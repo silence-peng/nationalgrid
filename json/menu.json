@@ -1,0 +1,1245 @@
+{
+	"status": 0,
+	"msg": "ok",
+	"data": [{
+			"id": 1,
+			"name": "平台配置",
+			"icon": "&#xe6b8;",
+			"url": "",
+			"children": [{
+				"id": 2,
+				"name": "一级模块配置",
+				"icon": "",
+				"url": "./pages/member/list.html"
+			}, {
+				"id": 3,
+				"name": "平台菜单配置",
+				"icon": "",
+				"url": "./pages/member/del.html"
+			}, {
+				"id": 4,
+				"name": "平台职位配置",
+				"icon": "&#xe70b;",
+				"url": ""
+			},{
+				"id": 5,
+				"name": "销售板块设置",
+				"icon": "&#xe70b;",
+				"url": ""
+			},{
+				"id": 6,
+				"name": "平台选项设置",
+				"icon": "&#xe70b;",
+				"url": ""
+			},{
+				"id": 7,
+				"name": "平台调用表守则",
+				"icon": "&#xe70b;",
+				"url": ""
+			}]
+		},
+		{
+			"id": 8,
+			"name": "配置管理",
+			"icon": "&#xe705;",
+			"url": "",
+			"children": [{
+				"id": 9,
+				"name": "打印配置",
+				"icon": "",
+				"url": "./pages/article/list.html"
+			}, {
+				"id": 10,
+				"name": "APP升级",
+				"icon": "",
+				"url": "./pages/article/category.html"
+			}, {
+				"id": 11,
+				"name": "导出设置",
+				"icon": "",
+				"url": "./pages/article/category.html"
+			}, {
+				"id": 12,
+				"name": "参数设置",
+				"icon": "",
+				"url": "./pages/article/category.html"
+			}, {
+				"id": 13,
+				"name": "短信设置",
+				"icon": "",
+				"url": "./pages/article/category.html"
+			}, {
+				"id": 14,
+				"name": "系统环境变量设置",
+				"icon": "",
+				"url": "./pages/article/category.html"
+			}]
+		},
+		{
+			"id": 15,
+			"name": "组织",
+			"icon": "&#xe723;",
+			"url": "",
+			"children": [{
+				"id": 16,
+				"name": "公司设置",
+				"icon": "",
+				"url": "./pages/order/list.html"
+			},{
+				"id": 17,
+				"name": "网点设置",
+				"icon": "",
+				"url": "./pages/order/list.html"
+			},{
+				"id": 18,
+				"name": "员工管理",
+				"icon": "",
+				"url": "./pages/order/list.html"
+			},{
+				"id": 19,
+				"name": "职位角色",
+				"icon": "",
+				"url": "./pages/order/list.html"
+			},{
+				"id": 20,
+				"name": "授权管理",
+				"icon": "",
+				"url": "./pages/order/list.html"
+			},{
+				"id": 21,
+				"name": "选项设置",
+				"icon": "",
+				"url": "./pages/order/list.html"
+			},{
+				"id": 22,
+				"name": "OMS授权",
+				"icon": "",
+				"url": "./pages/order/list.html"
+			},{
+				"id": 23,
+				"name": "操作日志",
+				"icon": "",
+				"url": "./pages/order/list.html"
+			}]
+		},
+		{
+			"id": 24,
+			"name": "基础",
+			"icon": "&#xe726;",
+			"url": "",
+			"children": [{
+				"id": 25,
+				"name": "目的地管理",
+				"icon": "",
+				"url": "./pages/admin/list.html"
+			},
+			{
+				"id": 26,
+				"name": "代理管理",
+				"icon": "",
+				"url": "./pages/admin/role.html"
+			},
+			{
+				"id": 27,
+				"name": "客户分组",
+				"icon": "",
+				"url": "./pages/admin/cate.html"
+			},
+			{
+				"id": 28,
+				"name": "客户管理",
+				"icon": "",
+				"url": "./pages/admin/rule.html"
+			},
+			{
+				"id": 29,
+				"name": "寄件人管理",
+				"icon": "",
+				"url": "./pages/admin/rule.html"
+			},
+			{
+				"id": 30,
+				"name": "公共收件人",
+				"icon": "",
+				"url": "./pages/admin/rule.html"
+			},
+			{
+				"id": 31,
+				"name": "货位管理",
+				"icon": "",
+				"url": "./pages/admin/rule.html"
+			},
+			{
+				"id": 32,
+				"name": "扫描状态",
+				"icon": "",
+				"url": "./pages/admin/rule.html"
+			},
+			{
+				"id": 33,
+				"name": "问题状态",
+				"icon": "",
+				"url": "./pages/admin/rule.html"
+			},
+			{
+				"id": 34,
+				"name": "科目管理",
+				"icon": "",
+				"url": "./pages/admin/rule.html"
+			},
+			{
+				"id": 35,
+				"name": "账单公式",
+				"icon": "",
+				"url": "./pages/admin/rule.html"
+			},
+			{
+				"id": 36,
+				"name": "汇率设置",
+				"icon": "",
+				"url": "./pages/admin/rule.html"
+			},
+			{
+				"id": 37,
+				"name": "资金账户",
+				"icon": "",
+				"url": "./pages/admin/rule.html"
+			},
+			{
+				"id": 38,
+				"name": "收支科目",
+				"icon": "",
+				"url": "./pages/admin/rule.html"
+			},
+			{
+				"id": 39,
+				"name": "发件箱设置",
+				"icon": "",
+				"url": "./pages/admin/rule.html"
+			}]
+		},
+		{
+			"id": 40,
+			"name": "策略",
+			"icon": "&#xe6ce;",
+			"url": "",
+			"children": [{
+				"id": 41,
+				"name": "订单",
+				"icon": "",
+				"url": "",
+				"children":[
+					{
+						"id": 42,
+						"name": "运单分配规则",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 43,
+						"name": "目的地策略",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 44,
+						"name": "品名对照规则",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 45,
+						"name": "17单号规则",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 46,
+						"name": "客户打单规则",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 47,
+						"name": "EDI规则",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 48,
+						"name": "客户EDI",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					}
+				]
+			},{
+				"id": 49,
+				"name": "操作",
+				"icon": "",
+				"url": "",
+				"children":[
+					{
+						"id": 50,
+						"name": "排货策略",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 51,
+						"name": "分拣策略",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 52,
+						"name": "装袋策略",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 53,
+						"name": "上板策略",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 54,
+						"name": "重量采集策略",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 55,
+						"name": "单号验证策略",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					}
+				]
+			},{
+				"id": 56,
+				"name": "代理",
+				"icon": "",
+				"url": "",
+				"children":[
+					{
+						"id": 57,
+						"name": "代理EDI接口",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 58,
+						"name": "转单分配规则",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 59,
+						"name": "英文品名规则",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 60,
+						"name": "黑名单规则",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 61,
+						"name": "运单追踪设置",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 62,
+						"name": "干线追踪设置",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 63,
+						"name": "轨迹匹配设置",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 64,
+						"name": "运单自动跟踪规则",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 65,
+						"name": "打单导入分解",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 66,
+						"name": "寄件随机名单",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					},{
+						"id": 67,
+						"name": "自动转单规则",
+						"icon": "",
+						"url": "./pages/admin/rule.html"
+					}
+				]
+			}
+			]
+		},
+		{
+			"id": 68,
+			"name": "订单",
+			"icon": "&#xe726;",
+			"url": "",
+			"children": [{
+				"id": 69,
+				"name": "订单导入",
+				"icon": "",
+				"url": "./pages/order/exportOrder.html"
+			},{
+				"id": 70,
+				"name": "订单预报",
+				"icon": "",
+				"url": "./pages/admin/rule.html"
+			}]
+		},{
+			"id": 71,
+			"name": "操作",
+			"icon": "&#xe726;",
+			"url": "",
+			"children": [{
+				"id": 72,
+				"name": "入库",
+				"icon": "",
+				"url": "./pages/admin/rule.html",
+				"children":[{
+					"id": 73,
+					"name": "收件入库",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 74,
+					"name": "快速收货",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 75,
+					"name": "整袋收货",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 76,
+					"name": "运单查询",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 77,
+					"name": "运单导入修改",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 78,
+					"name": "专线录单",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 79,
+					"name": "运单修改",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 80,
+					"name": "变更审核",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 81,
+					"name": "条码打印",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 82,
+					"name": "查货",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 83,
+					"name": "收货上架",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 84,
+					"name": "运单查询2",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				}]
+			},{
+				"id": 85,
+				"name": "单证",
+				"icon": "",
+				"url": "./pages/admin/rule.html",
+				"children":[{
+					"id": 86,
+					"name": "单证预查",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 87,
+					"name": "排货",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 88,
+					"name": "代理打单",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 89,
+					"name": "打单查询",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 90,
+					"name": "打单审核",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 91,
+					"name": "运单推送",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 92,
+					"name": "运单附件上传",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 93,
+					"name": "运单附件管理",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 94,
+					"name": "班次交接",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				},{
+					"id": 95,
+					"name": "在途跟踪",
+					"icon": "",
+					"url": "./pages/admin/rule.html"
+				}]
+			},{
+				"id": 96,
+				"name": "出库",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 97,
+					"name": "装袋",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 98,
+					"name": "扫描打印",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 99,
+					"name": "上板",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 100,
+					"name": "出货",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 101,
+					"name": "出货变更",
+					"icon": "",
+					"url": ""
+				}]
+			},{
+				"id": 102,
+				"name": "转运",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 103,
+					"name": "转运发件",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 104,
+					"name": "转运到件",
+					"icon": "",
+					"url": ""
+				}]
+			},{
+				"id": 105,
+				"name": "退件",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 106,
+					"name": "退返客户",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 107,
+					"name": "退件入库",
+					"icon": "",
+					"url": ""
+				}]
+			},{
+				"id": 108,
+				"name": "仓内",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 109,
+					"name": "清仓",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 110,
+					"name": "来货上架",
+					"icon": "",
+					"url": ""
+				}]
+			}]
+		},{
+			"id": 111,
+			"name": "异常",
+			"icon": "&#xe6b8;",
+			"url": "",
+			"children": [{
+				"id": 112,
+				"name": "港前",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 113,
+					"name": "港前问题件登记",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 114,
+					"name": "港前问题件处理",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 115,
+					"name": "港前问题件查询",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 116,
+					"name": "已处理完毕港前问题件",
+					"icon": "",
+					"url": ""
+				}]
+			},{
+				"id": 117,
+				"name": "港后",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 118,
+					"name": "港前问题件登记",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 119,
+					"name": "港后问题件处理",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 120,
+					"name": "港后问题件查询",
+					"icon": "",
+					"url": ""
+				}]
+			},{
+				"id": 121,
+				"name": "代理",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 122,
+					"name": "代理问题件登记",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 123,
+					"name": "代理问题件处理",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 124,
+					"name": "代理问题件查询",
+					"icon": "",
+					"url": ""
+				}]
+			}]
+		},{
+			"id": 125,
+			"name": "客服",
+			"icon": "&#xe6b8;",
+			"url": "",
+			"children": [{
+				"id": 126,
+				"name": "追踪查询",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 127,
+				"name": "运单轨迹追踪",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 128,
+				"name": "干线轨迹追踪",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 129,
+				"name": "班次轨迹追踪",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 130,
+				"name": "短信",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 131,
+				"name": "发件箱查询",
+				"icon": "",
+				"url": ""
+			}]
+		},{
+			"id": 132,
+			"name": "报价",
+			"icon": "&#xe6b8;",
+			"url": "",
+			"children": [{
+				"id": 133,
+				"name": "客户",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 134,
+					"name": "指定路线",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 135,
+					"name": "应收客户运费",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 136,
+					"name": "应收客户运费2",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 137,
+					"name": "应收客户燃油",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 138,
+					"name": "应收整袋运费",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 139,
+					"name": "应收客户偏远费",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 140,
+					"name": "应收客户包装费",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 141,
+					"name": "应收客户超值费",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 142,
+					"name": "应收客户其他",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 143,
+					"name": "应收代收手续费",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 144,
+					"name": "进位规则",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 145,
+					"name": "计抛规则",
+					"icon": "",
+					"url": ""
+				}]
+			},{
+				"id": 146,
+				"name": "派送代理",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 147,
+					"name": "走货录像",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 148,
+					"name": "应付派送运费",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 149,
+					"name": "应付派送燃油",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 150,
+					"name": "应付代收手续费",
+					"icon": "",
+					"url": ""
+				}]
+			},{
+				"id": 151,
+				"name": "承运代理",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 152,
+					"name": "出港路由",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 153,
+					"name": "应付承运报价",
+					"icon": "",
+					"url": ""
+				}]
+			},{
+				"id": 154,
+				"name": "内部",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 155,
+					"name": "内部取件成本",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 156,
+					"name": "内部成本报价",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 157,
+					"name": "销售成本报价",
+					"icon": "",
+					"url": ""
+				}]
+			},{
+				"id": 158,
+				"name": "查价",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 159,
+					"name": "应收报价查询",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 160,
+					"name": "应付报价查询",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 161,
+					"name": "销售成本查询",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 162,
+					"name": "偏远查询",
+					"icon": "",
+					"url": ""
+				}]
+			}]
+		},{
+			"id": 163,
+			"name": "应收结算",
+			"icon": "&#xe6b8;",
+			"url": "",
+			"children": [{
+				"id": 164,
+				"name": "客户费用导入",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 165,
+				"name": "客户账单明细",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 166,
+				"name": "运费结算明细",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 167,
+				"name": "客户账单明细（袋）",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 168,
+				"name": "客户账单管理",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 169,
+				"name": "客户余额管理",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 170,
+				"name": "客户解锁查询",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 171,
+				"name": "费用补录管理",
+				"icon": "",
+				"url": ""
+			}]
+		},{
+			"id": 172,
+			"name": "结算规则",
+			"icon": "&#xe6b8;",
+			"url": "",
+			"children": [{
+				"id": 173,
+				"name": "收入成本规则",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 174,
+				"name": "重量补差规则",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 175,
+				"name": "收入成本源报表",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 176,
+				"name": "月末结算",
+				"icon": "",
+				"url": ""
+			}]
+		},{
+			"id": 177,
+			"name": "应付结算",
+			"icon": "&#xe6b8;",
+			"url": "",
+			"children": [{
+				"id": 178,
+				"name": "派送对账单导入",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 179,
+				"name": "派送对账单管理",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 180,
+				"name": "派送账单明细",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 181,
+				"name": "承运账单明细",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 182,
+				"name": "承运费用分摊",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 183,
+				"name": "应付账单管理",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 184,
+				"name": "代理余额管理",
+				"icon": "",
+				"url": ""
+			}]
+		},{
+			"id": 185,
+			"name": "贷款结算",
+			"icon": "&#xe6b8;",
+			"url": "",
+			"children": [{
+				"id": 186,
+				"name": "贷款导入",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 187,
+				"name": "贷款回款",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 188,
+				"name": "回款对账单导入",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 189,
+				"name": "回款对账单管理",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 190,
+				"name": "贷款回款账单",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 191,
+				"name": "贷款返款",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 192,
+				"name": "贷款返款账单",
+				"icon": "",
+				"url": ""
+			}]
+		},{
+			"id": 193,
+			"name": "出纳",
+			"icon": "&#xe6b8;",
+			"url": "",
+			"children": [{
+				"id": 194,
+				"name": "客户收款",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 195,
+					"name": "客户收款登记",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 196,
+					"name": "客户收款管理",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 197,
+					"name": "客户收款审核",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 198,
+					"name": "客户核销管理",
+					"icon": "",
+					"url": ""
+				}]
+			},{
+				"id": 199,
+				"name": "代理付款",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 200,
+					"name": "代理付款申请",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 201,
+					"name": "代理付款管理",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 202,
+					"name": "代理核销管理",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 203,
+					"name": "代理付款",
+					"icon": "",
+					"url": ""
+				}]
+			},{
+				"id": 204,
+				"name": "费用报销",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 205,
+					"name": "费用报销",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 206,
+					"name": "报销付款",
+					"icon": "",
+					"url": ""
+				}]
+			},{
+				"id": 207,
+				"name": "账户转账",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 208,
+				"name": "资金账户管理",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 209,
+				"name": "出纳明细",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 210,
+				"name": "其他出纳",
+				"icon": "",
+				"url": ""
+			}]
+		},{
+			"id": 211,
+			"name": "报表",
+			"icon": "&#xe6b8;",
+			"url": "",
+			"children": [{
+				"id": 212,
+				"name": "客户类",
+				"icon": "",
+				"url": "",
+				"children": {
+					"id": 213,
+					"name": "客户发货日报表",
+					"icon": "",
+					"url": ""
+				}
+			},{
+				"id": 214,
+				"name": "操作类",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 215,
+					"name": "仓库操作日报表",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 216,
+					"name": "出货预报日报表",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 217,
+					"name": "操作工作量日报表",
+					"icon": "",
+					"url": ""
+				}]
+			},{
+				"id": 218,
+				"name": "承运类",
+				"icon": "",
+				"url": "",
+				"children": {
+					"id": 219,
+					"name": "总运单时效报表",
+					"icon": "",
+					"url": ""
+				}
+			},{
+				"id": 220,
+				"name": "结算类",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 221,
+					"name": "客户对账报表",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 222,
+					"name": "客户账龄报表",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 223,
+					"name": "资金进出报表",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 224,
+					"name": "客户往来报表",
+					"icon": "",
+					"url": ""
+				}]
+			},{
+				"id": 225,
+				"name": "毛利类",
+				"icon": "",
+				"url": "",
+				"children": [{
+					"id": 226,
+					"name": "指定路线毛利分析",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 227,
+					"name": "总运单毛利分析",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 228,
+					"name": "网点毛利",
+					"icon": "",
+					"url": ""
+				},{
+					"id": 229,
+					"name": "公司毛利分析",
+					"icon": "",
+					"url": ""
+				}]
+			},{
+				"id": 230,
+				"name": "销售类",
+				"icon": "",
+				"url": "",
+				"children": {
+					"id": 231,
+					"name": "销售客户数报表",
+					"icon": "",
+					"url": ""
+				}
+			}]
+		},{
+			"id": 232,
+			"name": "CRM",
+			"icon": "&#xe6b8;",
+			"url": "",
+			"children":[{
+				"id": 233,
+				"name": "客户视图",
+				"icon": "",
+				"url": ""
+			},{
+				"id": 234,
+				"name": "运单视图",
+				"icon": "",
+				"url": ""
+			}]
+		}
+	]
+}

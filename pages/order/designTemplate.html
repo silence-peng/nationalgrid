@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>添加订单-WeAdmin Frame型后台管理系统-WeAdmin 1.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/weadmin.css">
+    <script src="../../lib/layui/layui.js" charset="utf-8"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="weadmin-body">
+
+
+    <form class="layui-form">
+        <blockquote class="layui-elem-quote layui-text">基本信息</blockquote>
+        <div class="layui-form-item">
+            <label class="layui-form-label">可用格式</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="col" lay-skin="primary" title="识别序列（通过列号定位列）" >
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-inline">
+                <select name="quiz">
+
+                </select>
+            </div>
+            <div class="layui-input-inline" style="width: auto">
+                <button type="button" class="layui-btn" lay-filter="save">保存</button>
+                <button type="button" class="layui-btn" lay-filter="save">另存为</button>
+                <button type="button" class="layui-btn layui-btn-danger" lay-filter="del">删除</button>
+                <button type="button" class="layui-btn" lay-filter="load">加载</button>
+            </div>
+        </div>
+        <blockquote class="layui-elem-quote layui-text">字段信息</blockquote>
+        <table class="layui-table" id="templateInfo"></table>
+        <div class="layui-form-item">
+            <div class="layui-input-inline" style="width: auto;float: right" >
+                <button type="button" class="layui-btn" lay-filter="exportTitle">导入Excel标题</button>
+            </div>
+        </div>
+        <script type="text/html" id="switchTpl">
+            <!-- 这里的 checked 的状态只是演示 -->
+            <div class=".layui-input-inline" style="width: 300px">
+            <select name="'city'+{{d.id}}" lay-filter="testSelect"  lay-verify="required" data-value="{{d.id}}" >
+                <option value="A">A|运单号码</option>
+                <option value="B">B|转单号码</option>
+                <option value="C">C|参考编号</option>
+                <option value="D">D|件数</option>
+                <option value="E">E|总数量</option>
+                <option value="F">F|子单号码</option>
+                <option value="G">G|包装类型</option>
+                <option value="H">H|预报实重</option>
+                <option value="I">I|预报材重</option>
+                <option value="J">J|指定路线</option>
+                <option value="K">K|目的地</option>
+                <option value="L">L|货物类型</option>
+                <option value="M">M|中文品名</option>
+                <option value="N">N|英文品名</option>
+                <option value="O">O|报关方式</option>
+                <option value="P">P|申报价值</option>
+                <option value="Q">Q|申报币别</option>
+                <option value="R">R|寄件公司</option>
+                <option value="S">S|寄件人</option>
+                <option value="T">T|寄件人电话</option>
+                <option value="U">U|寄件地址1</option>
+                <option value="V">V|寄件地址2</option>
+                <option value="W">W|寄件地址3</option>
+                <option value="X">X|寄件国家</option>
+                <option value="Y">Y|寄件州/省</option>
+                <option value="Z">Z|寄件城市</option>
+                <option value="AA">AA|寄件邮编</option>
+                <option value="AB">AB|收件税号</option>
+                <option value="AC">AC|收件公司</option>
+                <option value="AD">AD|收件人</option>
+                <option value="AE">AE|收件人电话</option>
+                <option value="AF">AF|收件地址1</option>
+                <option value="AJ">AG|收件地址2</option>
+                <option value="AH">AH|收件地址3</option>
+                <option value="AI">AI|收件国家</option>
+                <option value="AJ">AJ|收件州/省</option>
+                <option value="AK">AK|收件城市</option>
+                <option value="AL">AL|收件邮编</option>
+                <option value="AM">AM|备注</option>
+                <option value="AN">AN|付款方式</option>
+                <option value="AO">AO|到付款</option>
+                <option value="AP">AP|到付币别</option>
+                <option value="AQ">AQ|税金付款</option>
+                <option value="AR">AR|代收款</option>
+                <option value="AS">AS|代收币别</option>
+                <option value="AT">AT|箱号</option>
+                <option value="AU">AU|箱子尺寸</option>
+                <option value="AV">AV|箱子体积</option>
+                <option value="AW">AW|箱子实重</option>
+                <option value="AX">AX|中文品名1</option>
+                <option value="AY">AY|英文品名1</option>
+                <option value="AZ">AZ|数量1</option>
+                <option value="BA">BA|单位1</option>
+                <option value="BB">BB|单价1</option>
+                <option value="BC">BC|海关编码1</option>
+                <option value="BD">BD|中文品名2</option>
+                <option value="BE">BE|英文品名2</option>
+                <option value="BF">BF|数量2</option>
+                <option value="BG">BG|单位2</option>
+                <option value="BH">BH|单价2</option>
+                <option value="BI">BI|海关编码2</option>
+                <option value="BJ">BJ|中文品名3</option>
+                <option value="BK">BK|英文品名3</option>
+                <option value="BL">BL|数量3</option>
+                <option value="BM">BM|单位3</option>
+                <option value="BN">BN|单价3</option>
+                <option value="BO">BO|海关编码3</option>
+                <option value="BP">BP|中文品名4</option>
+                <option value="BQ">BQ|英文品名4</option>
+                <option value="BR">BR|数量4</option>
+                <option value="BS">BS|单位4</option>
+                <option value="BT">BT|单价4</option>
+                <option value="BU">BU|海关编码4</option>
+                <option value="BV">BV|中文品名5</option>
+                <option value="BW">BW|英文品名5</option>
+                <option value="BS">BX|数量5</option>
+                <option value="BY">BY|单位5</option>
+                <option value="BZ">BZ|单价5</option>
+                <option value="CA">CA|海关编码5</option>
+                <option value="CB">CB|中文品名6</option>
+                <option value="CC">CC|英文品名6</option>
+                <option value="CD">CD|数量6</option>
+                <option value="CE">CE|单位6</option>
+                <option value="CF">CF|单价6</option>
+                <option value="CG">CG|海关编码6</option>
+                <option value="CH">CH|中文品名7</option>
+                <option value="CI">CI|英文品名7</option>
+                <option value="CJ">CJ|数量7</option>
+                <option value="CK">CK|单位7</option>
+                <option value="CL">CL|单价7</option>
+                <option value="CM">CM|中文品名8</option>
+                <option value="CN">CN|英文品名8</option>
+                <option value="CO">CO|数量8</option>
+                <option value="CP">CP|单位8</option>
+                <option value="CQ">CQ|单价8</option>
+                <option value="CR">CR|海关编码8</option>
+                <option value="CS">CS|中文品名9</option>
+                <option value="CT">CT|英文品名9</option>
+                <option value="CU">CU|数量9</option>
+                <option value="CV">CV|单位9</option>
+                <option value="CW">CW|单价9</option>
+                <option value="CX">CX|海关编码9</option>
+                <option value="CY">CY|中文品名10</option>
+                <option value="CZ">CZ|英文品名10</option>
+                <option value="DA">DA|数量10</option>
+                <option value="DB">DB|单位10</option>
+                <option value="DC">DC|单价10</option>
+                <option value="DD">DD|海关编码10</option>
+            </select>
+            </div>
+        </script>
+    </form>
+</div>
+<script>
+    layui.extend({
+        admin: '{/}../../static/js/admin'
+    });
+    layui.use(['form', 'admin', 'jquery', 'table', 'layer'], function() {
+        var form = layui.form,
+            admin = layui.admin,
+            $ = layui.jquery,
+            table = layui.table,
+            layer = layui.layer;
+
+        form.on('select(testSelect)', function (data) {
+
+            var elem = $(data.elem);
+            var trElem = elem.parents('tr');
+            var tableData = table.cache['templateInfo'];
+            // 更新到表格的缓存数据中，才能在获得选中行等等其他的方法中得到更新之后的值
+            tableData[trElem.data('index')][elem.attr('name')] = data.value;
+            // 其他的操作看需求 TODO
+        });
+        table.render({
+            elem: '#templateInfo'
+            , width: 600
+            , height: 250
+            , url: 'TEST' //数据接口
+            , title: '错误信息表',
+            done: function (res, curr, count) {
+                count || this.elem.next('.layui-table-view').find('.layui-table-header').css('overflow', 'auto');
+                console.log(this.elem.next('.layui-table-view').find('.layui-table-header').css('overflow', 'auto'))
+                layui.each($('select'), function (index, item) {
+                    var elem = $(item);
+                    elem.val(elem.data('value')).parents('div.layui-table-cell').css('overflow', 'visible');
+                });
+                form.render();
+            }
+            ,cols: [[ //表头
+                {field: 'sortNo', title: '序列'}
+                ,{field: 'num', title: '必填'}
+                ,{field: 'orderNum', title: '字段名'}
+                ,{field: 'errorInfo', title: '列号|标题',width: 350, template: '#switchTpl',}
+            ]]
+        });
+        //监听提交
+        form.on('submit(add)', function(data) {
+            console.log(data);
+            //发异步，把数据提交给php
+            layer.alert("增加成功", {
+                icon: 6
+            }, function() {
+                // 获得frame索引
+                var index = parent.layer.getFrameIndex(window.name);
+                //关闭当前frame
+                parent.layer.close(index);
+            });
+            return false;
+        });
+
+
+    });
+</script>
+</body>
+
+</html>
