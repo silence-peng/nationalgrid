@@ -384,7 +384,7 @@
 				"id": 70,
 				"name": "订单预报",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/order/orderPrediction.html"
 			}]
 		},{
 			"id": 71,

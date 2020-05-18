@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>管理员列表-WeAdmin Frame型后台管理系统-WeAdmin 1.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/weadmin.css">
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .btnArr button {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="weadmin-nav">
+			<span class="layui-breadcrumb">
+        <a href="">我的桌面</a>
+        <a href="">订单</a>
+        <a>
+          <cite>订单预报</cite></a>
+      </span>
+    <a class="layui-btn layui-btn-sm" style="line-height:1.6em;margin-top:3px;float:right"
+       href="javascript:location.replace(location.href);" title="刷新">
+        <i class="layui-icon" style="line-height:30px">ဂ</i></a>
+</div>
+<div class="weadmin-body">
+    <div class="layui-row">
+        <form class="layui-form layui-col-md12 we-search">
+            <div class="layui-form-item">
+                <div class="layui-input-inline btnArr" style="width: auto">
+                    <button type="button" class="layui-btn" lay-filter="templateDownload">选择收货</button>
+                    <button type="button" class="layui-btn" lay-filter="designTemplate">全部收货</button>
+                    <button type="button" class="layui-btn" lay-filter="designTemplate">面单打印</button>
+                    <button type="button" class="layui-btn" lay-filter="designTemplate">标签打印</button>
+                    <button type="button" class="layui-btn" lay-filter="designTemplate">预报修改</button>
+                    <button type="button" class="layui-btn" lay-filter="designTemplate">批量修改</button>
+                    <button type="button" class="layui-btn layui-btn-danger" lay-filter="designTemplate">取消订单</button>
+                    <button type="button" class="layui-btn" lay-filter="designTemplate">导出</button>
+                    <button type="button" class="layui-btn" lay-filter="designTemplate">单号导出</button>
+                </div>
+            </div>
+
+            <div class="layui-row" style="font-size: 14px">
+                <div class="layui-col-xs2">
+                    <div class="layui-form-item" style="margin: 0">
+                        <div class="layui-input-inline">
+                            <select name="city" lay-verify="required">
+                                <option value="0">运单号码</option>
+                                <option value="1">参考编号</option>
+                                <option value="2">订单号码</option>
+                                <option value="3">转运号码</option>
+                                <option value="4">收货袋号</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item" style="margin: 0">
+                        <div class="layui-input-inline" style="margin: 0">
+                            <textarea name="desc" class="layui-textarea"></textarea>
+                        </div>
+                        <div class="layui-input-inline" style="margin: 0;width: auto;height: 100%">
+                            <button class="layui-btn" style="height: 100px">清<br>空</button>
+                        </div>
+                    </div>
+                    <div class="layui-form-item" style="margin: 0">
+                        <div class="layui-input-inline" style="margin: 0">
+                            <input type="checkbox" name="" lay-skin="primary" title="回车查询打印收货标签">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-xs10">
+                    <div class="layui-row">
+                        <div class="layui-col-xs4">
+                            订单日期
+                        </div>
+                        <div class="layui-col-xs2">
+                            寄货网点
+                        </div>
+                        <div class="layui-col-xs4">
+                            <input type="checkbox" name="" lay-skin="primary" title="查录单">客户
+                        </div>
+                        <div class="layui-col-xs2">
+
+                        </div>
+                    </div>
+                    <div class="layui-row">
+                        <div class="layui-col-xs4">
+                            <div class="layui-form-item">
+                                <div class="layui-input-inline">
+                                    <input type="text" name="startDate" id="startDate" lay-verify="startDate"
+                                           placeholder="开始日期" autocomplete="off" class="layui-input">
+                                </div>
+                                <div class="layui-form-mid">-</div>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="endDate" id="endDate" lay-verify="startDate"
+                                           placeholder="结束日期" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-xs2">
+                            <div class="layui-form-item" style="margin: 0">
+                                <div class="layui-input-inline">
+                                    <select name="city" lay-verify="required">
+                                        <option value="0">总部</option>
+                                        <option value="1">参考编号</option>
+                                        <option value="2">订单号码</option>
+                                        <option value="3">转运号码</option>
+                                        <option value="4">收货袋号</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-xs4">
+                            <div class="layui-row">
+                                <div class="layui-col-xs4"><input style="width: 100%;" type="text" name="num"
+                                                                  class="layui-input"></div>
+                                <div class="layui-col-xs1">
+                                    <button style="width: 100%;height:38px" type="button"
+                                            class="layui-btn layui-icon layui-btn-primary layui-btn-sm">&#xe615;
+                                    </button>
+                                </div>
+                                <div class="layui-col-xs4"><input type="text" name="exportTime" disabled
+                                                                  class="layui-input"></div>
+                                <div class="layui-col-xs3"></div>
+                            </div>
+                        </div>
+                        <div class="layui-col-xs2">
+
+                        </div>
+                    </div>
+                    <div class="layui-row" style="font-size: 14px">
+                        <div class="layui-row">
+                            <div class="layui-col-xs1">走货路线</div>
+                            <div class="layui-col-xs1">指定路线</div>
+                            <div class="layui-col-xs1">目的地</div>
+                            <div class="layui-col-xs1">订单状态</div>
+                            <div class="layui-col-xs1">订单数据来源</div>
+                            <div class="layui-col-xs7"></div>
+                        </div>
+                        <div class="layui-row">
+                            <div class="layui-col-xs1"><select name="city" lay-verify="required">
+                                <option value="0">总部</option>
+                                <option value="1">参考编号</option>
+                                <option value="2">订单号码</option>
+                                <option value="3">转运号码</option>
+                                <option value="4">收货袋号</option>
+                            </select></div>
+                            <div class="layui-col-xs1"><select name="city" lay-verify="required">
+                                <option value="0">总部</option>
+                                <option value="1">参考编号</option>
+                                <option value="2">订单号码</option>
+                                <option value="3">转运号码</option>
+                                <option value="4">收货袋号</option>
+                            </select></div>
+                            <div class="layui-col-xs1"><select name="city" lay-verify="required">
+                                <option value="0">总部</option>
+                                <option value="1">参考编号</option>
+                                <option value="2">订单号码</option>
+                                <option value="3">转运号码</option>
+                                <option value="4">收货袋号</option>
+                            </select></div>
+                            <div class="layui-col-xs1"><select name="city" lay-verify="required">
+                                <option value="0">总部</option>
+                                <option value="1">参考编号</option>
+                                <option value="2">订单号码</option>
+                                <option value="3">转运号码</option>
+                                <option value="4">收货袋号</option>
+                            </select></div>
+                            <div class="layui-col-xs1"><select name="city" lay-verify="required">
+                                <option value="0">总部</option>
+                                <option value="1">参考编号</option>
+                                <option value="2">订单号码</option>
+                                <option value="3">转运号码</option>
+                                <option value="4">收货袋号</option>
+                            </select></div>
+                            <div class="layui-col-xs7">
+                                <button type="button" class="layui-btn" lay-filter="fileDownload">查询</button>
+                                <button type="button" class="layui-btn" lay-filter="historyLog">重置</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <table class="layui-table" id="errorInfo"></table>
+
+</div>
+<script src="../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../static/js/orderPrediction.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

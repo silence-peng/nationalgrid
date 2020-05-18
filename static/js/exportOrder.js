@@ -12,7 +12,7 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
         elem: '#errorInfo'
         ,width:880
         ,height: 450
-        ,url: '' //数据接口
+        ,url: 'test' //数据接口
         ,title: '错误信息表'
         ,cols: [[ //表头
             {field: 'sortNo', title: '序列', width:100}
