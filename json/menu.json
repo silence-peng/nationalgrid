@@ -398,9 +398,9 @@
 				"url": "./pages/admin/rule.html",
 				"children":[{
 					"id": 73,
-					"name": "收件入库",
+					"name": "收件录单",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/receivingRecord.html"
 				},{
 					"id": 74,
 					"name": "快速收货",

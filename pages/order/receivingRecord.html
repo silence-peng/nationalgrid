@@ -19,6 +19,9 @@
         .layui-row{
             margin: 2px 0;
         }
+        .btnArr button{
+            width: 100px;
+        }
     </style>
 
 </head>
@@ -42,7 +45,7 @@
             <form class="layui-form">
                 <div class="layui-form-item">
                     <div class="layui-input-inline">
-                        <button class="layui-btn">保存&S</button>
+                        <button class="layui-btn layui-btn-normal">保存&S</button>
                     </div>
                 </div>
                 <div class="layui-row">
@@ -120,7 +123,7 @@
                         </div>
                     </div>
                     <div class="layui-col-xs4">
-                        <div class="layui-row">
+                        <div class="layui-row" style="margin: 0">
                             <div class="layui-col-xs5" ><input  type="text" name="destinationName" id="destinationName"
                                                                 class="layui-input"></div>
                             <div class="layui-col-xs2" style="width: auto">
@@ -165,7 +168,7 @@
                         <input type="text" class="layui-input">
                     </div>
                     <div class="layui-col-xs4">
-                        <div class="layui-row">
+                        <div class="layui-row" style="margin: 0">
                             <div class="layui-col-xs6">
                                 <input type="text" class="layui-input">
                             </div><div class="layui-col-xs6">
@@ -176,19 +179,118 @@
 
                     </div>
                 </div>
-                <div class="row">
+                <div class="layui-row">
                     <div class="layui-col-xs6">
                         <div class="layui-row">
-                            <div class="col-xs4"></div>
-                            <div class="col-xs8"></div>
+                            <div class="layui-col-xs4">
+
+                                <i class="layui-icon layui-icon-snowflake"
+                                   style="color: red"></i>包装类型
+                            </div>
+                            <div class="layui-col-xs8"><i class="layui-icon layui-icon-snowflake"
+                                                          style="color: red"></i>件数</div>
+                        </div>
+                        <div class="layui-row" >
+                            <div class="layui-col-xs4">
+                                <select class="layui-select" id=""></select>
+                            </div>
+                            <div class="layui-col-xs8">
+                                <div class="layui-row" style="margin: 0">
+                                    <div class="layui-col-xs5" ><input  type="text" name="customerName" id="orderNum"
+                                                                        class="layui-input"></div>
+                                    <div class="layui-col-xs2" style="overflow: hidden">
+                                        <button style="width: auto;height:38px" type="button" onclick="WeAdminShow('查找','./find.html?type='+'customer',900,650)"
+                                                class="layui-btn layui-icon layui-btn-primary layui-btn-sm"><i class="layui-icon layui-icon-next"></i>
+                                        </button>
+                                    </div>
+                                    <div class="layui-col-xs5" ><input type="text" name="customerCode" id="orderInfo" disabled
+                                                                       class="layui-input"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-row">
+                            <div class="layui-col-xs4"> <i class="layui-icon layui-icon-snowflake"
+                                                               style="color: red"></i>收费实重</div>
+                            <div class="layui-col-xs4">收费材重</div>
+                            <div class="layui-col-xs4">收费重</div>
+                        </div>
+                        <div class="layui-row">
+                            <div class="layui-col-xs4">
+                                <input type="text" class="layui-input" value="0.00">
+                            </div>
+                            <div class="layui-col-xs4"><input type="text" class="layui-input" value="0.00"></div>
+                            <div class="layui-col-xs4"> <input type="text" disabled class="layui-input" value="0.00"></div>
+                        </div>
+                        <div>中文品文</div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-inline" style="width: 100%"><input type="text" class="layui-input"></div>
+                        </div>
+                        <div>收件备注</div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-inline" style="width: 100%"><input type="text" class="layui-input"></div>
+                        </div>
+                        <div class="layui-row">
+                            <div class="layui-col-xs4"> <i class="layui-icon layui-icon-snowflake"
+                                                           style="color: red"></i>付款方式</div>
+                            <div class="layui-col-xs4">到付款</div>
+                            <div class="layui-col-xs4"></div>
+                        </div>
+                        <div class="layui-row">
+                            <div class="layui-col-xs4">
+                                <select name=""class="layui-select"></select>
+                            </div>
+                            <div class="layui-col-xs4"><input type="text" class="layui-input" value="0.00"></div>
+                            <div class="layui-col-xs4">
+                                <select name=""class="layui-select"></select></div>
+                        </div>
+                        <div class="layui-row">
+                            <div class="layui-col-xs4"> <i class="layui-icon layui-icon-snowflake"
+                                                           style="color: red"></i>税金方式</div>
+                            <div class="layui-col-xs4">代收款</div>
+                            <div class="layui-col-xs4"></div>
+                        </div>
+                        <div class="layui-row">
+                            <div class="layui-col-xs4">
+                                <select name=""class="layui-select"></select>
+                            </div>
+                            <div class="layui-col-xs4"><input type="text" class="layui-input" value="0.00"></div>
+                            <div class="layui-col-xs4">
+                                <select name=""class="layui-select"></select></div>
                         </div>
                     </div>
-                    <div class="layui-col-xs6"></div>
+                    <div class="layui-col-xs6" style="padding: 0 10px">
+                        <table class="layui-table" id="chargeInfo" ></table>
+                        <div class="layui-row">
+                            <div class="layui-col-xs2">
+                                <button  style="height: auto;line-height: 25px" type="button" class="layui-btn layui-btn-normal layui-btn-sm">
+                                    待<br>确<br>认<br>问<br>题
+                                </button>
+                            </div>
+                            <div class="layui-col-xs10">
+                                <div><input type="checkbox" name="isAutoGetOrderNum" lay-skin="primary" title="付款附税方式带缺确定"/></div>
+                                <div><input type="checkbox" name="isAutoGetOrderNum" lay-skin="primary" title="香烟毒品，军工政治，易燃易爆"/></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </form>
         </div>
-        <div class="layui-col-xs8"></div>
+        <div class="layui-col-xs8" >
+            <div class="layui-form-item">
+                <div class="layui-input-inline btnArr" style="width:100%">
+                    <button type="button" class="layui-btn" lay-filter="templateDownload"  style="background-color: rgb(179,225,157)">新增</button>
+                    <button type="button" class="layui-btn" lay-filter="designTemplate"  style="background-color: rgb(160,207,225)">修改</button>
+                    <button type="button" class="layui-btn layui-btn-normal" lay-filter="designTemplate">取消</button>
+                    <button type="button" class="layui-btn layui-btn-danger"  lay-filter="designTemplate">删除</button>
+                    <button type="button" class="layui-btn layui-btn-normal" lay-filter="designTemplate">打印条码</button>
+                    <button type="button" class="layui-btn layui-btn-normal" lay-filter="designTemplate">打印清单</button>
+                    <button type="button" class="layui-btn layui-btn-normal"  lay-filter="designTemplate">收货提交</button>
+                    <button type="button" class="layui-btn layui-btn-normal" lay-filter="designTemplate">设置</button>
+                </div>
+            </div>
+            <table class="layui-table" id="listInfo"  ></table>
+        </div>
     </div>
 </div>
 <script src="../../lib/layui/layui.js" charset="utf-8"></script>
