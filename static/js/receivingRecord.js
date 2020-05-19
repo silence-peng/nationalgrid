@@ -1,17 +1,29 @@
-layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element', 'slider'], function(){
+layui.use(['laydate', 'laypage', 'layer', 'table','form',"jquery"], function(){
     var laydate = layui.laydate //日期
         ,laypage = layui.laypage //分页
         ,layer = layui.layer //弹层
         ,table = layui.table //表格
-        ,carousel = layui.carousel //轮播
-        ,upload = layui.upload //上传
-        ,element = layui.element //元素操作
-        ,slider = layui.slider //滑块
+        ,form=layui.form,
+        $=layui.jquery;
 
     laydate.render({
         elem: '#startDate'
     });laydate.render({
         elem: '#endDate'
+    });
+    form.on('checkbox(listeningReferenceNumber)', function(data){
+        if (data.elem.checked){
+            $("#referenceNumber").prop('disabled', true);
+        }else{
+            $("#referenceNumber").prop('disabled', false);
+        }
+    });
+    form.on('checkbox(listeningTransferNo)', function(data){
+        if (data.elem.checked){
+            $("#transferNo").prop('disabled', true);
+        }else{
+            $("#transferNo").prop('disabled', false);
+        }
     });
     //执行一个 table 实例
     table.render({
@@ -54,4 +66,7 @@ function getValue(str,name) {
     var customerName=document.getElementById("customerName");
     code.value=str;
     customerName.value=name;
+}
+function getAddressCode(str) {
+
 }

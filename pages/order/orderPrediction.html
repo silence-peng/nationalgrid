@@ -19,6 +19,9 @@
         .btnArr button {
             width: 100px;
         }
+        .layui-nav-child button{
+            font-size: 12px;
+        }
     </style>
 </head>
 
@@ -38,16 +41,48 @@
     <div class="layui-row">
         <form class="layui-form layui-col-md12 we-search">
             <div class="layui-form-item">
-                <div class="layui-input-inline btnArr" style="width: auto">
-                    <button type="button" class="layui-btn" lay-filter="templateDownload">选择收货</button>
-                    <button type="button" class="layui-btn" lay-filter="designTemplate">全部收货</button>
-                    <button type="button" class="layui-btn" lay-filter="designTemplate">面单打印</button>
-                    <button type="button" class="layui-btn" lay-filter="designTemplate">标签打印</button>
-                    <button type="button" class="layui-btn" lay-filter="designTemplate">预报修改</button>
-                    <button type="button" class="layui-btn" lay-filter="designTemplate">批量修改</button>
-                    <button type="button" class="layui-btn layui-btn-danger" lay-filter="designTemplate">取消订单</button>
-                    <button type="button" class="layui-btn" lay-filter="designTemplate">导出</button>
-                    <button type="button" class="layui-btn" lay-filter="designTemplate">单号导出</button>
+                <div class="layui-input-inline btnArr" style="width:100%">
+                    <button type="button" class="layui-btn" lay-filter="templateDownload"  style="float: left;">选择收货</button>
+                    <button type="button" class="layui-btn" lay-filter="designTemplate"  style="float: left;">全部收货</button>
+                    <ul class="layui-nav layui-bg-green btnz" lay-filter=""  style=" float:left;font-size: 14px;border-radius: 0px;padding:0;margin: 0 4px;height: 38px">
+                        <li class="layui-nav-item" style="line-height: 30px;">
+                            <a style="color:white;font-size: 12px;padding: 5px 30px 5px 20px;">面单打印<span class="layui-nav-more" style="right: 10px;font-size: 12px;"></span></a>
+                            <dl class="layui-nav-child" style="z-index:9999999;top: 30px;font-size: 12px;line-height: 31px;padding: 0px 0px 0px 0px;"> <!-- 二级菜单 -->
+                                <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm" > 嘉里-标准面单</button></dd>
+                                <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm"> 嘉里-POSLAJU</button></dd>
+                                <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm" > 嘉里-SKY</button></dd>
+                                <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm"> 嘉里-越南面单</button></dd>
+                                <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm" > 嘉里-香港面单</button></dd>
+                                <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm"> 嘉里泰国</button></dd>
+                                <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm" > 嘉里-西班牙</button></dd>
+                                <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm" > 嘉里-末端</button></dd>
+                                <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm" > 泰廊曼标准面单</button></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <ul class="layui-nav layui-bg-green btnz" lay-filter=""  style=" float:left;font-size: 14px;border-radius: 0px;padding:0;margin: 0 4px;height: 38px">
+                        <li class="layui-nav-item" style="line-height: 30px;">
+                            <a  style="color:white;font-size: 12px;padding: 5px 30px 5px 20px;">标签打印<span class="layui-nav-more" style="right: 10px;font-size: 12px;"></span></a>
+                            <dl class="layui-nav-child" style="z-index:9999999;top: 30px;font-size: 12px;line-height: 31px;padding: 0px 0px 0px 0px;"> <!-- 二级菜单 -->
+                                <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm" >收货标签</button></dd>
+                                <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm">发票标签</button></dd>
+                                <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm" >运单标签</button></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <button type="button" class="layui-btn" style="float: left;" lay-filter="designTemplate">预报修改</button>
+                    <button type="button" class="layui-btn"  style="float: left;"lay-filter="designTemplate">批量修改</button>
+                    <button type="button" class="layui-btn layui-btn-danger" style="float: left;" lay-filter="designTemplate">取消订单</button>
+                    <ul class="layui-nav layui-bg-green btnz" lay-filter=""  style=" float:left;font-size: 14px;border-radius: 0px;padding:0;margin: 0 4px;height: 38px">
+                        <li class="layui-nav-item" style="line-height: 30px;">
+                            <a style="color:white;font-size: 12px;padding: 5px 30px 5px 20px;">导出<span class="layui-nav-more" style="right: 10px;font-size: 12px;"></span></a>
+                            <dl class="layui-nav-child" style="z-index:9999999;top: 30px;font-size: 12px;line-height: 31px;padding: 0px 0px 0px 0px;"> <!-- 二级菜单 -->
+                                <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm" >qq</button></dd>
+                                <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="WeAdminShow('Excel自定义导出','./designTemplate2.html',900,650)">自定义导出</button></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <button type="button" class="layui-btn"  style="float: left;"lay-filter="designTemplate">单号导出</button>
                 </div>
             </div>
 
@@ -122,14 +157,14 @@
                         </div>
                         <div class="layui-col-xs4">
                             <div class="layui-row">
-                                <div class="layui-col-xs4"><input style="width: 100%;" type="text" name="num"
+                                <div class="layui-col-xs4"><input style="width: 100%;" type="text" name="customerName" id="customerName"
                                                                   class="layui-input"></div>
                                 <div class="layui-col-xs1">
-                                    <button style="width: 100%;height:38px" type="button"
+                                    <button style="width: 100%;height:38px" type="button" onclick="WeAdminShow('查找','./find.html?type='+'customer',900,650)"
                                             class="layui-btn layui-icon layui-btn-primary layui-btn-sm">&#xe615;
                                     </button>
                                 </div>
-                                <div class="layui-col-xs4"><input type="text" name="exportTime" disabled
+                                <div class="layui-col-xs4"><input type="text" name="customerCode" id="customerCode" disabled
                                                                   class="layui-input"></div>
                                 <div class="layui-col-xs3"></div>
                             </div>
