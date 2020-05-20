@@ -58,13 +58,19 @@ layui.use(['laydate', 'laypage', 'layer', 'table','form',"jquery"], function(){
             ,{field: 'orderNum', title: '税金付款'}
         ]]
     });
+    $("#btnLoadOrderInfo").click(function () {
+        const routeCode=$("#routeCode").val();
+        if (routeCode!=null && routeCode!==""){
+            WeAdminShow('查找','./find.html?type='+'destination',900,650);
+        }else{
+            layer.msg("清先选择指定路线");
+            $("#routeCode").focus();
+        }
+    })
 });
-function getValue(str,name) {
+function getCustomerValue(str,name) {
     var code=document.getElementById("customerCode");
     var customerName=document.getElementById("customerName");
     code.value=str;
     customerName.value=name;
-}
-function getAddressCode(str) {
-
 }

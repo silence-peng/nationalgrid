@@ -1,0 +1,28 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1,
+  "data": [
+    {
+      "long": 0,
+      "netWeight": 0,
+      "wide": 0,
+      "height":0,
+      "divided": 500,
+      "weight": 0,
+      "cw":0,
+      "minimumWeight":null,
+      "packingCost": 0,
+      "currency": "CNY"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
