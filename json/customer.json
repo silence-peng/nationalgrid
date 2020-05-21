@@ -1,0 +1,27 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 3,
+  "data": [
+    {
+      "id": 1,
+      "takeGoodsName": "哲盟用户",
+      "customerName": "测试11",
+      "votes": "1",
+      "goodsNum": "1",
+      "payForHeight": "1",
+      "freight": "0",
+      "otherCost": "11",
+      "userCode": "TEST11"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
