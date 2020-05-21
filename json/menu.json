@@ -286,7 +286,7 @@
 						"id": 52,
 						"name": "装袋策略",
 						"icon": "",
-						"url": "./pages/admin/rule.html"
+						"url": "./pages/order/bagging.html"
 					},{
 						"id": 53,
 						"name": "上板策略",
