@@ -405,7 +405,7 @@
 					"id": 74,
 					"name": "快速收货",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/fastShipping.html"
 				},{
 					"id": 75,
 					"name": "整袋收货",

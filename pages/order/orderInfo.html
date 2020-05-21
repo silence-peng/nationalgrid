@@ -49,22 +49,13 @@
         </table>
     </form>
 </div>
-<script type="text/html" id="long">
-    <!-- 这里的 checked 的状态只是演示 -->
-    <input type="text" name="long" class="layui-input" value="{{d.long}}" title="锁定" lay-filter="lockDemo">
+<script type="text/html" id="toolbarDemo">
+    <div align="left" class="layui-btn-container">
+        <button id="addTable" class="layui-btn layui-icon-addition layui-icon layui-btn-sm layui-btn-normal" lay-event="add"></button>
+    </div>
 </script>
-<script type="text/html" id="netWeight">
-    <!-- 这里的 checked 的状态只是演示 -->
-    <input type="text" name="netWeight" class="layui-input" value="{{d.netWeight}}" title="锁定" lay-filter="lockDemo">
-</script>
-<script type="text/html" id="wide">
-    <!-- 这里的 checked 的状态只是演示 -->
-    <input type="text" name="wide" class="layui-input" value="{{d.wide}}" title="锁定" lay-filter="lockDemo">
-</script>
-<script type="text/html" id="height">
-    <!-- 这里的 checked 的状态只是演示 -->
-    <input type="text" name="height" class="layui-input" value="{{d.height}}" title="锁定" lay-filter="lockDemo">
-</script>
+
+
 
 <script>
 
@@ -79,21 +70,32 @@
             ,cellMinWidth: 80
             ,totalRow: true //开启合计行
             ,id:"grid"
+            ,toolbar: '#toolbarDemo'
             ,cols: [[
                 {type:'numbers',title:"序号"}
-                ,{field:'netWeight ', title:'实重', templet: '#netWeight',totalRow: true}
-                ,{field:'long', title:'长', templet: '#long'}
-                ,{field:'wide', title:'宽', templet: '#wide'}
-                ,{field:'height', title:'高', templet: '#height'}
+                ,{field:'nw', title:'实重',edit: 'text',totalRow: true}
+                ,{field:'long', title:'长',edit: 'text', }
+                ,{field:'wide', title:'宽',edit: 'text',}
+                ,{field:'height', title:'高',edit: 'text', }
                 ,{field:'divided', title:'除以数'}
                 ,{field:'weight', title:'材重',totalRow: true}
                 ,{field:'cw', title:'收费重',totalRow: true}
                 ,{field:'minimumWeight', title:'最小重量'}
-                ,{field:'username', title:'包装项目', templet: '#usernameTpl'}
+                ,{field:'username', title:'包装项目'}
                 ,{field:'packingCost', title:'包装费',totalRow: true}
-                ,{field:'currency', title:'币别', templet: '#usernameTpl'}
-                ,{field:'username', title:'包装说明', templet: '#usernameTpl'}
-            ]]
+                ,{field:'currency', title:'币别'}
+                ,{field:'username', title:'包装说明'}
+            ]],data:[{  "nw": "0"
+                ,"long": "0"
+                ,"wide": "0"
+                ,"height": "0"
+                ,"divided": "500"
+                ,"weight": ""
+                ,"cw": ""
+                ,"minimumWeight": ""
+                ,"packingCost": ""
+                ,"currency": ""
+            }]
         });
         table.on('row(orderInfo)', function(obj){
             $(".layui-table-body tr ").attr({"style":"background:#FFFFFF"});//其他tr恢复原样

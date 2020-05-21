@@ -5,7 +5,7 @@
   "data": [
     {
       "long": 0,
-      "netWeight": 0,
+      "nw": 3,
       "wide": 0,
       "height":0,
       "divided": 500,
