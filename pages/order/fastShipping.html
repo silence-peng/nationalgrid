@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>管理员列表-WeAdmin Frame型后台管理系统-WeAdmin 1.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/weadmin.css">
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .layui-form-checkbox span{font-size: 20px;}
+        .layui-row{
+            margin: 13px 0;
+            color: black;
+        }
+        .layui-col-xs2{
+            margin: 0 4px;
+        }
+        .ds .layui-col-xs1{
+            width: 10px;
+            text-align: center;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+<div class="weadmin-nav">
+			<span class="layui-breadcrumb">
+        <a href="">我的桌面</a>
+        <a href="">订单</a>
+        <a><cite>入库</cite></a>
+        <a><cite>快速收货</cite></a>
+      </span>
+    <a class="layui-btn layui-btn-sm" style="line-height:1.6em;margin-top:3px;float:right"
+       href="javascript:location.replace(location.href);" title="刷新">
+        <i class="layui-icon" style="line-height:30px">ဂ</i></a>
+</div>
+<div class="weadmin-body">
+    <form class="layui-form">
+        <div class="layui-row" >
+            <div class="layui-col-xs2"><input type="checkbox"  lay-skin="primary" title="客户" lay-filter="listeningCustomer" class="layui-input" ></div>
+            <div class="layui-col-xs2"><input type="checkbox"  lay-skin="primary" title="指定路线" lay-filter="listeningRoute" class="layui-input" ></div>
+            <div class="layui-col-xs2"><input type="checkbox"  lay-skin="primary" title="收货袋号" lay-filter="listeningPackageNum" class="layui-input" ></div>
+            <div class="layui-col-xs6"></div>
+        </div>
+        <div class="layui-row">
+            <div class="layui-col-xs2">
+                <select class="layui-select" disabled id="customer"></select>
+            </div>
+            <div class="layui-col-xs2">
+                <select class="layui-select" disabled id="route"></select>
+            </div>
+            <div class="layui-col-xs2">
+                <input type="text" class="layui-input" id="packageNum" >
+            </div>
+            <div class="layui-col-xs6"></div>
+        </div>
+        <div class="layui-row" >
+            <div class="layui-col-xs2"><input type="checkbox" checked lay-skin="primary" title="收费实重" lay-filter="listeningCustomer" class="layui-input" >
+
+            </div>
+            <div class="layui-col-xs2"><input type="checkbox" checked  lay-skin="primary" title="收货尺寸" lay-filter="listeningRoute" class="layui-input" >
+                <br><span style="font-size: 13px">(cm*cm*cm=cm³)</span></div>
+            <div class="layui-col-xs2" style="font-size: 20px">扫描单号</div>
+            <div class="layui-col-xs6">
+
+            </div>
+        </div>
+        <div class="layui-row">
+            <div class="layui-col-xs2">
+                <input type="text"  value="0.00" class="layui-input" >
+            </div>
+            <div class="layui-col-xs2">
+
+                    <div class="layui-row ds" style="margin: 0">
+                        <div class="layui-col-xs2" >
+                            <div class="layui-input-inline">
+                                <input type="text" value="0"  autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-col-xs1" >*</div>
+                        <div class="layui-col-xs2" >
+                            <div class="layui-input-inline">
+                                <input type="text" value="0"  autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-col-xs1">*</div>
+                        <div class="layui-col-xs2" >
+                            <div class="layui-input-inline">
+                                <input type="text" value="0" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-col-xs1">=</div>
+                        <div class="layui-col-xs2" >
+                            <input type="text" value="0" disabled="disabled" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+
+
+            </div>
+            <div class="layui-col-xs2">
+                <input type="text" class="layui-input"  >
+            </div>
+            <div class="layui-col-xs5"><button class="layui-btn layui-btn-normal layui-btn-lg">收货设置</button></div>
+        </div>
+        <table class="layui-form" id="goodsInfo" lay-filter="goodsInfo"></table>
+        <div class="layui-row">
+            <div class="layui-col-xs3">
+                <button class="layui-btn layui-btn-normal">未收货订单</button>  <button class="layui-btn layui-btn-normal">待提交订单</button>
+            </div>
+            <div class="layui-col-xs6">正常票数： <span style="color: red">0票</span>异常票数： <span style="color: red">0票</span></div>
+        </div>
+    </form>
+</div>
+<script src="../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../static/js/order/fastShipping.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

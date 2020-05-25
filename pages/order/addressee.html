@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>添加订单-WeAdmin Frame型后台管理系统-WeAdmin 1.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/weadmin.css">
+    <script src="../../lib/layui/layui.js" charset="utf-8"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="weadmin-body">
+    <table class="layui-table" id="templateInfo" lay-filter="templateInfo"></table>
+
+</div>
+<script>
+    layui.extend({
+        admin: '{/}../../static/js/admin'
+    });
+    layui.use([ 'table', 'layer', 'jquery'], function () {
+        var table = layui.table,
+            layer = layui.layer
+            ,$=layui.jquery;
+        table.render({
+            elem: '#templateInfo',
+            id:"templateInfo"
+
+            , height: 250
+            , title: '错误信息表'
+            , page: true //开启分页
+            , cols: [[ //表头
+                {type: 'numbers', title: '序号'}
+                , {field: 'receiptNo', title: '收件税号'}
+                , {field: 'receiptCompany', title: '收件公司'}
+                , {field: 'addressee', title: '收件人'}
+                , {field: 'receiptPhone', title: '收件电话'}
+                , {field: 'receivingAddress', title: '收件地址'}
+                , {field: 'receivingAddress2', title: '收件地址2'}
+                , {field: 'receivingAddress3', title: '收件地址3'}
+                , {field: 'receivingCity', title: '收件城市'}
+                , {field: 'receivingCode', title: '收件邮编'}
+            ]]
+            ,data:[{
+                'receiptNo':"00",
+                'receiptCompany':"00",
+                'addressee':"00",
+                'receiptPhone':"00",
+                'receivingAddress':"00",
+                'receivingAddress2':"00",
+                'receivingAddress3':"00",
+                'receivingCity':"00",
+                'receivingCode':"00",
+            }]
+        });
+
+        table.on('row(templateInfo)', function(obj){
+            $(".layui-table-body tr ").attr({"style":"background:#FFFFFF"});//其他tr恢复原样
+            $(obj.tr.selector).attr({"style":"background:rgb(109,184,42)"});//改变当前tr颜色
+
+        });
+        table.on('rowDouble(templateInfo)', function(obj){
+            parent.renderForm(obj.data);
+            var index=parent.layer.getFrameIndex(window.name);
+            parent.layer.close(index);
+        });
+    });
+
+</script>
+</body>
+
+</html>

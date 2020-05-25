@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>添加订单-WeAdmin Frame型后台管理系统-WeAdmin 1.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/weadmin.css">
+    <script src="../../lib/layui/layui.js" charset="utf-8"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+
+    </style>
+</head>
+
+<body>
+<div class="weadmin-body">
+
+
+    <form class="layui-form">
+        可选格式
+        <div class="layui-form-item">
+            <div class="layui-input-inline">
+                <select name="quiz">
+
+                </select>
+            </div>
+            <div class="layui-input-inline" style="width: auto">
+                <button type="button" class="layui-btn" lay-filter="save">保存</button>
+                <button type="button" class="layui-btn" lay-filter="save">另存为</button>
+            </div>
+            <div class="layui-input-inline" style="width: auto">
+                <button type="button" class="layui-btn layui-btn-danger" lay-filter="del">删除</button>
+            </div>
+        </div>
+
+        <div id="test2" class="demo-transfer"></div>
+        <div class="layui-form-item">
+            <div class="layui-input-inline" style="width: auto;float: right" >
+                <button type="button" class="layui-btn" lay-filter="exportTitle">导入Excel标题</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+<script>
+
+    layui.use(['transfer', 'layer', 'util'], function(){
+        var type=GetQueryString("type");
+        var $ = layui.$
+            ,transfer = layui.transfer
+            ,layer = layui.layer
+            ,util = layui.util;
+
+        var data = [
+            {"value": "1", id:1,"title": "瓦罐汤"}
+            , {"value": "2",id:2, "title": "油酥饼"}
+            , {"value": "3", id:3,"title": "炸酱面"}
+            , {"value": "4",id:4, "title": "串串香"}
+            , {"value": "5", "title": "豆腐脑"}
+            , {"value": "6", "title": "驴打滚"}
+            , {"value": "7", "title": "北京烤鸭"}
+            , {"value": "8", "title": "烤冷面"}
+            , {"value": "9", "title": "毛血旺"}
+            , {"value": "10", "title": "肉夹馍"}
+            , {"value": "11", "title": "臊子面"}
+            , {"value": "12", "title": "凉皮"}
+            , {"value": "13", "title": "羊肉泡馍"}
+            , {"value": "14", "title": "冰糖葫芦"}
+            , {"value": "15", "title": "狼牙土豆"}
+        ];
+
+        //初始右侧数据
+        transfer.render({
+            elem: '#test2'
+            ,title: ['待导出列', '导出列']  //自定义标题
+            ,data: data
+            ,id: 'demo1' //定义索引
+        });
+
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
+
+
+
+
+    })
+
+</script>
+</body>
+
+</html>

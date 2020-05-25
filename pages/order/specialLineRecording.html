@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>管理员列表-WeAdmin Frame型后台管理系统-WeAdmin 1.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/weadmin.css">
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .btnArr button {
+            width: 100px;
+        }
+        .layui-nav-child button{
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="weadmin-nav">
+			<span class="layui-breadcrumb">
+        <a href="">我的桌面</a>
+        <a href="">操作</a>
+        <a>
+          <cite>入库</cite></a>
+         <a>
+          <cite>专线录单</cite></a>
+      </span>
+    <a class="layui-btn layui-btn-sm" style="line-height:1.6em;margin-top:3px;float:right"
+       href="javascript:location.replace(location.href);" title="刷新">
+        <i class="layui-icon" style="line-height:30px">ဂ</i></a>
+</div>
+<div class="weadmin-body">
+    <form id="record" class="layui-form" lay-filter="record">
+    <div class="layui-row">
+        <div class="layui-col-xs8 layui-col-space10" >
+            <div class="layui-col-xs5">
+                <blockquote class="layui-elem-quote layui-text">基本信息</blockquote>
+                <div class="layui-form-item">
+                    <div style="color: red">* 客户</div>
+                    <div class="layui-row">
+                        <div class="layui-col-xs5" ><input  type="text" name="customerName" id="customerName"
+                                                            class="layui-input"></div>
+                        <div class="layui-col-xs2" style="width: auto">
+                            <button style="width: 38px;height:38px" type="button" onclick="WeAdminShow('查找','./find.html?type='+'customer',900,470)"
+                                    class="layui-btn layui-icon layui-btn-primary layui-btn-sm">&#xe615;
+                            </button>
+                        </div>
+                        <div class="layui-col-xs5" ><input type="text" name="customerCode" id="customerCode" disabled
+                                                           class="layui-input layui-disabled"></div>
+                    </div>
+
+                </div>
+                <div class="layui-row layui-col-space5">
+                    <div class="layui-col-xs6" style="color: red">*指定路线</div>
+                    <div class="layui-col-xs6" style="color: red">*目的地</div>
+                    <div class="layui-col-xs6">
+                        <div class="layui-row">
+                            <div class="layui-col-xs8" ><input  type="text" name="addressCode" id="routeCode"
+                                                                class="layui-input"></div>
+                            <div class="layui-col-xs2" style="width: auto">
+                                <button style="width:auto;height:38px" type="button" onclick="WeAdminShow('查找','./find.html?type='+'route',900,470)"
+                                        class="layui-btn layui-icon layui-btn-primary layui-btn-sm">&#xe615;
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="layui-col-xs6" style="color: red">
+
+                        <div class="layui-row" style="margin: 0">
+                            <div class="layui-col-xs5" ><input  type="text" name="destinationName" id="destinationName"
+                                                                class="layui-input"></div>
+                            <div class="layui-col-xs2" style="width: auto" >
+                                <button style="width:auto;height:38px" type="button" onclick="WeAdminShow('查找','find.html?type='+'destination',900,470)"
+                                        class="layui-btn layui-icon layui-btn-primary layui-btn-sm">&#xe615;
+                                </button>
+                            </div>
+                            <div class="layui-col-xs5" ><input type="text" name="destinationCode" id="destinationCode" disabled
+                                                               class="layui-input layui-disabled"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="layui-row layui-col-space5">
+                    <div class="layui-col-xs6" ><span style="color: red">*</span>运单号码</div>
+                    <div class="layui-col-xs6">参考编号</div>
+                    <div class="layui-col-xs6">
+                        <input type="text" class="layui-input layui-disabled" disabled>
+                    </div>
+                    <div class="layui-col-xs6">
+                        <input type="text" class="layui-input" >
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-xs7">
+                <blockquote class="layui-elem-quote layui-text">收件人</blockquote>
+                <div class="layui-row layui-col-space5">
+                    <div class="layui-col-xs3">收件税号 <a class="choiceReceipt" style="color: rgb(40,110,214)">选择收件人</a></div>
+                    <div class="layui-col-xs3">收件公司</div>
+                    <div class="layui-col-xs3">收件人</div>
+                    <div class="layui-col-xs3">收件电话</div>
+                </div>
+                <div class="layui-row layui-col-space5">
+                    <div class="layui-col-xs3"><input type="text" name="receiptNo" class="layui-input"></div>
+                    <div class="layui-col-xs3"><input type="text" name="receiptCompany" class="layui-input"></div>
+                    <div class="layui-col-xs3"><input type="text" name="addressee" class="layui-input"></div>
+                    <div class="layui-col-xs3"><input type="text" name="receiptPhone" class="layui-input"></div>
+                </div>
+                <div class="layui-row layui-col-space5">
+                    <div class="layui-col-xs8">收件地址</div>
+                    <div class="layui-col-xs4">收件城市</div>
+                </div>
+                <div class="layui-row layui-col-space5">
+                    <div class="layui-col-xs8"><input type="text" name="receivingAddress" class="layui-input"></div>
+                    <div class="layui-col-xs4"><input type="text" name="receivingCity" class="layui-input"></div>
+                </div>
+                <div class="layui-row layui-col-space5">
+                    <div class="layui-col-xs8">收件地址2</div>
+                    <div class="layui-col-xs4">收件邮编</div>
+                </div>
+                <div class="layui-row layui-col-space5">
+                    <div class="layui-col-xs8"><input type="text" name="receivingAddress2" class="layui-input"></div>
+                    <div class="layui-col-xs4"><input type="text" name="receivingCode" class="layui-input"></div>
+                </div>
+            </div>
+            <div class="layui-row">
+                <blockquote class="layui-elem-quote layui-text">单件信息</blockquote>
+                <table class="layui-table" id="orderInfo" lay-filter="orderInfo"></table>
+            </div>
+            <div class="layui-row">
+                <div class="layui-col-xs2"><span style="color: red">*</span>包装类型</div>
+                <div class="layui-col-xs2"><span style="color: red">*</span>货物类型</div>
+                <div class="layui-col-xs2"><span style="color: red">*</span>报关方式</div>
+                <div class="layui-col-xs2"><span style="color: red">*</span>总件数</div>
+                <div class="layui-col-xs2"><span style="color: red">收费重</span></div>
+                <div class="layui-col-xs2"><span style="color: red">体积(m³)</span></div>
+            </div>
+            <div class="layui-row layui-col-space5">
+                <div class="layui-col-xs2">
+                    <select class="layui-select"></select>
+                </div>
+                <div class="layui-col-xs2">
+                    <select class="layui-select"></select>
+                </div>
+                <div class="layui-col-xs2">
+                    <select class="layui-select"></select>
+                </div>
+                <div class="layui-col-xs2">
+                    <input type="text" class="layui-input" name="nums" id="nums">
+                </div>
+                <div class="layui-col-xs2">
+                    <input type="text" class="layui-input" name="nw" id="nw">
+                </div>
+                <div class="layui-col-xs2">
+                    <input type="text" class="layui-input" name="volume" id="volume">
+                </div>
+
+            </div>
+            <div class="layui-row">
+                <div class="layui-col-xs2"><span style="color: red">*</span>付款方式</div>
+                <div class="layui-col-xs2">应收总运费</div>
+                <div class="layui-col-xs2">到付款</div>
+                <div class="layui-col-xs2">代付款</div>
+                <div class="layui-col-xs2">收货备注</div>
+                <div class="layui-col-xs2"></div>
+            </div>
+            <div class="layui-row layui-col-space5">
+                <div class="layui-col-xs2">
+                    <select class="layui-select"></select>
+                </div>
+                <div class="layui-col-xs2">
+                    <select class="layui-select"></select>
+                </div>
+                <div class="layui-col-xs2">
+                    <select class="layui-select"></select>
+                </div>
+                <div class="layui-col-xs2">
+                    <select class="layui-select"></select>
+                </div>
+                <div class="layui-col-xs2">
+                    <input type="text" class="layui-input">
+                </div>
+                <div class="layui-col-xs2">
+
+                </div>
+
+            </div>
+        </div>
+        <div class="layui-col-xs4"></div>
+    </div>
+    </form>
+</div>
+<script type="text/html" id="toolbarDemo">
+    <div align="left" class="layui-btn-container">
+        <button id="addTable" type="button" class="layui-btn layui-icon-addition layui-icon layui-btn-sm layui-btn-normal" lay-event="add"></button>
+    </div>
+</script>
+<script type="text/html" id="rowDemo">
+    <div class="layui-btn-container">
+        <button id="delRow" type="button" class="layui-btn layui-icon-subtraction layui-icon layui-btn-danger layui-btn-sm layui-btn-normal" lay-event="del"></button>
+    </div>
+</script>
+<script src="../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../static/js/order/specialLineRecording.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

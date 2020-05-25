@@ -49,3 +49,9 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
         ]]
     });
 });
+function getValue(str,name) {
+    var code=document.getElementById("customerCode");
+    var customerName=document.getElementById("customerName");
+    code.value=str;
+    customerName.value=name;
+}

@@ -487,3 +487,24 @@ layui.define(['jquery', 'form', 'layer', 'element'], function(exports) {
 
 	exports('admin', {});
 });
+function getValue(str,name,type) {
+	switch (type) {
+		case "customer":
+			var customerCode=document.getElementById("customerCode");
+			var customerName=document.getElementById("customerName");
+			customerCode.value=str;
+			customerName.value=name;
+			break;
+		case "destination":
+			var destinationCode=document.getElementById("destinationCode");
+			var destinationName=document.getElementById("destinationName");
+			destinationCode.value=str;
+			destinationName.value=name;
+			break;
+		case "route":
+			var routeCode=document.getElementById("routeCode");
+			routeCode.value=str;
+			break;
+	}
+
+}
