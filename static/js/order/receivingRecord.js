@@ -61,7 +61,7 @@ layui.use(['laydate', 'laypage', 'layer', 'table','form',"jquery"], function(){
     $("#btnLoadOrderInfo").click(function () {
         const routeCode=$("#routeCode").val();
         if (routeCode!=null && routeCode!==""){
-            WeAdminShow('查找','./find.html?type='+'destination',900,650);
+            WeAdminShow('查找','./orderInfo.html?type='+'destination',900,650);
         }else{
             layer.msg("清先选择指定路线");
             $("#routeCode").focus();

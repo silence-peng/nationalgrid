@@ -53,6 +53,7 @@
 <script>
 
     layui.use(['transfer', 'layer', 'util'], function(){
+        var type=GetQueryString("type");
         var $ = layui.$
             ,transfer = layui.transfer
             ,layer = layui.layer
@@ -84,7 +85,11 @@
             ,id: 'demo1' //定义索引
         });
 
-
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        }
 
 
 
