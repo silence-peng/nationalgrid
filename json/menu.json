@@ -67,7 +67,7 @@
 				"id": 13,
 				"name": "短信设置",
 				"icon": "",
-				"url": "./pages/article/category.html"
+				"url": "./pages/settings/smsSettings.html"
 			}, {
 				"id": 14,
 				"name": "系统环境变量设置",
@@ -87,19 +87,19 @@
 				"url": "./pages/order/list.html"
 			},{
 				"id": 17,
-				"name": "网点设置",
+				"name": "网点管理",
 				"icon": "",
-				"url": "./pages/order/list.html"
+				"url": "./pages/organization/branchManage.html"
 			},{
 				"id": 18,
 				"name": "员工管理",
 				"icon": "",
-				"url": "./pages/order/list.html"
+				"url": "./pages/organization/jobRole.html"
 			},{
 				"id": 19,
 				"name": "职位角色",
 				"icon": "",
-				"url": "./pages/order/list.html"
+				"url": "./pages/organization/jobRole.html"
 			},{
 				"id": 20,
 				"name": "授权管理",

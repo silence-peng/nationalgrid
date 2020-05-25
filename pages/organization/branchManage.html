@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网点管理</title>
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/weadmin.css">
+    <!--<link rel="stylesheet" href="../../static/css/menu.css">-->
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .layui-btn {
+            width: 100px;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 20px;
+            background-color: #009688;
+            color: #fff;
+            white-space: nowrap;
+            text-align: center;
+            font-size: 14px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        .layui-nav .layui-nav-more {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid dashed dashed;
+            border-color: #fff transparent transparent;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all .2s;
+            -webkit-transition: all .2s;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            margin-top: -3px;
+            border-width: 6px;
+            border-top-color: rgba(255,255,255,.7);
+        }
+    </style>
+</head>
+<body>
+<div class="weadmin-nav">
+        <span class="layui-breadcrumb">
+            <a href="javascript:;">首页</a> <a href="javascript:;">组织</a>
+            <a href="javascript:;"><cite>网点管理</cite></a>
+        </span>
+    <a class="layui-btn layui-btn-sm" style="margin-top:3px;float:right" href="javascript:location.replace(location.href);"
+       title="刷新">
+        <i class="layui-icon layui-icon-refresh"></i>
+    </a>
+</div>
+<div class="weadmin-body" style="background-color: #f6f6f6">
+    <ul class="layui-nav" style="font-size: 14px;border-radius: 0px;background-color: #f6f6f6">
+        <li class="layui-nav-item layui-inline">
+            <a type="button" class="layui-btn layui-bg-blue">新增</a>
+            <dl class="layui-nav-child" style="margin-top: -20px;">
+                <dd><a href="javascript:0;" onclick="WeAdminShow('新增网点','./addBranch.html',800,600)">新增下级</a></dd>
+                <dd><a href="javascript:0;">新增同级</a></dd>
+            </dl>
+        </li>
+        <li class="layui-inline layui-nav-item">
+            <a type="button" class="layui-btn ">修改</a>
+            <dl class="layui-nav-child" style="margin-top: -20px;">
+                <dd><a href="javascript:;">网点信息</a></dd>
+                <dd><a href="javascript:;">上级网点</a></dd>
+            </dl>
+        </li>
+        <li class="layui-inline">
+            <a type="button" class="layui-btn layui-bg-red">删除</a>
+        </li>
+        <li class="layui-inline">
+            <a type="button" class="layui-btn layui-bg-blue">浏览</a>
+        </li>
+    </ul>
+    <form class="layui-form">
+        <div class="layui-form-item layui-inline"style="width: 190px;">
+            <label class="layui-form-label" style="margin-left: -30px;">网点编码</label>
+            <div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item layui-inline"style="width: 190px;">
+            <label class="layui-form-label" style="margin-left: -30px;">网点名称</label>
+            <div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item layui-inline"style="width: 190px;">
+            <label class="layui-form-label" style="margin-left: -30px;">网点简码</label>
+            <div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item layui-inline"style="width: 190px;">
+            <label class="layui-form-label" style="margin-left: -30px;">内部电话</label>
+            <div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item layui-inline"style="width: 190px;">
+            <label class="layui-form-label" style="margin-left: -30px;">上级网点</label>
+            <div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item layui-inline"style="width: 190px;">
+            <label class="layui-form-label" style="margin-left: -30px;">网点类型</label>
+            <div class="layui-input-inline">
+                <select name="midtype" lay-verify="required">
+                    <option value="身份证"></option>
+                    <option value="身份证">身份证</option>
+                    <option value="工作证">工作证</option>
+                    <option value="其他证">其他证</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item layui-inline" style="margin-left: 30px;margin-top: 40px;">
+            <button class="layui-btn" type="button" lay-submit lay-filter="formDemo">新建</button>
+            <button class="layui-btn" type="reset" style="background-color:#c2c2c2">重置</button>
+        </div>
+    </form>
+    <table id="test" lay-filter="test"></table>
+</div>
+<script src="../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/organization/branchManage.js"></script>
+</body>
+</html>
