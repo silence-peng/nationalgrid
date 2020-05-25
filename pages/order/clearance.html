@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>出仓</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/weadmin.css">
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="weadmin-nav">
+			<span class="layui-breadcrumb">
+        <a href="">我的桌面</a>
+        <a href="">订单</a>
+        <a>
+          <cite>退件入库</cite></a>
+      </span>
+    <a class="layui-btn layui-btn-sm" style="line-height:1.6em;margin-top:3px;float:right"
+       href="javascript:location.replace(location.href);" title="刷新">
+        <i class="layui-icon" style="line-height:30px">ဂ</i></a>
+</div>
+<div class="weadmin-body" style="background-color: #f6f6f6">
+    <div class="layui-row">
+        <form class="layui-form layui-col-md12 we-search">
+            <h2 style="display: inline-block">清仓类型</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+            <h2 style="display: inline-block;margin-left: 10%">清仓单号</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+        <h2 style="display: inline-block;margin-left: 18%">扫描单号</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div style="margin-left: -110px;margin-top: 2%">
+            <div class="layui-input-block" style="display: inline-block">
+                <select name="city" lay-verify="required">
+                    <option value=""></option>
+                </select>
+            </div>
+            <div class="layui-input-block" style="display: inline-block;margin-left: 40px">
+                <input type="text" name="title" required disabled  lay-verify="required" style="width: 220px;height: 40px" autocomplete="off" class="layui-input">
+            </div>
+            <button type="button" class="layui-btn layui-btn-lg layui-btn-normal" style="height: 40px">新建</button>
+            <div class="layui-input-block" style="display: inline-block;margin-left: 3%">
+                <input type="text" name="title" required  lay-verify="required" style="width: 220px;height: 40px" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        </form>
+    </div>
+    <table class="layui-table" id="errorInfo"></table>
+    <div style="position: fixed;width: 100%;height: 50px;float: left;bottom: 0">
+        <button class="layui-btn layui-btn-normal" style="display: inline-block">清仓管理</button>
+    </div>
+</div>
+<script src="../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../static/js/order/clearance.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+</body>
+<!--Tab菜单右键弹出菜单-->
+<ul class="rightMenu" id="rightMenu">
+    <li data-type="fresh">刷新</li>
+    <li data-type="current">关闭当前</li>
+    <li data-type="other">关闭其它</li>
+    <li data-type="all">关闭所有</li>
+</ul>
+</html>
