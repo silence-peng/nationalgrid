@@ -435,17 +435,17 @@
 					"id": 80,
 					"name": "变更审核",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/changeReview.html"
 				},{
 					"id": 81,
 					"name": "条码打印",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/printBarcode.html"
 				},{
 					"id": 82,
 					"name": "查货",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/checkGoods.html"
 				},{
 					"id": 83,
 					"name": "收货上架",
