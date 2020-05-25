@@ -410,27 +410,27 @@
 					"id": 75,
 					"name": "整袋收货",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/allPackage.html"
 				},{
 					"id": 76,
 					"name": "运单查询",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/queryOrder.html"
 				},{
 					"id": 77,
 					"name": "运单导入修改",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/importWaybill.html"
 				},{
 					"id": 78,
 					"name": "专线录单",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/specialLineRecording.html"
 				},{
 					"id": 79,
 					"name": "运单修改",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/modificationWaybill.html"
 				},{
 					"id": 80,
 					"name": "变更审核",

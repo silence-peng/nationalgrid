@@ -9,20 +9,16 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
         , slider = layui.slider; //滑块
     //执行一个 table 实例
     table.render({
-        elem: '#goodsInfo'
-        ,toolbar: 'default' //开启工具栏，此处显示默认图标，可以自定义模板，详见文档
-        ,height: 400
+        elem: '#errorInfo'
+        ,width:880
+        ,height: 450
         ,url: 'test' //数据接口
-        ,page:true
         ,title: '错误信息表'
         ,cols: [[ //表头
-            {field: 'sortNo', title: '收货袋号'}
-            ,{field: 'num', title: '客户名称'}
-            ,{field: 'orderNum', title: '总票数'}
-            ,{field: 'errorInfo', title: '预报'}
-            ,{field: 'errorInfo', title: '收费重'}
-            ,{field: 'errorInfo', title: '指定路线'}
-            ,{field: 'errorInfo', title: '货物类型'}
+            {field: 'sortNo', title: '序列', width:100}
+            ,{field: 'num', title: '行数', width: 100}
+            ,{field: 'orderNum', title: '运单号码', width:180}
+            ,{field: 'errorInfo', title: '错误说明', width: 500}
         ]]
     });
 });
