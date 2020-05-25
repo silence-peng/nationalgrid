@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>代理管理</title>
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/weadmin.css">
+    <!--<link rel="stylesheet" href="../../static/css/menu.css">-->
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .layui-btn {
+            width: 100px;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 20px;
+            background-color: #009688;
+            color: #fff;
+            white-space: nowrap;
+            text-align: center;
+            font-size: 14px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        .layui-nav .layui-nav-more {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid dashed dashed;
+            border-color: #fff transparent transparent;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all .2s;
+            -webkit-transition: all .2s;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            margin-top: -3px;
+            border-width: 6px;
+            border-top-color: rgba(255,255,255,.7);
+        }
+    </style>
+</head>
+<body>
+<div class="weadmin-nav" >
+        <span class="layui-breadcrumb">
+            <a href="javascript:;">首页</a> <a href="javascript:;">组织</a>
+            <a href="javascript:;"><cite>目的地管理</cite></a>
+        </span>
+    <a class="layui-btn layui-btn-sm" style="margin-top:3px;float:right" href="javascript:location.replace(location.href);"
+       title="刷新">
+        <i class="layui-icon layui-icon-refresh"></i>
+    </a>
+</div>
+<div class="weadmin-body" style="background-color: #f6f6f6">
+    <ul class="layui-nav" style="font-size: 14px;border-radius: 0px;background-color: #f6f6f6">
+        <li class="layui-nav-item layui-inline">
+            <a type="button" class="layui-btn layui-bg-blue" onclick="WeAdminShow('新增目的地','./addDestination.html',750,500)">新增</a>
+        </li>
+        <li class="layui-inline layui-nav-item">
+            <a type="button" class="layui-btn" onclick="WeAdminShow('修改目的地','./updateDestination.html',750,500)">修改</a>
+        </li>
+        <li class="layui-inline">
+            <a type="button" class="layui-btn layui-bg-red">删除</a>
+        </li>
+        <li class="layui-inline">
+            <a type="button" class="layui-btn layui-bg-blue">浏览</a>
+        </li>
+        <li class="layui-inline">
+            <a type="button" class="layui-btn layui-bg-orange">导出</a>
+        </li>
+    </ul>
+    <form class="layui-form" style="margin-left: 2%;margin-top: 2%">
+        <div class="layui-form-item layui-inline"style="width: 150px;margin-left: -1%">
+            <label class="layui-form-label" style="margin-left: -30px;">所属网点</label>
+            <div class="layui-input-inline" style="width: 130px">
+                <select name="midtype" lay-verify="required">
+                    <option value="总部">总部</option>
+                    <option value="长沙分部">长沙分部</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item layui-inline"style="width: 150px;margin-left: 0px">
+            <label class="layui-form-label" style="margin-left: -30px;">代理编码</label>
+            <div class="layui-input-inline" style="margin-left: -2%">
+                <input type="text" name="title" lay-verify="title" style="width: 150px" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item layui-inline"style="width: 190px;margin-left: 1%">
+            <label class="layui-form-label" style="margin-left: -25px;">代理名称</label>
+            <div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" style="width: 150px" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item layui-inline"style="width: 150px;margin-left: -2%">
+            <label class="layui-form-label" style="margin-left: -30px;">代理类型</label>
+            <div class="layui-input-inline" style="width: 150px">
+                <select name="midtype" lay-verify="required">
+                    <option value="派送代理">派送代理</option>
+                    <option value="承运代理">承运代理</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item layui-inline"style="width: 150px;margin-left: 2%">
+            <label class="layui-form-label" style="margin-left: -30px;">启用状态</label>
+            <div class="layui-input-inline" style="width: 150px">
+                <select name="midtype" lay-verify="required">
+                    <option value="启用">启用</option>
+                    <option value="停用">停用</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item layui-inline"style="width: 150px;margin-left:2%">
+            <label class="layui-form-label" style="margin-left: -25%;">对账员</label>
+            <div class="layui-input-inline">
+                <input type="text" name="title" lay-verify="title" style="width: 150px" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item layui-inline" style="margin-left: 30px;margin-top:3%;display: inline-block">
+            <button class="layui-btn" type="button">查询</button>
+            <button class="layui-btn" type="reset" style="background-color:#c2c2c2">重置</button>
+        </div>
+    </form>
+    <table class="layui-table" id="errorInfo"></table>
+</div>
+<script src="../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/basics/agentManagement.js"></script>
+
+</body>
+</html>

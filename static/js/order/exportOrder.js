@@ -1,4 +1,5 @@
 layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element', 'slider'], function() {
+
     var laydate = layui.laydate //日期
         , laypage = layui.laypage //分页
         , layer = layui.layer //弹层
@@ -6,7 +7,10 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
         , carousel = layui.carousel //轮播
         , upload = layui.upload //上传
         , element = layui.element //元素操作
-        , slider = layui.slider; //滑块
+        , slider = layui.slider; //滑块//执行一个laydate实例
+    laydate.render({
+        elem: '#test1,#test2'//指定元素
+    });
     //执行一个 table 实例
     table.render({
         elem: '#errorInfo'

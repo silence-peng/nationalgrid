@@ -131,13 +131,13 @@
 				"id": 25,
 				"name": "目的地管理",
 				"icon": "",
-				"url": "./pages/admin/list.html"
+				"url": "./pages/basics/destinationAdmin.html"
 			},
 			{
 				"id": 26,
 				"name": "代理管理",
 				"icon": "",
-				"url": "./pages/admin/role.html"
+				"url": "./pages/basics/agentManagement.html"
 			},
 			{
 				"id": 27,
@@ -522,27 +522,27 @@
 					"id": 97,
 					"name": "装袋",
 					"icon": "",
-					"url": ""
+					"url": "./pages/order/bagging.html"
 				},{
 					"id": 98,
 					"name": "扫描打印",
 					"icon": "",
-					"url": ""
+					"url": "./pages/order/scan-to-print.html"
 				},{
 					"id": 99,
 					"name": "上板",
 					"icon": "",
-					"url": ""
+					"url": "./pages/order/upper-plate.html"
 				},{
 					"id": 100,
 					"name": "出货",
 					"icon": "",
-					"url": ""
+					"url": "./pages/order/shipment.html"
 				},{
 					"id": 101,
 					"name": "出货变更",
 					"icon": "",
-					"url": ""
+					"url": "./pages/order/shipment-change.html"
 				}]
 			},{
 				"id": 102,
@@ -569,12 +569,12 @@
 					"id": 106,
 					"name": "退返客户",
 					"icon": "",
-					"url": ""
+					"url": "./pages/order/return-to-client.html"
 				},{
 					"id": 107,
 					"name": "退件入库",
 					"icon": "",
-					"url": ""
+					"url": "./pages/order/the-product-put-in-storage.html"
 				}]
 			},{
 				"id": 108,
@@ -585,12 +585,12 @@
 					"id": 109,
 					"name": "清仓",
 					"icon": "",
-					"url": ""
+					"url": "./pages/order/clearance.html"
 				},{
 					"id": 110,
 					"name": "来货上架",
 					"icon": "",
-					"url": ""
+					"url": "./pages/order/to-stock.html"
 				}]
 			}]
 		},{
