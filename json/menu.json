@@ -233,7 +233,7 @@
 						"id": 42,
 						"name": "运单分配规则",
 						"icon": "",
-						"url": "./pages/admin/rule.html"
+						"url": "./pages/strategy/order/waybillAllocationRules.html"
 					},{
 						"id": 43,
 						"name": "目的地策略",
