@@ -22,6 +22,7 @@
         .layui-nav-child button{
             font-size: 12px;
         }
+
     </style>
 </head>
 
@@ -39,7 +40,7 @@
 </div>
 <div class="weadmin-body">
     <div class="layui-row">
-        <form class="layui-form layui-col-md12 we-search">
+        <form class="layui-form layui-col-md12">
             <div class="layui-form-item">
                 <div class="layui-input-inline btnArr" style="width:100%">
                     <button type="button" class="layui-btn" lay-filter="templateDownload"  style="float: left;">选择收货</button>
@@ -88,25 +89,28 @@
 
             <div class="layui-row" style="font-size: 14px">
                 <div class="layui-col-xs2">
-                    <div class="layui-form-item" style="margin: 0">
-                        <div class="layui-input-inline">
-                            <select name="city" lay-verify="required">
-                                <option value="0">运单号码</option>
-                                <option value="1">参考编号</option>
-                                <option value="2">订单号码</option>
-                                <option value="3">转运号码</option>
-                                <option value="4">收货袋号</option>
-                            </select>
+                    <div class="layui-row">
+                        <div class="layui-col-xs12">
+                            <div class="layui-form-item" style="margin: 0;width: 100%">
+                                <div class="layui-inline" style="margin: 0;width: 100%">
+                                    <select name="city" lay-verify="required">
+                                        <option value="0">运单号码</option>
+                                        <option value="1">参考编号</option>
+                                        <option value="2">订单号码</option>
+                                        <option value="3">转运号码</option>
+                                        <option value="4">收货袋号</option>
+                                    </select>
+                                </div>
+                            </div>
+
                         </div>
+
+                        <div class="layui-col-xs10"><textarea name="desc" class="layui-textarea"></textarea></div>
+                        <div class="layui-col-xs2"><button class="layui-btn" style="height: 100px;padding: 0;width:100%">清<br>空</button></div>
+
                     </div>
-                    <div class="layui-form-item" style="margin: 0">
-                        <div class="layui-input-inline" style="margin: 0">
-                            <textarea name="desc" class="layui-textarea"></textarea>
-                        </div>
-                        <div class="layui-input-inline" style="margin: 0;width: auto;height: 100%">
-                            <button class="layui-btn" style="height: 100px">清<br>空</button>
-                        </div>
-                    </div>
+
+
                     <div class="layui-form-item" style="margin: 0">
                         <div class="layui-input-inline" style="margin: 0">
                             <input type="checkbox" name="" lay-skin="primary" title="回车查询打印收货标签">
@@ -114,7 +118,7 @@
                     </div>
                 </div>
                 <div class="layui-col-xs10">
-                    <div class="layui-row">
+                    <div class="layui-row layui-col-space5">
                         <div class="layui-col-xs4">
                             订单日期
                         </div>
@@ -128,23 +132,22 @@
 
                         </div>
                     </div>
-                    <div class="layui-row">
+                    <div class="layui-row layui-col-space5">
                         <div class="layui-col-xs4">
                             <div class="layui-form-item">
-                                <div class="layui-input-inline">
+                                <div class="layui-input-inline" style="width: 40%" >
                                     <input type="text" name="startDate" id="startDate" lay-verify="startDate"
                                            placeholder="开始日期" autocomplete="off" class="layui-input">
                                 </div>
                                 <div class="layui-form-mid">-</div>
-                                <div class="layui-input-inline">
-                                    <input type="text" name="endDate" id="endDate" lay-verify="startDate"
+                                <div class="layui-input-inline" style="width: 40%">
+                                    <input type="text"  name="endDate" id="endDate" lay-verify="startDate"
                                            placeholder="结束日期" autocomplete="off" class="layui-input">
                                 </div>
                             </div>
                         </div>
                         <div class="layui-col-xs2">
-                            <div class="layui-form-item" style="margin: 0">
-                                <div class="layui-input-inline">
+
                                     <select name="city" lay-verify="required">
                                         <option value="0">总部</option>
                                         <option value="1">参考编号</option>
@@ -152,15 +155,14 @@
                                         <option value="3">转运号码</option>
                                         <option value="4">收货袋号</option>
                                     </select>
-                                </div>
-                            </div>
+
                         </div>
                         <div class="layui-col-xs4">
                             <div class="layui-row">
                                 <div class="layui-col-xs4"><input style="width: 100%;" type="text" name="customerName" id="customerName"
                                                                   class="layui-input"></div>
                                 <div class="layui-col-xs1">
-                                    <button style="width: 100%;height:38px" type="button" onclick="WeAdminShow('查找','./find.html?type='+'customer',900,650)"
+                                    <button style="width: 100%;height:38px" type="button" onclick="WeAdminShow('查找','./find.html?type='+'customer',900,500)"
                                             class="layui-btn layui-icon layui-btn-primary layui-btn-sm">&#xe615;
                                     </button>
                                 </div>
