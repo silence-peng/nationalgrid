@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>代理管理</title>
+    <title>客户管理</title>
     <link rel="stylesheet" href="../../static/css/font.css">
     <link rel="stylesheet" href="../../static/css/weadmin.css">
     <!--<link rel="stylesheet" href="../../static/css/menu.css">-->
@@ -50,7 +50,7 @@
 <div class="weadmin-nav" >
         <span class="layui-breadcrumb">
             <a href="javascript:;">首页</a> <a href="javascript:;">组织</a>
-            <a href="javascript:;"><cite>代理管理</cite></a>
+            <a href="javascript:;"><cite>客户分组</cite></a>
         </span>
     <a class="layui-btn layui-btn-sm" style="margin-top:3px;float:right" href="javascript:location.replace(location.href);"
        title="刷新">
@@ -60,23 +60,54 @@
 <div class="weadmin-body" style="background-color: #f6f6f6">
     <ul class="layui-nav" style="font-size: 14px;border-radius: 0px;background-color: #f6f6f6">
         <li class="layui-inline">
-            <a type="button" class="layui-btn layui-bg-blue" onclick="WeAdminShow('新增代理','./addAgency.html',860,550)">新增</a>
+            <a type="button" class="layui-btn layui-bg-blue" onclick="WeAdminShow('新增客户组','./addCustomerGroup.html',660,550)">新增</a>
         </li>
         <li class="layui-inline">
-            <a type="button" class="layui-btn" onclick="WeAdminShow('修改代理','./updateAgency.html',860,550)">修改</a>
+            <a type="button" class="layui-btn layui-bg-blue" onclick="WeAdminShow('新增客户组','./addCustomerGroup.html',660,550)">复制新增</a>
+        </li>
+        <li class="layui-inline">
+            <a type="button" class="layui-btn" onclick="WeAdminShow('修改客户组','./updateCustomerGroup.html',660,550)">修改</a>
+        </li>
+        <li class="layui-inline">
+            <a type="button" class="layui-btn" onclick="WeAdminShow('修改客户组','./updateCustomerGroup.html',660,550)">批量修改</a>
         </li>
         <li class="layui-inline">
             <a type="button" class="layui-btn layui-bg-red">删除</a>
         </li>
         <li class="layui-inline">
-            <a type="button" class="layui-btn layui-bg-blue">浏览</a>
+            <a type="button" class="layui-btn layui-bg-blue" onclick="WeAdminShow('新增客户组','./addCustomerGroup.html',660,550)">浏览</a>
         </li>
         <li class="layui-inline">
-            <a type="button" class="layui-btn layui-bg-orange">导出</a>
+            <a type="button" class="layui-btn layui-bg-blue">停用</a>
         </li>
+        <li class="layui-inline">
+            <a type="button" class="layui-btn layui-bg-blue">收件人管理</a>
+        </li>
+        <li class="layui-inline layui-nav-item">
+            <a type="button" class="layui-btn ">导出</a>
+            <dl class="layui-nav-child" style="margin-top: -20px;">
+                <dd><a href="javascript:;">自定义导出</a></dd>
+                <dd><a href="javascript:;">test</a></dd>
+            </dl>
+        </li>
+
     </ul>
-    <form class="layui-form" style="margin-left: 2%;margin-top: 2%">
-        <div class="layui-form-item layui-inline"style="width: 150px;margin-left: -1%">
+    <form class="layui-form" style="margin-left: 2%;margin-top: 2%">0.
+        c
+        <div style="display: inline-block;margin-left: -1%;width: 15%">
+        <div class="layui-input-block" style="width: 190px;margin-top: 1%;margin-left: -1%">
+            <select name="city" lay-verify="required">
+                <option value=""></option>
+            </select>
+        </div>
+
+        <textarea name="desc" class="layui-textarea" style="height: 120px;width: 190px;margin-left: -1%"></textarea>
+
+            <button class="layui-btn layui-btn-primary" style="width: 190px;margin-left: -1%;">清空</button>
+        </div>
+
+        <div style="display: inline-block;margin-top: -150px;width: 80%">
+        <div class="layui-form-item layui-inline"style="width: 150px;">
             <label class="layui-form-label" style="margin-left: -30px;">所属网点</label>
             <div class="layui-input-inline" style="width: 130px">
                 <select name="midtype" lay-verify="required">
@@ -86,23 +117,24 @@
             </div>
         </div>
         <div class="layui-form-item layui-inline"style="width: 150px;margin-left: 0px">
-            <label class="layui-form-label" style="margin-left: -30px;">代理编码</label>
+            <label class="layui-form-label" style="margin-left: -30px;">客户组编码</label>
             <div class="layui-input-inline" style="margin-left: -2%">
                 <input type="text" name="title" lay-verify="title" style="width: 150px" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item layui-inline"style="width: 190px;margin-left: 1%">
-            <label class="layui-form-label" style="margin-left: -25px;">代理名称</label>
+            <label class="layui-form-label" style="margin-left: -25px;">客户组名称</label>
             <div class="layui-input-inline">
                 <input type="text" name="title" lay-verify="title" autocomplete="off" style="width: 150px" class="layui-input">
             </div>
         </div>
-        <div class="layui-form-item layui-inline"style="width: 150px;margin-left: -2%">
-            <label class="layui-form-label" style="margin-left: -30px;">代理类型</label>
+        <div class="layui-form-item layui-inline"style="width: 150px;margin-left: -1%">
+            <label class="layui-form-label" style="margin-left: -30px;">共享分式</label>
             <div class="layui-input-inline" style="width: 150px">
                 <select name="midtype" lay-verify="required">
-                    <option value="派送代理">派送代理</option>
-                    <option value="承运代理">承运代理</option>
+                    <option value="不共享">不共享</option>
+                    <option value="共享给所有">共享给所有</option>
+                    <option value="共享给指定">共享给指定</option>
                 </select>
             </div>
         </div>
@@ -115,15 +147,10 @@
                 </select>
             </div>
         </div>
-        <div class="layui-form-item layui-inline"style="width: 150px;margin-left:2%">
-            <label class="layui-form-label" style="margin-left: -25%;">对账员</label>
-            <div class="layui-input-inline">
-                <input type="text" name="title" lay-verify="title" style="width: 150px" autocomplete="off" class="layui-input">
-            </div>
-        </div>
         <div class="layui-form-item layui-inline" style="margin-left: 30px;margin-top:3%;display: inline-block">
             <button class="layui-btn" type="button">查询</button>
             <button class="layui-btn" type="reset" style="background-color:#c2c2c2">重置</button>
+        </div>
         </div>
     </form>
     <table class="layui-table" id="errorInfo"></table>
@@ -131,6 +158,5 @@
 <script src="../../lib/layui/layui.js" charset="utf-8"></script>
 <script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../static/js/basics/agentManagement.js"></script>
-
 </body>
 </html>
