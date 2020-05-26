@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/weadmin.css">
+    <!--<link rel="stylesheet" href="../../static/css/menu.css">-->
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="weadmin-nav">
+        <span class="layui-breadcrumb">
+            <a href="javascript:;">首页</a> <a href="javascript:;">配置管理</a>
+            <a href="javascript:;"><cite>短信设置</cite></a>
+        </span>
+    <a class="layui-btn layui-btn-sm" style="margin-top:3px;float:right" href="javascript:location.replace(location.href);"
+       title="刷新">
+        <i class="layui-icon layui-icon-refresh"></i>
+    </a>
+</div>
+<div class="weadmin-body layui-row" style="background-color: #f6f6f6">
+    <form>
+    <div class="layui-col-md2">
+        <ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo" style="margin-right: 10px;">
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;">默认展开</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">选项一</a></dd>
+                    <dd><a href="javascript:;">选项一</a></dd>
+                    <dd><a href="javascript:;">选项一</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+    <div class="layui-col-md4">
+        <fieldset class="layui-elem-field layui-field-title">
+            <legend style="font-size: 15px;">短信格式<></legend>
+        </fieldset>
+        <div class="layui-form-item layui-form-text" style="margin-left: -100px;">
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" class="layui-textarea" style="height: 250px;"></textarea>
+            </div>
+        </div>
+        <p style="color: red">短信说明</p>
+        <p style="color: red">1、客户解锁查询中，针对欠款运单由用户主动发起短信</p>
+        <p style="color: red">2、短信接收人为寄件人，短信接收手机号码为寄件手机</p>
+        <br/>
+        <button class="layui-btn layui-bg-blue">保存</button>
+    </div>
+    <div class="layui-col-md4" style="margin-left: 30px;">
+         <legend style="font-size: 15px;">变量</legend>
+        <div class=""">
+            <button type="button" class="layui-btn layui-bg-blue" style="width: 200px;font-size: 15px;">{ss}</button>
+        </div>
+    </div>
+    </form>
+</div>
+<script src="../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/settings/smsSettings.js"></script>
+</body>
+</html>

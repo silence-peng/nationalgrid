@@ -44,6 +44,10 @@ body {
   background: #EEE;
   color: #666;
 }
+.layui-elem-quote{
+  padding: 5px;
+  margin-top: 5px;
+}
 /**treeselect*/
 .layui-form-select .layui-tree {
   display: none;
@@ -63,6 +67,9 @@ body {
 }
 .layui-form-selected .layui-tree {
   display: block;
+}
+.layui-input{
+  border-radius: 4px;
 }
 .weadmin-trailer {
   position: absolute;

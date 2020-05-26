@@ -21,9 +21,11 @@
 <div class="weadmin-nav">
 			<span class="layui-breadcrumb">
         <a href="">我的桌面</a>
-        <a href="">订单</a>
+        <a href="">操作</a>
         <a>
-          <cite>订单导入</cite></a>
+          <cite>入库</cite></a>
+         <a>
+          <cite>运单导入修改</cite></a>
       </span>
     <a class="layui-btn layui-btn-sm" style="line-height:1.6em;margin-top:3px;float:right"
        href="javascript:location.replace(location.href);" title="刷新">
@@ -41,20 +43,20 @@
                     </select>
                 </div>
                 <div class="layui-input-inline" style="width: auto">
-                    <button type="button" class="layui-btn" lay-filter="templateDownload">模板下载</button>
-                    <button type="button" class="layui-btn" onclick="WeAdminShow('Excel导入自定义格式设置','./designTemplate.html',900,650)" lay-filter="designTemplate">自定义格式</button>
+                    <button type="button" class="layui-btn layui-btn-normal" lay-filter="templateDownload">模板下载</button>
+                    <button type="button" class="layui-btn layui-btn-normal" onclick="WeAdminShow('Excel导入自定义格式设置','./designTemplate.html',900,650)" lay-filter="designTemplate">自定义格式</button>
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label"><i class="layui-icon layui-icon-snowflake"
-                                                   style="color: red"></i>客户</label>
+                                                   style="color: red"></i>寄件网点</label>
                 <div class="layui-input-inline">
                     <select name="quiz">
 
                     </select>
                 </div>
                 <div class="layui-input-inline" style="width: auto">
-                    <button type="button" class="layui-btn" lay-filter="export">导入</button>
+                    <button type="button" class="layui-btn layui-btn-normal" lay-filter="export">导入</button>
                 </div>
                 <div class="layui-input-inline" style="width: auto;font-size: 13px">
                     <span style="color: red">
@@ -63,13 +65,7 @@
                     </span>
                 </div>
             </div>
-            <div class="layui-form-item">
 
-                <div class="layui-input-inline">
-                    &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="isAutoGetOrderNum" lay-skin="primary" title="自动获取运单号码"/>
-                </div>
-
-            </div>
             <div class="layui-row" style="font-size: 14px">
                 <div class="layui-col-xs1">批次号</div>
                 <div class="layui-col-xs1">导入文件</div>
@@ -87,8 +83,8 @@
                 <div class="layui-col-xs1"><input type="text" name="rows"   class="layui-input"></div>
                 <div class="layui-col-xs1"><input type="text" name="wrongRows"   class="layui-input"></div>
                 <div class="layui-col-xs6">
-                    <button type="button" class="layui-btn" lay-filter="fileDownload">文件下载</button>
-                    <button type="button" class="layui-btn" lay-filter="historyLog">历史日志</button>
+                    <button type="button" class="layui-btn layui-btn-normal" lay-filter="fileDownload">文件下载</button>
+                    <button type="button" class="layui-btn layui-btn-normal" lay-filter="historyLog">历史日志</button>
                 </div>
             </div>
         </form>
