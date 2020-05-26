@@ -466,7 +466,7 @@
 					"id": 86,
 					"name": "单证预查",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/"
 				},{
 					"id": 87,
 					"name": "排货",
@@ -491,27 +491,27 @@
 					"id": 91,
 					"name": "运单推送",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/Waybillpush.html"
 				},{
 					"id": 92,
 					"name": "运单附件上传",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/Uploadtheattachedwaybill.html"
 				},{
 					"id": 93,
 					"name": "运单附件管理",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/Waybillattachment.html"
 				},{
 					"id": 94,
 					"name": "班次交接",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/Documentslessons.html"
 				},{
 					"id": 95,
 					"name": "在途跟踪",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/Roadtracking.html"
 				}]
 			},{
 				"id": 96,

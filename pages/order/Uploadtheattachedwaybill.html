@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运单附件上传</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/weadmin.css">
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="weadmin-body" style="background-color: #f6f6f6;height: 260px">
+    <div style="color:red;">操作流程（用于原始运单、原始INVOICE文件上传使用）：<br>
+        1、先设置好默认读取路径，点击"开始上传"<br>
+        2、系统自动识别路径下扩展名为jpg、tif、tiff的文件，单个文件不能超过1MB；不符合以上条件，将自动备份到异常路径；<br>符合条件的文件将自动上传<br>
+        3、文件上传后，系统自动识别文件类型，文件格式为：运单号码 + "-1." + 扩展名（"-1"默认为原始运单；第二张如含</br>有"INVOICE"字眼，识别为原始<br>
+        INVOICE）；其他识别为"识别异常"</div>
+    <div style="margin-left: 60%;margin-top: -8%">开始时间:<br>
+
+        执行时长:<span style="color: red">0时00分00秒</span><br>
+
+        已经上传：<span style="color: red;font-size: 30px">0</span>个文件，其中有效文件<span style="color:red;font-size: 30px">0</span>个<br>
+
+        正在上传：<span >0</span>个文件</div>
+    <div>
+        <form class="layui-form layui-col-md12 we-search" >
+
+
+
+                <div style="margin-top: 2%">
+                    <span>默认读取路径</span>
+</div>
+                <div class="layui-input-block" style="margin-top: 1%;margin-left:0%;display: inline-block">
+                        <input type="text" name="title" required  lay-verify="required" style="width: 550px" autocomplete="off" class="layui-input">
+
+                    <button	class="layui-btn layui-btn-normal" style="margin-left: 100%;margin-top: -11%">设置默认路径</button>
+
+                    <button	class="layui-btn layui-btn-normal" style="margin-left: 122%;margin-top: -17.5%">开始上传</button>
+                    <input type="text" name="title" required  style="width: 50px;margin-left: 139%;margin-top: -14%" autocomplete="off" class="layui-input">
+                    <span style="position: absolute;left: 820px;top: 10px">S</span>
+                    <button type="button" style="margin-left: 153%;margin-top: -10.5%" class="layui-btn layui-btn-danger">停止上传</button>
+                </div>
+
+
+        </form>
+    </div>
+</div>
+
+<table class="layui-table" id="errorInfo" style="margin-top: -150px" ></table>
+
+<script src="../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../static/js/order/return-to-client.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+</body>
+<script src="../../lib/layui/layui.js" charset="utf-8"></script>
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+
+        table.render({
+            elem: '#errorInfo'
+            ,url:'test'
+            ,cellMinWidth: 80
+            //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            ,height: 400
+            ,cols: [[
+                {field:'id',  width:137, title: 'ID', sort: true,fixed:'left'}
+                ,{field:'username',  width:137, title: '用户名'}
+                ,{field:'sex',  width:137, title: '性别', sort: true}
+                ,{field:'city',  width:137, title: '城市'}
+                ,{field:'sign', title: '签名',  width:137, minWidth: 100} //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+                ,{field:'experience', title: '积分', sort: true}
+                ,{field:'score', title: '评分', sort: true}
+                ,{field:'classify', title: '职业'}
+                ,{field:'wealth', width:137, title: '财富', sort: true,fixed: 'right'}
+            ]]
+        });
+    });
+</script>
+<!--Tab菜单右键弹出菜单-->
+<ul class="rightMenu" id="rightMenu">
+    <li data-type="fresh">刷新</li>
+    <li data-type="current">关闭当前</li>
+    <li data-type="other">关闭其它</li>
+    <li data-type="all">关闭所有</li>
+</ul>
+</html>
