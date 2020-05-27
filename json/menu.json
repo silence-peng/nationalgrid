@@ -94,7 +94,7 @@
 				"id": 18,
 				"name": "员工管理",
 				"icon": "",
-				"url": "./pages/organization/jobRole.html"
+				"url": "./pages/organization/staffManagement.html"
 			},{
 				"id": 19,
 				"name": "职位角色",
