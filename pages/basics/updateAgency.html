@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增代理</title>
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/weadmin.css">
+    <!--<link rel="stylesheet" href="../../static/css/menu.css">-->
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+    <style>
+        .layui-elem-quote {
+            font-size: 5px;
+            margin-bottom: 10px;
+            padding: 5px;
+            line-height: 20px;
+            border-left: 5px solid #009688;
+            border-radius: 0 2px 2px 0;
+            background-color: #f2f2f2;
+        }
+        /*.layui-input {
+            width: 140px;
+            height: 25px;
+            line-height: 1.3;
+            line-height: 38px\9;
+            border-width: 1px;
+            border-style: solid;
+            background-color: #fff;
+            border-radius: 3px;
+        }*/
+
+    </style>
+</head>
+<body>
+<form class="layui-form">
+    <div class="layui-tab layui-tab-card" style="background-color: #f6f6f6">
+        <div class="layui-tab">
+            <ul class="layui-tab-title">
+                <li class="layui-this">基础信息</li>
+                <li>付款信息</li>
+                <li>联络信息</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <blockquote class="layui-elem-quote">基础信息
+                        <div class="layui-form-item layui-inline" style="height: 10px;margin-top: -15px;">
+                            <div class="layui-input-block">
+                                <input type="checkbox" name="like1[write]" lay-skin="primary" title="启用" checked>
+                            </div>
+                        </div>
+                    </blockquote>
+                    <div class="layui-form-item layui-inline"style="width: 200px;">
+                        <label class="layui-form-label" style="margin-left: -20px;font-size: 14px;"><span style="color: red;font-size: 17px">*</span>代理编码</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 170px;">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline"style="width: 200px;margin-left: 0px;">
+                        <label class="layui-form-label" style="margin-left: -20px;font-size: 14px;"><span style="color: red;font-size: 17px;">*</span>代理名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 170px;">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline"style="width: 200px;">
+                        <p>代理简码</p>
+                        <br/>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off"  class="layui-input" style="width: 170px;">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline"style="width: 200px;">
+                        <label class="layui-form-label" style="margin-left: -30px;font-size: 14px;"><span style="color: red;font-size: 17px;">*</span>代理类型</label>
+                        <div class="layui-input-inline" style="width: 170px">
+                            <select name="midtype" lay-verify="required" style="width: 170px">
+                                <option value="承运代理">承运代理</option>
+                                <option value="派送代理">派送代理</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline"style="width: 200px;">
+                        <p>代理名称</p>
+
+                        <div class="layui-input-inline" style="margin-top: 2%">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 170px;">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline"style="width: 200px;">
+                        <p>所属州/省</p>
+                        <div class="layui-input-block" style="margin-top: 2%">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 170px;margin-left: -110px;">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline"style="width: 200px;">
+                        <p>所属城市</p>
+                        <div class="layui-input-block" style="margin-top: 2%">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off"  class="layui-input" style="width: 170px;margin-left: -110px;">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline"style="width: 200px;">
+                        <p>所属编码</p>
+                        <div class="layui-input-block" style="margin-top: 2%">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off"  class="layui-input" style="width: 170px;margin-left: -110px;">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline"style="width: 400px;">
+                        <p>地址</p>
+                        <div class="layui-input-block" style="margin-top: 2%">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off"  class="layui-input" style="width: 350px;margin-left: -110px;">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline"style="width: 400px;">
+                        <p>地址2</p>
+                        <div class="layui-input-block" style="margin-top: 2%">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off"  class="layui-input" style="width: 350px;margin-left: -110px;">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline"style="width: 800px;margin-left: -3%">
+                        <p style="margin-top: 10px;margin-left: 20px;">备注</p>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 700px;margin-left: -90px;margin-top: 10px;">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline"style="width: 200px;">
+                        <label class="layui-form-label" style="margin-left: -30px;font-size: 14px;"><span style="color: red;font-size: 17px;">*</span>所属网点</label>
+                        <div class="layui-input-inline" style="width: 170px">
+                            <select name="midtype" lay-verify="required" style="width: 170px">
+                                <option value="总部">总部</option>
+                                <option value="长沙分部">长沙分部</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline"style="width: 200px;">
+                        <label class="layui-form-label" style="margin-left: -30px;font-size: 14px;">对账员</label>
+                        <div class="layui-input-inline" style="width: 170px">
+                            <select name="midtype" lay-verify="required" style="width: 170px">
+                                <option value="杨晓燕">杨晓燕</option>
+                                <option value="成冰">成冰</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="layui-tab-item">
+
+                    <blockquote class="layui-elem-quote">付款账号信息
+                        <div class="layui-form-item layui-inline" style="height: 10px;margin-top: -15px;">
+                            <div class="layui-input-block">
+                            </div>
+                        </div>
+                    </blockquote>
+
+                    <div class="layui-form-item layui-inline"style="width: 200px;">
+                        <p>银行账号</p>
+
+                        <div class="layui-input-inline" style="margin-top: 2%">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 170px;">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline"style="width: 200px;">
+                        <p>开户银行</p>
+                        <div class="layui-input-block" style="margin-top: 2%">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 170px;margin-left: -110px;">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline"style="width: 200px;">
+                        <p>开户人</p>
+                        <div class="layui-input-block" style="margin-top: 2%">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off"  class="layui-input" style="width: 170px;margin-left: -110px;">
+                        </div>
+                    </div>
+                    <blockquote class="layui-elem-quote">付款账户协议
+                        <div class="layui-form-item layui-inline" style="height: 10px;margin-top: -15px;">
+                            <div class="layui-input-block">
+                            </div>
+                        </div>
+                    </blockquote>
+                    <div class="layui-upload">
+                        <button type="button" class="layui-btn" id="test1">上传图片</button>
+                        <div class="layui-upload-list">
+                            <img class="layui-upload-img" id="demo1">
+                            <p id="demoText"></p>
+                        </div>
+                    </div>
+                    <p style="color: red">只能上传1张JPG/JPEG/PNG格式
+                        图片文件，不超过2M</p>
+
+
+
+                </div>
+                <div class="layui-tab-item"><table class="layui-table" id="orderInfo" lay-filter="orderInfo"></table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="layui-form-item layui-inline" style="margin-left: 650px;margin-top: 30px;">
+        <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="formDemo2">保存</button>
+        <button class="layui-btn layui-bg-gray" type="reset" onclick="x_admin_close()">关闭</button>
+    </div>
+    </div>
+</form>
+<script type="text/html" id="toolbarDemo">
+    <div align="left" class="layui-btn-container">
+        <button id="addTable" type="button" class="layui-btn layui-icon-addition layui-icon layui-btn-sm layui-btn-normal" lay-event="add"></button>
+    </div>
+</script>
+<script type="text/html" id="rowDemo">
+    <div class="layui-btn-container">
+        <button id="delRow" type="button" class="layui-btn layui-icon-subtraction layui-icon layui-btn-danger layui-btn-sm layui-btn-normal" lay-event="del"></button>
+    </div>
+</script>
+<script src="../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/basics/updateAgency.js"></script>
+</body>
+</html>

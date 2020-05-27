@@ -16,11 +16,18 @@
     <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+        body{
+            font-size: 12px;
+        }
         .layui-row{
             margin: 2px 0;
         }
-        .btnArr button{
-            width: 100px;
+        .btnArr button {
+            width: 80px;
+            padding: 0;
+            height: 30px;
+            text-align: center;
+            line-height: 0;
         }
     </style>
 
@@ -40,8 +47,8 @@
         <i class="layui-icon" style="line-height:30px">ဂ</i></a>
 </div>
 <div class="weadmin-body">
-    <div class="layui-row">
-        <div class="layui-col-xs4">
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-xs4" style="overflow: hidden">
             <form class="layui-form">
                 <div class="layui-form-item">
                     <div class="layui-input-inline">
@@ -263,7 +270,7 @@
                         <table class="layui-table" id="chargeInfo" ></table>
                         <div class="layui-row">
                             <div class="layui-col-xs2">
-                                <button  style="height: auto;line-height: 25px" type="button" class="layui-btn layui-btn-normal layui-btn-sm">
+                                <button  style="height: auto;width:100%;line-height: 25px" type="button" class="layui-btn layui-btn-normal layui-btn-sm">
                                     待<br>确<br>认<br>问<br>题
                                 </button>
                             </div>

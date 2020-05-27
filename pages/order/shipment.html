@@ -30,83 +30,85 @@
 <div class="weadmin-body" style="background-color: #f6f6f6">
     <div class="layui-row">
         <form class="layui-form layui-col-md12 we-search">
-            <div>
-                <div style="display: inline-block">
+            <div style="width: 65%">
                     <div style="display: inline-block;margin-top: 2%">
-                        <h2 style="display: inline-block">总运单号</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button class="layui-btn layui-btn-normal">总运单</button>
-                    </div>
+                        <div style="display: inline-block">
+                            <input type="checkbox" name="" lay-skin="primary" id="always_the_awb" lay-filter="always_the_awb">
+                            <h2 style="display: inline-block">总运单号</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button type="button" style="margin-left: 60px" class="layui-btn layui-btn-normal">总运单</button>
+                        </div>
 
-                    <div style="display: inline-block;margin-left: 15%">
+                        <div style="display: inline-block;margin-left: 5%">
 
-                        <h2 style="display: inline-block">扫描单号</h2>
-                        <input type="checkbox" name="" lay-skin="primary" id="bag">整板整袋
-                    </div>
-                    <div>
-                        <div class="layui-form-item" style="margin-left: -13.5%;margin-top: 30px;display: inline-block">
-                            <div class="layui-input-block">
-                                <input type="text" name="title" required  lay-verify="required" style="width: 300px" autocomplete="off" class="layui-input">
+                            <h2 style="display: inline-block">扫描单号</h2>
+                            <input type="checkbox" name="" lay-skin="primary" id="bag">整版整袋
+                        </div>
+                        <div>
+                            <div class="layui-form-item" style="margin-left: -13.5%;margin-top: 30px;display: inline-block">
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" required  lay-verify="required" style="width: 300px" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item" style="display: inline-block;margin-left: -10%">
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" required  lay-verify="required" style="width: 300px" autocomplete="off" class="layui-input">
+                                </div>
                             </div>
                         </div>
-                        <div class="layui-form-item" style="display: inline-block;margin-left: -10%">
-                            <div class="layui-input-block">
-                                <input type="text" name="title" required  lay-verify="required" style="width: 300px" autocomplete="off" class="layui-input">
+                    </div>
+
+
+                    <div style="display: inline-block;margin-top: 2%">
+                        <div style="display: inline-block">
+                            <h2 style="display: inline-block">派件网点</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+
+                        <div style="display: inline-block;margin-left: 25%">
+
+                            <h2 style="display: inline-block">转单号码</h2>&nbsp;
+                            <input type="checkbox" name="" lay-skin="primary">扫描
+                        </div>
+                        <div>
+                            <div class="layui-form-item" style="margin-left: -13.5%;margin-top: 30px;display: inline-block">
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" required  lay-verify="required" style="width: 300px" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item" style="display: inline-block;margin-left: -10%">
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" required  lay-verify="required" style="width: 300px" autocomplete="off" class="layui-input">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div style="display: inline-block">
-                    <div style="display: inline-block">
-                        <h2 style="display: inline-block">派件网点</h2>
-                    </div>
 
-                    <div style="display: inline-block;margin-left: 28.5%">
+                <div style="display: inline-block;border:1px solid #ececec;width:40%;height: 300px;margin-left: 52%;margin-top: -20%;">
+                    <span style="display: inline-block;width: 5px;height: 20px;background-color: #00FFFF;margin-top: 15px"></span>
+                    <p style="display: inline-block;font-size: 14px">出港路由规则</p>
 
-                        <h2 style="display: inline-block">转单号码</h2>
-                        <input type="checkbox" name="" lay-skin="primary" id="bag">扫描
-                    </div>
-                    <div>
-                        <div class="layui-form-item" style="margin-left: -13.5%;margin-top: 30px;display: inline-block">
-                            <div class="layui-input-block">
-                                <input type="text" name="title" required  lay-verify="required" style="width: 300px" autocomplete="off" class="layui-input">
-                            </div>
-                        </div>
-                        <div class="layui-form-item" style="display: inline-block;margin-left: -10%">
-                            <div class="layui-input-block">
-                                <input type="text" name="title" required  lay-verify="required" style="width: 300px" autocomplete="off" class="layui-input">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div style="display: inline-block;border:1px solid #ececec;width:43%;height: 300px;margin-left: 52%;margin-top: -20%;float:left;">
-                <span style="display: inline-block;width: 5px;height: 20px;background-color: #00FFFF;margin-top: 15px"></span>
-                <p style="display: inline-block;font-size: 14px">出港路由规则</p>
-                <div style="margin-top: 2%">
-                    <div style="display: inline-block">
-                        出港路由
-                        <input type="text" style="height: 25px;width:200px;margin-top: 2%" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
-                    </div>
-                    <div style="display: inline-block">
-                        下一网点
-                        <input type="text" style="height: 25px;width:200px;margin-top: 2%" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
-                    </div>
-                    <button class="layui-btn layui-btn-normal" id="always_the_awb_button">出货设置</button>
                     <div style="margin-top: 2%">
                         <div style="display: inline-block">
+                            出港路由
+                            <input type="text" style="height: 25px;margin-top: 2%" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+                        </div>
+                        <div style="display: inline-block">
+                            下一网点
+                            <input type="text" style="height: 25px;margin-top: 2%" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+                        </div>
+                        <button type="button" class="layui-btn layui-btn-sm layui-btn-normal">出货设置</button>
+                        <div style="display: inline-block;margin-top: 2%">
                             走货路线
-                            <input type="text" style="height: 25px;width:200px;margin-top: 2%" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+                            <input type="text" style="height: 25px;margin-top: 2%" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
                         </div>
                         <div style="display: inline-block">
                             报关方式
-                            <input type="text" style="height: 25px;width:200px;margin-top: 2%" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
+                            <input type="text" style="height: 25px;margin-top: 2%" name="title" required  lay-verify="required" autocomplete="off" class="layui-input">
                         </div>
                     </div>
                 </div>
-            </div>
+    </div>
         </form>
     </div>
     <table class="layui-table" id="errorInfo" ></table>

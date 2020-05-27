@@ -30,17 +30,17 @@
 <div class="weadmin-body" style="background-color: #f6f6f6">
     <div class="layui-row">
         <form class="layui-form layui-col-md12 we-search" style="background-color: #f6f6f6">
-            <div>
+            <div style="width: 65%">
                 <div style="display: inline-block;margin-top: 2%">
                     <div style="display: inline-block">
-                        <input type="checkbox" name="" lay-skin="primary" id="always_the_awb">
+                        <input type="checkbox" name="" lay-skin="primary" id="always_the_awb" lay-filter="always_the_awb">
                         <h2 style="display: inline-block">总运单号</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button class="layui-btn layui-btn-normal" id="always_the_awb_button" style="height: 30px;font-size: 13px">选择总单号</button>
+                        <button type="button" class="layui-btn layui-btn-normal">选择总运单号</button>
                     </div>
 
-                    <div style="display: inline-block;margin-left: 8.5%">
+                    <div style="display: inline-block;margin-left: 5.5%">
                         <input type="checkbox" name="" lay-skin="primary" id="bag">
-                        <h2 style="display: inline-block">板号</h2>
+                        <h2 style="display: inline-block">板号</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
                     <div>
                         <div class="layui-form-item" style="margin-left: -13.5%;margin-top: 30px;display: inline-block">
@@ -56,14 +56,15 @@
                     </div>
                 </div>
 
-                <div style="display: inline-block">
+
+                <div style="display: inline-block;margin-top: 2%">
                     <div style="display: inline-block">
-                        <h2 style="display: inline-block">扫描单号</h2>
+                        <h2 style="display: inline-block">扫描单号</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
 
-                    <div style="display: inline-block;margin-left: 28.5%">
-                        <input type="checkbox" name="" lay-skin="primary" id="bag">
-                        <h2 style="display: inline-block">转单号码</h2>
+                    <div style="display: inline-block;margin-left: 25%">
+                        <input type="checkbox" name="" lay-skin="primary">
+                        <h2 style="display: inline-block">转单号码</h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
                     <div>
                         <div class="layui-form-item" style="margin-left: -13.5%;margin-top: 30px;display: inline-block">
@@ -81,22 +82,20 @@
             </div>
 
 
-            <div style="display: inline-block;border:1px solid #ececec;width:43%;height: 300px;margin-left: 52%;margin-top: -20%;float:left;">
+            <div style="display: inline-block;border:1px solid #ececec;width:45%;height: 300px;margin-left: 52%;margin-top: -20%;">
                 <span style="display: inline-block;width: 5px;height: 20px;background-color: #00FFFF;margin-top: 15px"></span>
                 <p style="display: inline-block;font-size: 14px">板号规则</p>
                 <div style="margin-top: 2%">
                     上板策略
-                    <div class="layui-form-item" style="margin-left: -19%;margin-top: 1.5%">
-                        <div class="layui-input-block" style="width: 27.5%;display: inline-block">
-                            <select name="city" lay-verify="required" >
+                    <div class="layui-form-item" style="margin-left: -110px;margin-top: 1.5%">
+                        <div class="layui-input-block" style="width: 200px;display: inline-block">
+                            <select name="city" lay-verify="required" style="width: 200px">
                                 <option value=""></option>
                             </select>
                         </div>
-                        <div style="display: inline-block;margin-left: 50%;margin-top: -4.5%;float: left">
-                            <button class="layui-btn layui-btn-normal"  style="height: 30px;font-size: 13px">新版号</button>
-                            <button class="layui-btn layui-btn-normal"  style="height: 30px;font-size: 13px">上板设置</button>
+                        <button type="button" class="layui-btn layui-btn-sm layui-btn-normal">新袋号</button>
+                        <button type="button" class="layui-btn layui-btn-sm layui-btn-normal">装袋设置</button>
 
-                        </div>
                     </div>
 
                 </div>
