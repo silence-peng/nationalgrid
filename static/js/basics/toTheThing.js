@@ -37,18 +37,22 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
         ,title: '错误信息表'
         ,cols: [[ //表头
             {type:'numbers',title:"序号"}
-            ,{field: 'num', title: '客户组编码'}
-            ,{field: 'sortNo', title: '客户组名称'}
-            ,{field: 'sortNo', title: '启用'}
-            ,{field: 'orderNum', title: 'VIP中隐藏公式'}
-            ,{field: 'errorInfo', title: '所属网点'}
-            ,{field: 'errorInfo', title: '共享方式'}
-            ,{field: 'errorInfo', title: '备注'}
-            ,{field: 'errorInfo', title: '建立时间'}
-            ,{field: 'errorInfo', title: '建立人'}
-            ,{field: 'errorInfo', title: '修改时间'}
-            ,{field: 'errorInfo', title: '修改人'}
-
+            ,{field: 'num', title: '扫描时间'}
+            ,{field: 'sortNo', title: '类型'}
+            ,{field: 'sortNo', title: '扫描单号'}
+            ,{field: 'orderNum', title: '运单号码'}
+            ,{field: 'errorInfo', title: '转单号码'}
+            ,{field: 'errorInfo', title: '收费实重'}
+            ,{field: 'errorInfo', title: '收费材重'}
+            ,{field: 'errorInfo', title: '复核实重'}
+            ,{field: 'errorInfo', title: '复核异常'}
+            ,{field: 'errorInfo', title: '发件网点'}
+            ,{field: 'errorInfo', title: '转运单号'}
+            ,{field: 'errorInfo', title: '客户'}
+            ,{field: 'errorInfo', title: '指定路线'}
+            ,{field: 'errorInfo', title: '运单件数'}
+            ,{field: 'errorInfo', title: '目的地'}
+            ,{field: 'errorInfo', title: '报关方式'}
         ]]
     });
 })

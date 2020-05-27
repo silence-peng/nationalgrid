@@ -92,22 +92,22 @@
         </li>
 
     </ul>
-    <form class="layui-form" style="margin-left: 2%;margin-top: 2%">0.
-        c
-        <div style="display: inline-block;margin-left: -1%;width: 15%">
-        <div class="layui-input-block" style="width: 190px;margin-top: 1%;margin-left: -1%">
-            <select name="city" lay-verify="required">
-                <option value=""></option>
-            </select>
-        </div>
-
-        <textarea name="desc" class="layui-textarea" style="height: 120px;width: 190px;margin-left: -1%"></textarea>
-
-            <button class="layui-btn layui-btn-primary" style="width: 190px;margin-left: -1%;">清空</button>
-        </div>
-
-        <div style="display: inline-block;margin-top: -150px;width: 80%">
-        <div class="layui-form-item layui-inline"style="width: 150px;">
+    <form class="layui-form" style="margin-left: 2%;margin-top: 2%">
+        <div style="display: inline-block;margin-left: -1%;width: 100%">
+            <div style="display: inline-block;width: 13%">
+            <div class="layui-input-block" style="width: 200px;margin-top: 1%;margin-left: 0">
+                <select name="city" lay-verify="required" style="width: 200px">
+                    <option value=""></option>
+                </select>
+            </div>
+            <div style="display: inline-block">
+                <textarea name="desc" class="layui-textarea" style="height: 170px;width: 170px"></textarea>
+                <div class="layui-col-xs2" style="margin-left: 100%;margin-top: -100%"><button class="layui-btn" style="height: 169px;padding: 0;width:100%">清<br>空</button></div>
+            </div>
+            </div>
+            <div style="display: inline-block;width: 85%;">
+                <div>
+        <div class="layui-form-item layui-inline"style="width: 190px;">
             <label class="layui-form-label" style="margin-left: -30px;">所属网点</label>
             <div class="layui-input-inline" style="width: 130px">
                 <select name="midtype" lay-verify="required">
@@ -116,40 +116,108 @@
                 </select>
             </div>
         </div>
-        <div class="layui-form-item layui-inline"style="width: 150px;margin-left: 0px">
-            <label class="layui-form-label" style="margin-left: -30px;">客户组编码</label>
+        <div class="layui-form-item layui-inline"style="width: 190px;margin-left: 0px;">
+            <label class="layui-form-label" style="margin-left: -30px;">客户名称</label>
             <div class="layui-input-inline" style="margin-left: -2%">
                 <input type="text" name="title" lay-verify="title" style="width: 150px" autocomplete="off" class="layui-input">
             </div>
         </div>
-        <div class="layui-form-item layui-inline"style="width: 190px;margin-left: 1%">
-            <label class="layui-form-label" style="margin-left: -25px;">客户组名称</label>
+        <div class="layui-form-item layui-inline"style="width: 190px;">
+            <label class="layui-form-label" style="margin-left: -25px;">客户曾用名</label>
             <div class="layui-input-inline">
                 <input type="text" name="title" lay-verify="title" autocomplete="off" style="width: 150px" class="layui-input">
             </div>
         </div>
-        <div class="layui-form-item layui-inline"style="width: 150px;margin-left: -1%">
-            <label class="layui-form-label" style="margin-left: -30px;">共享分式</label>
-            <div class="layui-input-inline" style="width: 150px">
-                <select name="midtype" lay-verify="required">
-                    <option value="不共享">不共享</option>
-                    <option value="共享给所有">共享给所有</option>
-                    <option value="共享给指定">共享给指定</option>
-                </select>
-            </div>
-        </div>
-        <div class="layui-form-item layui-inline"style="width: 150px;margin-left: 2%">
-            <label class="layui-form-label" style="margin-left: -30px;">启用状态</label>
+        <div class="layui-form-item layui-inline"style="width: 190px;">
+            <label class="layui-form-label" style="margin-left: -30px;">客户状态</label>
             <div class="layui-input-inline" style="width: 150px">
                 <select name="midtype" lay-verify="required">
                     <option value="启用">启用</option>
                     <option value="停用">停用</option>
+                    <option value="暂停">暂停</option>
                 </select>
             </div>
         </div>
-        <div class="layui-form-item layui-inline" style="margin-left: 30px;margin-top:3%;display: inline-block">
+                <div class="layui-form-item layui-inline"style="width: 190px;">
+                    <label class="layui-form-label" style="margin-left: -30px;">客户等级</label>
+                    <div class="layui-input-inline" style="width: 150px">
+                        <select name="midtype" lay-verify="required">
+                            <option value="一级">一级</option>
+                            <option value="二级">二级</option>
+                            <option value="三级">三级</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline"style="width: 190px;">
+                    <label class="layui-form-label" style="margin-left: -30px;">客户类型</label>
+                    <div class="layui-input-inline" style="width: 150px">
+                        <select name="midtype" lay-verify="required">
+                            <option value="启用">启用</option>
+                            <option value="停用">停用</option>
+                            <option value="暂停">暂停</option>
+                        </select>
+
+                    </div>
+
+                </div>
+                <div class="layui-form-item layui-inline"style="width: 190px;">
+                <input type="checkbox" name="like1[write]" lay-skin="primary" title="只显示含附件">
+                </div>
+                </div>
+                <div>
+                <div class="layui-form-item layui-inline"style="width: 190px;margin-left: 0px;">
+                    <label class="layui-form-label" style="margin-left: -30px;">主客户编码</label>
+                    <div class="layui-input-inline" style="margin-left: -2%">
+                        <input type="text" name="title" lay-verify="title" style="width: 150px" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline"style="width: 190px;margin-left: 0px;">
+                    <label class="layui-form-label" style="margin-left: -30px;">销售员</label>
+                    <div class="layui-input-inline" style="margin-left: -2%">
+                        <input type="text" name="title" lay-verify="title" style="width: 150px" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline"style="width: 190px;margin-left: 0px;">
+                    <label class="layui-form-label" style="margin-left: -30px;">跟单员</label>
+                    <div class="layui-input-inline" style="margin-left: -2%">
+                        <input type="text" name="title" lay-verify="title" style="width: 150px" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline"style="width: 100px;margin-left: 0px;">
+                    <label class="layui-form-label" style="margin-left: -30px;">港前客服</label>
+                    <div class="layui-input-inline" style="margin-left: -2%">
+                        <input type="text" name="title" lay-verify="title" style="width: 90px" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline"style="width: 100px;margin-left: 0px;">
+                    <label class="layui-form-label" style="margin-left: -30px;">港后客户</label>
+                    <div class="layui-input-inline" style="margin-left: -2%">
+                        <input type="text" name="title" lay-verify="title" style="width: 90px" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline"style="width: 190px;margin-left: 0px;">
+                    <label class="layui-form-label" style="margin-left: -30px;">对账员</label>
+                    <div class="layui-input-inline" style="margin-left: -2%">
+                        <input type="text" name="title" lay-verify="title" style="width: 150px" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline"style="width: 190px;">
+                    <label class="layui-form-label" style="margin-left: -30px;">账单格式</label>
+                    <div class="layui-input-inline" style="width: 150px">
+                        <select name="midtype" lay-verify="required">
+                            <option value="启用">启用</option>
+                            <option value="停用">停用</option>
+                            <option value="暂停">暂停</option>
+                        </select>
+
+                    </div>
+
+                </div>
+        <div class="layui-form-item layui-inline" style="display: inline-block">
             <button class="layui-btn" type="button">查询</button>
             <button class="layui-btn" type="reset" style="background-color:#c2c2c2">重置</button>
+        </div>
+                </div>
         </div>
         </div>
     </form>
@@ -157,6 +225,6 @@
 </div>
 <script src="../../lib/layui/layui.js" charset="utf-8"></script>
 <script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
-<script src="../../static/js/basics/agentManagement.js"></script>
+<script src="../../static/js/basics/clientManagement.js"></script>
 </body>
 </html>
