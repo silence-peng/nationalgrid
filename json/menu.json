@@ -143,13 +143,13 @@
 				"id": 27,
 				"name": "客户分组",
 				"icon": "",
-				"url": "./pages/admin/cate.html"
+				"url": "./pages/basics/customerGroup.html"
 			},
 			{
 				"id": 28,
 				"name": "客户管理",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/clientManagement.html"
 			},
 			{
 				"id": 29,
@@ -233,7 +233,7 @@
 						"id": 42,
 						"name": "运单分配规则",
 						"icon": "",
-						"url": "./pages/admin/rule.html"
+						"url": "./pages/strategy/order/waybillAllocationRules.html"
 					},{
 						"id": 43,
 						"name": "目的地策略",
@@ -395,7 +395,7 @@
 				"id": 72,
 				"name": "入库",
 				"icon": "",
-				"url": "./pages/admin/rule.html",
+				"url": "",
 				"children":[{
 					"id": 73,
 					"name": "收件录单",
@@ -435,17 +435,17 @@
 					"id": 80,
 					"name": "变更审核",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/changeReview.html"
 				},{
 					"id": 81,
 					"name": "条码打印",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/printBarcode.html"
 				},{
 					"id": 82,
 					"name": "查货",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/checkGoods.html"
 				},{
 					"id": 83,
 					"name": "收货上架",
@@ -466,7 +466,7 @@
 					"id": 86,
 					"name": "单证预查",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/"
 				},{
 					"id": 87,
 					"name": "排货",
@@ -491,27 +491,27 @@
 					"id": 91,
 					"name": "运单推送",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/Waybillpush.html"
 				},{
 					"id": 92,
 					"name": "运单附件上传",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/Uploadtheattachedwaybill.html"
 				},{
 					"id": 93,
 					"name": "运单附件管理",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/Waybillattachment.html"
 				},{
 					"id": 94,
 					"name": "班次交接",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/Documentslessons.html"
 				},{
 					"id": 95,
 					"name": "在途跟踪",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/Roadtracking.html"
 				}]
 			},{
 				"id": 96,
@@ -553,7 +553,7 @@
 					"id": 103,
 					"name": "转运发件",
 					"icon": "",
-					"url": ""
+					"url": "./pages/basics/transshipmentSentItems.html"
 				},{
 					"id": 104,
 					"name": "转运到件",
@@ -607,12 +607,12 @@
 					"id": 113,
 					"name": "港前问题件登记",
 					"icon": "",
-					"url": ""
+					"url": "./pages/abnormal/registerAbnormal.html"
 				},{
 					"id": 114,
 					"name": "港前问题件处理",
 					"icon": "",
-					"url": ""
+					"url": "./pages/abnormal/handlingExceptions.html"
 				},{
 					"id": 115,
 					"name": "港前问题件查询",
