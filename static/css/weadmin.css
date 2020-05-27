@@ -187,7 +187,7 @@ body {
   width: 100%;
 }
 .weadmin-body {
-  padding: 20px;
+  padding: 15px;
 }
 .weadmin-nav {
   padding: 0 20px;
@@ -327,6 +327,7 @@ body {
 }
 .left-nav #nav .current {
   background-color: rgba(0, 0, 0, 0.3);
+
 }
 .left-nav #nav li {
   border-bottom: 1px solid #e5e5e5;
