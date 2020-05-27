@@ -607,12 +607,12 @@
 					"id": 113,
 					"name": "港前问题件登记",
 					"icon": "",
-					"url": ""
+					"url": "./pages/abnormal/registerAbnormal.html"
 				},{
 					"id": 114,
 					"name": "港前问题件处理",
 					"icon": "",
-					"url": ""
+					"url": "./pages/abnormal/handlingExceptions.html"
 				},{
 					"id": 115,
 					"name": "港前问题件查询",
