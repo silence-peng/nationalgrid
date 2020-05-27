@@ -16,6 +16,7 @@ html {
 body {
   width: 100%;
   min-height: 100%;
+  font-size: 12px;
 }
 .fr {
   float: right;
@@ -47,6 +48,9 @@ body {
 .layui-elem-quote{
   padding: 5px;
   margin-top: 5px;
+}
+.layui-form-checkbox span{
+    font-size: 12px;
 }
 /**treeselect*/
 .layui-form-select .layui-tree {
@@ -516,6 +520,9 @@ table td {
     margin: 10px;
   }
 }
+input{
+  font-size: 13px;
+}
 .we-changelog .layui-timeline-title h3 {
   display: inline-block;
 }
@@ -566,6 +573,7 @@ table td {
   white-space: nowrap;
   font-size: 16px;
 }
+
 .weadmin-shortcut li p {
   font-size: 12px;
   line-height: 16px;
