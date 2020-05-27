@@ -143,13 +143,13 @@
 				"id": 27,
 				"name": "客户分组",
 				"icon": "",
-				"url": "./pages/admin/cate.html"
+				"url": "./pages/basics/customerGroup.html"
 			},
 			{
 				"id": 28,
 				"name": "客户管理",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/clientManagement.html"
 			},
 			{
 				"id": 29,
@@ -553,7 +553,7 @@
 					"id": 103,
 					"name": "转运发件",
 					"icon": "",
-					"url": ""
+					"url": "./pages/basics/transshipmentSentItems.html"
 				},{
 					"id": 104,
 					"name": "转运到件",

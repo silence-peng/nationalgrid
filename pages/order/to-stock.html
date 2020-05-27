@@ -30,19 +30,17 @@
 <div class="weadmin-body" style="background-color: #f6f6f6">
     <div class="layui-row">
         <form class="layui-form layui-col-md12 we-search" style="height: 280px">
-
+            <div style="display: inline-block;width: 100%">
             <div class="layui-input-block" style="width: 190px;margin-top: 1%;margin-left: 0">
-                <select name="city" lay-verify="required">
+                <select name="city" lay-verify="required" style="width: 200px">
                     <option value=""></option>
                 </select>
             </div>
-
-            <div class="layui-input-block" style="height: 300px">
-                <textarea name="desc" class="layui-textarea" style="width: 190px;margin-left: -9.5%"></textarea>
-                <button class="layui-btn layui-btn-primary" style="width: 190px;margin-left: -9.5%">清空</button>
+            <div style="display: inline-block">
+                <textarea name="desc" class="layui-textarea" style="height: 170px;width: 160px"></textarea>
+                <div class="layui-col-xs2" style="margin-left: 100%;margin-top: -106%"><button class="layui-btn" style="height: 169px;padding: 0;width:100%">清<br>空</button></div>
             </div>
-
-            <div style="display: inline-block;margin-left: 17%;float: left;margin-top: -27%">
+            <div style="display: inline-block;margin-left: 5%;margin-top: -27%">
                 <span>上架日期</span>
                 <br/>
                 <div style="display: inline-block;margin-top: 2%">
@@ -79,7 +77,7 @@
                     </select>
                 </div>
             </div>
-
+            </div>
         </form>
     </div>
     <table class="layui-table" id="errorInfo" style="margin-top: -300px"></table>

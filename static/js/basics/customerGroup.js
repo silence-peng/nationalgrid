@@ -37,24 +37,15 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
         ,title: '错误信息表'
         ,cols: [[ //表头
             {type:'numbers',title:"序号"}
-            ,{field: 'num', title: '启用'}
-            ,{field: 'sortNo', title: '代理编码'}
-            ,{field: 'sortNo', title: '代理名称'}
-            ,{field: 'orderNum', title: '代理简码'}
-            ,{field: 'errorInfo', title: '代理类型'}
-            ,{field: 'errorInfo', title: '所属国家'}
-            ,{field: 'errorInfo', title: '所属州/省'}
-            ,{field: 'errorInfo', title: '所属城市'}
+            ,{field: 'num', title: '客户组编码'}
+            ,{field: 'sortNo', title: '客户组名称'}
+            ,{field: 'sortNo', title: '启用'}
+            ,{field: 'orderNum', title: 'VIP中隐藏公式'}
             ,{field: 'errorInfo', title: '所属网点'}
-            ,{field: 'errorInfo', title: '对账员'}
-            ,{field: 'errorInfo', title: '付款账户协议'}
-            ,{field: 'errorInfo', title: '银行账号'}
-            ,{field: 'errorInfo', title: '开户银行'}
-            ,{field: 'errorInfo', title: '开户人'}
-            ,{field: 'errorInfo', title: '最后一次交货时间'}
+            ,{field: 'errorInfo', title: '共享方式'}
             ,{field: 'errorInfo', title: '备注'}
-            ,{field: 'errorInfo', title: '创建时间'}
-            ,{field: 'errorInfo', title: '创建人'}
+            ,{field: 'errorInfo', title: '建立时间'}
+            ,{field: 'errorInfo', title: '建立人'}
             ,{field: 'errorInfo', title: '修改时间'}
             ,{field: 'errorInfo', title: '修改人'}
 
