@@ -161,13 +161,13 @@
 				"id": 30,
 				"name": "公共收件人",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/publicReceiver.html"
 			},
 			{
 				"id": 31,
 				"name": "货位管理",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/goodsAllocation.html"
 			},
 			{
 				"id": 32,
