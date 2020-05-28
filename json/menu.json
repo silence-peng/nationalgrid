@@ -155,7 +155,7 @@
 				"id": 29,
 				"name": "寄件人管理",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/sender.html"
 			},
 			{
 				"id": 30,
@@ -215,7 +215,7 @@
 				"id": 39,
 				"name": "发件箱设置",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/outbox.html"
 			}]
 		},
 		{
