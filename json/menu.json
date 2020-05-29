@@ -179,7 +179,7 @@
 				"id": 33,
 				"name": "问题状态",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/problemState.html"
 			},
 			{
 				"id": 34,
