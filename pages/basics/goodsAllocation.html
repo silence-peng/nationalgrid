@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>货位管理</title>
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/weadmin.css">
+    <!--<link rel="stylesheet" href="../../static/css/menu.css">-->
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .layui-btn {
+            width: 100px;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 20px;
+            background-color: #009688;
+            color: #fff;
+            white-space: nowrap;
+            text-align: center;
+            font-size: 14px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        .layui-nav .layui-nav-more {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid dashed dashed;
+            border-color: #fff transparent transparent;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all .2s;
+            -webkit-transition: all .2s;
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            margin-top: -3px;
+            border-width: 6px;
+            border-top-color: rgba(255,255,255,.7);
+        }
+    </style>
+</head>
+<body>
+<div class="weadmin-body" style="background-color: #F6F6F6">
+    <ul class="layui-nav" style="font-size: 14px;border-radius: 0px;background-color: #f6f6f6">
+        <li class="layui-inline">
+            <a type="button" class="layui-btn layui-bg-blue" onclick="WeAdminShow('新增货位','addGoodsAllocation.html',700,400)">新增</a>
+        </li>
+        <li class="layui-inline">
+            <a type="button" class="layui-btn " onclick="WeAdminShow('修改货位','updateGoodsAllocation.html',700,400)">修改</a>
+        </li>
+        <li class="layui-inline">
+            <a type="button" class="layui-btn layui-bg-red" onclick="member_del('delOutBox.html',id)">删除</a>
+        </li>
+    </ul>
+    <form class="layui-form">
+        <div class="layui-row">
+            <div class="layui-col-md7">
+                <div class="layui-form-item layui-inline">
+                    <div style="padding: 10px;">所属网点</div>
+                    <div class="layui-input-inline">
+                        <select name="midtype">
+                            <option value="启用">启用</option>
+                            <option value="停用">停用</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <div style="padding: 10px;">货位编码</div>
+                    <div class="layui-input-inline">
+                        <input type="text" name="title" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <div style="padding: 10px;">货位类型</div>
+                    <div class="layui-input-inline">
+                        <select name="midtype">
+                            <option value="启用">启用</option>
+                            <option value="停用">停用</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <div style="padding: 10px;">启用状态</div>
+                    <div class="layui-input-inline">
+                        <select name="midtype">
+                            <option value="启用">启用</option>
+                            <option value="停用">停用</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md2">
+                <div class="layui-form-item layui-inline" style="margin-left: 30px;margin-top: 40px;">
+                    <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="formDemo">查询</button>
+                    <button class="layui-btn" type="reset" style="background-color:#c2c2c2">重置</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <table id="test" lay-filter="test"></table>
+</div>
+<script src="../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/basics/goodsAllocation.js"></script>
+</body>
+</html>

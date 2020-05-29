@@ -17,7 +17,22 @@ layui.use(['element','jquery','table','layer','transfer','tree'], function() {
         if(h == null || h == '') {
             h = ($(window).height() - 50);
         };
-        if(url == ""){
+        console.log(url);
+        if(url == "addJobRole.html"){
+            layer.open({
+                type: 2,
+                area: [w + 'px', h + 'px'],
+                fix: false, //不固定
+                width:w,
+                height:h,
+                maxmin: true,
+                shadeClose: true,
+                shade: 0.4,
+                title: title,
+                content: url
+            });
+        }
+        if(url == "updateJobRole.html"){
             layer.open({
                 type: 2,
                 area: [w + 'px', h + 'px'],
@@ -32,6 +47,18 @@ layui.use(['element','jquery','table','layer','transfer','tree'], function() {
             });
         }
     }
+
+    window.member_del = function (obj, id) {
+        layer.confirm('确认要删除吗？', function(index) {
+            //发异步删除数据
+            $(obj).parents("tr").remove();
+            layer.msg('已删除!', {
+                icon: 1,
+                time: 1000
+            });
+        });
+    };
+
     table.render({
         elem: '#test'
         , url: '/demo/table/user/'

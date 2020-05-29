@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增寄件人</title>
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/weadmin.css">
+    <!--<link rel="stylesheet" href="../../static/css/menu.css">-->
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="weadmin-body">
+    <form class="layui-form">
+        <blockquote class="layui-elem-quote">基础信息
+            <div class="layui-form-item layui-inline" style="height: 10px;margin-top: -15px;">
+                <div class="layui-input-block">
+                    <input type="checkbox" name="like1[write]" lay-skin="primary" title="启用" checked>
+                </div>
+            </div>
+        </blockquote>
+        <div class="layui-row">
+            <div class="layui-col-md12">
+                <div class="layui-form-item layui-inline">
+                    <div style="padding: 10px;">寄件公司</div>
+                    <div class="layui-input-inline">
+                        <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <div style="padding: 10px;">寄件人</div>
+                    <div class="layui-input-inline">
+                        <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <div style="padding: 10px;">寄件电话</div>
+                    <div class="layui-input-inline">
+                        <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <div style="padding: 10px;">所属客户</div>
+                    <div class="layui-input-inline">
+                        <select name="midtype">
+                            <option value="启用">启用</option>
+                            <option value="停用">停用</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <div style="padding: 10px;">所属网点</div>
+                    <div class=" layui-input-inline">
+                        <select name="midtype">
+                            <option value="启用">启用</option>
+                            <option value="停用">停用</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <blockquote class="layui-elem-quote">地址信息
+            </blockquote>
+            <div class="layui-form-item">
+                <div style="padding: 10px;">寄件地址1</div>
+                <div class="layui-row">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div style="padding: 10px;">寄件地址2</div>
+                <div class="layui-row">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div style="padding: 10px;">寄件地址3</div>
+                <div class="layui-row">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">
+                <div style="padding: 10px;">寄件国家</div>
+                <div class="layui-input-inline">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">
+                <div style="padding: 10px;">寄件洲/省</div>
+                <div class="layui-input-inline">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">
+                <div style="padding: 10px;">寄件城市</div>
+                <div class="layui-input-inline">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">
+                <div style="padding: 10px;">寄件邮编</div>
+                <div class="layui-input-inline">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="" style="margin-left: 350px;">
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="formDemo">保存并继续</button>
+                    <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="formDemo2">保存</button>
+                    <button class="layui-btn layui-bg-gray" type="reset" onclick="x_admin_close()">关闭</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/basics/addSender.js"></script>
+</body>
+</html>

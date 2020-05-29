@@ -65,4 +65,15 @@ layui.use(['element','jquery','table','layer'], function() {
         });
     }
 
+    window.member_del = function (obj, id) {
+        layer.confirm('确认要删除吗？', function(index) {
+            //发异步删除数据
+            $(obj).parents("tr").remove();
+            layer.msg('已删除!', {
+                icon: 1,
+                time: 1000
+            });
+        });
+    };
+
 })
