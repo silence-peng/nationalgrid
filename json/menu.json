@@ -276,17 +276,17 @@
 						"id": 50,
 						"name": "排货策略",
 						"icon": "",
-						"url": "./pages/admin/rule.html"
+						"url": "./pages/strategy/operation/deliveryStrategy.html"
 					},{
 						"id": 51,
 						"name": "分拣策略",
 						"icon": "",
-						"url": "./pages/admin/rule.html"
+						"url": "./pages/strategy/operation/sortingStrategy.html"
 					},{
 						"id": 52,
 						"name": "装袋策略",
 						"icon": "",
-						"url": "./pages/order/bagging.html"
+						"url": "./pages/strategy/operation/baggingStrategy.html"
 					},{
 						"id": 53,
 						"name": "上板策略",
