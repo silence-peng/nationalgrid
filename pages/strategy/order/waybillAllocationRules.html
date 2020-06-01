@@ -34,10 +34,10 @@
 <div class="weadmin-body" style="background-color: #f6f6f6;">
     <ul class="layui-nav" style="font-size: 14px;border-radius: 0px;padding:0;background-color: #f6f6f6">
         <li class="layui-nav-item layui-inline">
-            <a type="button" class="little-button button-green el-button"  onclick="WeAdminShow('新增目的地','addAllocation.html',750,500)">新增</a>
+            <a type="button" class="little-button button-green el-button"  onclick="WeAdminShow('新增单号分配规则','addAllocation.html',600,500)">新增</a>
         </li>
         <li class="layui-inline layui-nav-item">
-            <a type="button" class="little-button button-blue el-button" onclick="WeAdminShow('修改目的地','./updateDestination.html',750,500)">修改</a>
+            <a type="button" class="little-button button-blue el-button" onclick="WeAdminShow('修改单号分配规则','./updateAllocation.html',300,500)">修改</a>
         </li>
         <li class="layui-inline layui-nav-item">
             <a type="button" class="little-button button-red el-button">删除</a>
@@ -75,11 +75,11 @@
     <table class="layui-hide" id="test"></table>
 
         <div style="width:49.5%;float: left;padding-top: 1%;background-color: #f6f6f6;">
-            <p>号码段信息</p>
-            <table class="layui-hide" id="numberInfo"></table>
+            <p>号码段信息<button type="button" style="width: 40px;margin-left: 10px" class="button-blue" onclick="WeAdminShow('新增单号分配规则','addNumberSegment.html',600,500)">+</button>
+            </p>             <table class="layui-hide" id="numberInfo"></table>
         </div>
-    <div style="width:49.5%;float: left;padding-top: 1%;background-color: #f6f6f6;padding-left: 1%">
-            <p>使用信息</p>
+    <div style="width:49.5%;float: left;padding-top: 1%;background-color: #f6f6f6;padding-left: 1%"><br/>
+            <p>使用信息</p><br/>
             <table class="layui-hide"  id="useInfo"></table>
     </div>
 

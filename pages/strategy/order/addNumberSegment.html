@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>新增单号分配规则</title>
+    <title>新增号码段</title>
     <link rel="stylesheet" href="../../../static/css/font.css">
     <link rel="stylesheet" href="../../../static/css/weadmin.css">
     <!--<link rel="stylesheet" href="../../static/css/menu.css">-->
@@ -42,70 +42,63 @@
 
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
-                    <blockquote class="layui-elem-quote">单号分配规则
-                        <input type="checkbox" name="like1[write]" lay-skin="primary" title="启用" checked>
-                    </blockquote>
+                    <blockquote class="layui-elem-quote">号码段信息 </blockquote>
                     <div class="layui-row">
-                        <div class="layui-form-item layui-inline">
-                            <div style="padding: 10px;"><span style="color: red">*</span>规则编码</div>
+                        <div class="layui-form-item layui-inline" style="width: 180px">
+                            <div style="padding: 10px;"><span style="color: red">*</span>单号类型</div>
                             <div class="layui">
-                                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 200px;">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 150px;">
                             </div>
                         </div>
-                        <div class="layui-form-item layui-inline" style="width: 200px;">
-                            <div style="padding: 10px;"><span style="color: red">*</span>规则名称</div>
-                            <div class="layui">
-                                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 200px;">
-                            </div>
-                        </div>
+
                         <div class="layui-form-item layui-inline">
-                            <div style="padding: 10px;">效验类型</div>
-                            <div class=" layui-input-inline">
-                                <select name="midtype">
+                            <div style="padding: 10px;width: 200px">效验类型</div>
+                            <div class=" layui-input-inline" style="width: 150px;">
+                                <select name="midtype" style="width: 150px;">
                                     <option value="SMTP">SMTP</option>
                                 </select>
                             </div>
                         </div>
                         <div class="layui-form-item layui-inline">
                             <div style="padding: 10px;"><span style="color: red">*</span>单号规则</div>
-                            <div class="layui-input-inline" style="width: 60px">
-                                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 60px">
-                            </div>
-                            <div class=" layui-input-inline" style="width: 80px">
-                                <select name="midtype" style="width: 80px">
-                                    <option value="SMTP">SMTP</option>
-                                </select>
-                            </div>
-                            <div class="layui-input-inline" style="width: 60px">
-                                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 60px">
-                            </div>
-                            <div class=" layui-input-inline" style="width: 80px">
-                                <select name="midtype" style="width: 80px">
-                                    <option value="SMTP">SMTP</option>
-                                </select>
+                            <div class="layui">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 150px;">
                             </div>
                         </div>
                         <div class="layui-form-item layui-inline">
-                            <div style="padding: 10px;"><span style="color: red">*</span>预警份数</div>
+                            <div style="padding: 10px;"><span style="color: red">*</span>起始单号</div>
                             <div class="layui-input-inline">
-                                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 150px;">
                             </div>
                         </div>
                         <div class="layui-form-item layui-inline">
-                            <div style="padding: 10px;"><span style="color: red">*</span>单次最大获取份数</div>
+                            <div style="padding: 10px;"><span style="color: red">*</span>终止单号</div>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 150px;">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-inline">
+                            <div style="padding: 10px;"><span style="color: red">*</span>总份数</div>
+                            <div class="layui">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 150px;">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-inline">
+                            <p>备注</p>
+                            <div class="layui-input-inline">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 500px;">
+                            </div>
+                        </div>
+                        <blockquote class="layui-elem-quote">带校验位的前10个单号生成核对</blockquote>
+                        <div class="layui-form-item layui-inline">
                             <div class="layui-input-inline">
                                 <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
                             </div>
+                            <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="formDemo2">生成单号</button>
                         </div>
-                       <div style="color: red">
-                           单号规则说明：<br/>
-
-                           1、最多可分四段组成<br/>
-
-                           2、第一、四段为固定位，第二、三段可以为流水号或校验位<br/>
-
-                           3、流水号是必须项（也只允许一项）
-                       </div>
+                        <div style="color: red">
+                            由于校验类型的多样性，为确保检验类型选择正确，凡有设置校验类型号码段， 需统一生成单号，确认无误后，再做保存
+                        </div>
                         <div class="" style="margin-left: 400px;">
                             <div class="layui-form-item">
                                 <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="formDemo2">保存</button>
