@@ -471,22 +471,22 @@
 					"id": 87,
 					"name": "排货",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/boycottgoods.html"
 				},{
 					"id": 88,
 					"name": "代理打单",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/Agenttoplaysingle.html"
 				},{
 					"id": 89,
 					"name": "打单查询",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/Asinglequery.html"
 				},{
 					"id": 90,
 					"name": "打单审核",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/Asingleaudit.html"
 				},{
 					"id": 91,
 					"name": "运单推送",
