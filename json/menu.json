@@ -94,7 +94,7 @@
 				"id": 18,
 				"name": "员工管理",
 				"icon": "",
-				"url": "./pages/organization/jobRole.html"
+				"url": "./pages/organization/staffManagement.html"
 			},{
 				"id": 19,
 				"name": "职位角色",
@@ -155,19 +155,19 @@
 				"id": 29,
 				"name": "寄件人管理",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/sender.html"
 			},
 			{
 				"id": 30,
 				"name": "公共收件人",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/publicReceiver.html"
 			},
 			{
 				"id": 31,
 				"name": "货位管理",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/goodsAllocation.html"
 			},
 			{
 				"id": 32,
@@ -179,7 +179,7 @@
 				"id": 33,
 				"name": "问题状态",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/problemState.html"
 			},
 			{
 				"id": 34,
@@ -215,7 +215,7 @@
 				"id": 39,
 				"name": "发件箱设置",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/outbox.html"
 			}]
 		},
 		{
@@ -471,22 +471,22 @@
 					"id": 87,
 					"name": "排货",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/boycottgoods.html"
 				},{
 					"id": 88,
 					"name": "代理打单",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/Agenttoplaysingle.html"
 				},{
 					"id": 89,
 					"name": "打单查询",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/Asinglequery.html"
 				},{
 					"id": 90,
 					"name": "打单审核",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/Asingleaudit.html"
 				},{
 					"id": 91,
 					"name": "运单推送",
@@ -558,7 +558,7 @@
 					"id": 104,
 					"name": "转运到件",
 					"icon": "",
-					"url": ""
+					"url": "./pages/basics/toTheThing.html"
 				}]
 			},{
 				"id": 105,

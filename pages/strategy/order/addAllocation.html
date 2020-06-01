@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>新增客户-基本信息</title>
+    <title>新增单号分配规则</title>
     <link rel="stylesheet" href="../../../static/css/font.css">
     <link rel="stylesheet" href="../../../static/css/weadmin.css">
     <!--<link rel="stylesheet" href="../../static/css/menu.css">-->
@@ -35,180 +35,99 @@
 
     </style>
 </head>
-<body>
-<form class="layui-form">
+<body style="padding: 25px;">
+<form class="layui-form" >
 
-        <div class="layui-tab">
+        <div class="layui-tab" style="margin: 0;padding: 0;">
 
-            <div class="layui-tab-content">
+            <div class="layui-tab-content" style="margin: 0;padding: 0;"    >
                 <div class="layui-tab-item layui-show">
                     <blockquote class="layui-elem-quote">单号分配规则</blockquote>
-                    <div class="layui-form-item layui-inline"style="width: 200px;">
+                    <div class="layui-form-item layui-inline"style="width: 230px;margin-bottom: 0">
                         <label class="layui-form-label" style="margin-left: -20px;font-size: 14px;"><span style="color: red;font-size: 17px">*</span>规则编码</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 170px;">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 200px;">
                         </div>
                     </div>
-                    <div class="layui-form-item layui-inline"style="width: 200px;margin-left: 0px;">
+                    <div class="layui-form-item layui-inline"style="width: 230px;margin-left: 0px;margin-bottom: 0">
                         <label class="layui-form-label" style="margin-left: -20px;font-size: 14px;"><span style="color: red;font-size: 17px;">*</span>规则名称</label>
                         <div class="layui-input-inline">
-                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 170px;">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 200px;">
                         </div>
                     </div>
-                    <div class="layui-form-item layui-inline"style="width: 200px;">
-                        <label class="layui-form-label" style="margin-left: -30px;font-size: 14px;"><span style="color: red;font-size: 17px;">*</span>校验类型</label>
+                    <br/>
+                    <div class="layui-form-item layui-inline"style="width: 230px;margin: 0 0 0 0;padding: 0 0 0 0">
+                        <label class="layui-form-label" style="margin-left: -20px;font-size: 14px;"><span style="color: red;font-size: 17px;">*</span>校验类型</label>
 
-                        <div class="layui-input-inline" style="width: 170px">
+                        <div class="layui-input-inline" style="width: 200px">
                             <select name="midtype" lay-verify="required" style="width: 170px">
                                 <option value="承运代理">承运代理</option>
                                 <option value="派送代理">派送代理</option>
                             </select>
                         </div>
                     </div>
-                    <div class="layui-form-item layui-inline"style="width: 200px;">
-                        <label class="layui-form-label" style="margin-left: -30px;font-size: 14px;"><span style="color: red;font-size: 17px;">*</span>单号规则</label>
-                        <div class="layui-input-inline" style="width: 170px">
+                    <div class="layui-form-item layui-inline" style="width: 120px;padding: 0;margin: 0">
+                        <label class="layui-form-label"  style="margin-left: -20px;font-size: 14px;"><span style="color: red;font-size: 17px;">*</span>单号规则</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 120px;">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-inline"style="width: 120px;margin-top: 2%;">
+                        <label class="layui-form-label" style="font-size: 14px;"><span style="color: red;font-size: 17px;">&nbsp;</span></label>
+                        <div class="layui-input-inline" style="width: 120px">
 
                             <select name="midtype" lay-verify="required" style="width: 170px">
-                                <option value="总部">总部</option>
-                                <option value="长沙分部">长沙分部</option>
+                                <option value=""></option>
+                                <option value="总部">流水号15号</option>
+                                <option value="长沙分部">流水号14号</option>
                             </select>
-                                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 170px;">
 
                         </div>
                     </div>
+                    <div class="layui-form-item layui-inline"style="width: 120px;margin-top: 2%;">
+                        <label class="layui-form-label" style="font-size: 14px;"><span style="color: red;font-size: 17px;">&nbsp;</span></label>
+                        <div class="layui-input-inline" style="width: 120px">
 
-                    <div class="layui-form-item layui-inline"style="width: 300px;">
-                        <p>公司简体名称</p>
-                        <div class="layui-input-inline" style="margin-top: 2%">
-                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 270px;">
-                        </div>
-                    </div>
-                    <div class="layui-form-item layui-inline"style="width: 300px;">
-                        <p>简体地址</p>
-                        <div class="layui-input-inline" style="margin-top: 2%">
-                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 270px;">
-                        </div>
-                    </div>
-                    <div class="layui-form-item layui-inline"style="width: 200px;">
-                        <p>简体地址2</p>
-                        <div class="layui-input-block" style="margin-top: 2%">
-                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 170px;margin-left: -110px;">
-                        </div>
-                    </div>
+                            <select name="midtype" lay-verify="required" style="width: 170px">
+                                <option value=""></option>
+                                <option value="总部">流水号15号</option>
+                                <option value="长沙分部">流水号14号</option>
+                            </select>
 
-                    <div class="layui-form-item layui-inline"style="width: 300px;">
-                        <p>公司英文名称</p>
-                        <div class="layui-input-inline" style="margin-top: 2%">
-                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 270px;">
                         </div>
                     </div>
-                    <div class="layui-form-item layui-inline"style="width: 300px;">
-                        <p>英文地址</p>
-                        <div class="layui-input-inline" style="margin-top: 2%">
-                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 270px;">
+                    <div class="layui-form-item layui-inline" style="width: 120px;padding: 0;margin: 0">
+                        <label class="layui-form-label"  style="margin-left: -30px;font-size: 14px;"><span style="color: red;font-size: 17px;">&nbsp;</span></label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 120px;">
                         </div>
                     </div>
-                    <div class="layui-form-item layui-inline"style="width: 200px;">
-                        <p>英文地址2</p>
-                        <div class="layui-input-block" style="margin-top: 2%">
-                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 170px;margin-left: -110px;">
+                    <div class="layui-form-item layui-inline"style="width: 230px;margin-bottom: 0">
+                        <label class="layui-form-label" style="margin-left: -20px;font-size: 14px;"><span style="color: red;font-size: 17px">*</span>预警份数</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 200px;">
                         </div>
                     </div>
-                    <div class="layui-form-item layui-inline"style="width: 160px;">
-                        <p>所属城市</p>
-                        <div class="layui-input-block" style="margin-top: 2%">
-                            <input type="text" name="title" lay-verify="title" autocomplete="off"  class="layui-input" style="width: 150px;margin-left: -110px;">
+                    <div class="layui-form-item layui-inline"style="width: 230px;margin-left: 0px;margin-bottom: 0">
+                        <label class="layui-form-label" style="margin-left: -20px;font-size: 14px;width: 140px"><span style="color: red;font-size: 17px;">*</span>单词最大获取份数</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input layui-disabled" disabled="disabled" value="100" style="width: 200px;">
                         </div>
                     </div>
-                    <div class="layui-form-item layui-inline"style="width: 160px;">
-                        <p>所属州/省</p>
-                        <div class="layui-input-block" style="margin-top: 2%">
-                            <input type="text" name="title" lay-verify="title" autocomplete="off"  class="layui-input" style="width: 150px;margin-left: -110px;">
-                        </div>
-                    </div>
-                    <div class="layui-form-item layui-inline"style="width: 160px;">
-                        <p>所属国家</p>
-                        <div class="layui-input-block" style="margin-top: 2%">
-                            <input type="text" name="title" lay-verify="title" autocomplete="off"  class="layui-input" style="width: 150px;margin-left: -110px;">
-                        </div>
-                    </div>
+                    <br/>
 
-                    <div class="layui-form-item layui-inline"style="width: 160px;">
-                        <p>所属邮编</p>
-                        <div class="layui-input-block" style="margin-top: 2%">
-                            <input type="text" name="title" lay-verify="title" autocomplete="off"  class="layui-input" style="width: 150px;margin-left: -110px;">
-                        </div>
-                    </div>
-                    <div class="layui-form-item layui-inline"style="width: 160px;">
-                        <p>客户曾用名</p>
-                        <div class="layui-input-block" style="margin-top: 2%">
-                            <input type="text" name="title" lay-verify="title" autocomplete="off"  class="layui-input" style="width: 150px;margin-left: -110px;">
-                        </div>
-                    </div>
 
                 </div>
 
-                <blockquote class="layui-elem-quote">合同信息</blockquote>
-
-                <div class="layui-form-item layui-inline"style="width: 160px;">
-                    <p>合同编号</p>
-
-                    <div class="layui-input-inline" style="margin-top: 2%">
-                        <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 150px;">
-                    </div>
-                </div>
-                <div class="layui-form-item layui-inline"style="width: 160px;margin-top: 2%">
-                    <p>签约日期</p>
-                    <div class="layui-input-inline" style="margin-top: 2%">
-                        <input type="text" name="date" id="testdate" style="width: 150px" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
-                    </div>&nbsp;
-                </div>
-                <div class="layui-form-item layui-inline"style="width: 160px;">
-                    <p>关联客户组</p>
-                    <div class="layui-input-inline">
-                        <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 150px;">
-                    </div>
-                </div>
-                <div class="layui-form-item layui-inline"style="width: 160px;">
-                    <p>营业执照号</p>
-                    <div class="layui-input-inline" style="margin-top: 2%">
-                        <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 150px;">
-                    </div>
-                </div>
-                <div class="layui-form-item layui-inline"style="width: 160px;">
-                    <p>身份证号</p>
-                    <div class="layui-input-inline" style="margin-top: 2%">
-                        <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" style="width: 150px;">
-                    </div>
-                </div>
-
-
-
-                <blockquote class="layui-elem-quote">其他信息</blockquote>
-                <div class="layui-form-item layui-inline"style="width: 200px;">
-                    <label class="layui-form-label" style="margin-left: -30px;font-size: 14px;"><span style="color: red;font-size: 17px;">*</span>客户状态</label>
-                    <div class="layui-input-inline" style="width: 170px">
-                        <select name="midtype" lay-verify="required" style="width: 170px">
-                            <option value="启用">启用</option>
-                            <option value="停用">停用</option>
-                            <option value="暂停">暂停</option>
-                        </select>
-                    </div>
-                </div>
-                <p style="color: red">只能上传1张JPG/JPEG/PNG格式
-                    图片文件，不超过2M</p>
-
-
-
-            </div>
-            <div class="layui-tab-item"><table class="layui-table" id="orderInfo" lay-filter="orderInfo"></table>
-
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="layui-form-item layui-inline" style="margin-left: 650px;margin-top: 30px;">
+              <div style="color:red;">
+                  单号规则说明：<br/>
+                  1、最多可分四段组成
+                  <br/>
+                  2、第一、四段为固定位，第二、三段可以为流水号或校验位
+                  <br/>
+                  3、流水号是必须项（也只允许一项）
+              </div>
+    <div class="layui-form-item layui-inline" style="float: right;margin-right: 5%">
         <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="formDemo2">保存</button>
         <button class="layui-btn layui-bg-gray" type="reset" onclick="x_admin_close()">关闭</button>
     </div>
