@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运单分配规则</title>
+
+    <link rel="stylesheet" href="../../../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../../static/css/font.css">
+    <link rel="stylesheet" href="../../../static/css/weadmin.css">
+    <link rel="stylesheet" href="../../../static/css/cyh_button.css">
+
+    <!--<link rel="stylesheet" href="../../static/css/menu.css">-->
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+    <style>
+
+    </style>
+</head>
+<body>
+<!--<div class="weadmin-nav" >
+        <span class="layui-breadcrumb">
+            <a href="javascript:;">首页</a> <a href="javascript:;">组织</a>
+            <a href="javascript:;"><cite>运单分配规则</cite></a>
+        </span>
+    <a class="layui-btn layui-btn-sm" style="margin-top:3px;float:right" href="javascript:location.replace(location.href);"
+       title="刷新">
+        <i class="layui-icon layui-icon-refresh"></i>
+    </a>
+</div>-->
+<div class="weadmin-body" style="background-color: #f6f6f6;">
+    <ul class="layui-nav" style="font-size: 14px;border-radius: 0px;padding:0;background-color: #f6f6f6">
+        <li class="layui-nav-item layui-inline">
+            <a type="button" class="little-button button-green el-button"  onclick="WeAdminShow('新增单号分配规则','./addAllocation.html',790,550)">新增</a>
+        </li>
+        <li class="layui-inline layui-nav-item">
+            <a type="button" class="little-button button-blue el-button" onclick="WeAdminShow('修改单号分配规则','./updateAllocation.html',790,550)">修改</a>
+        </li>
+        <li class="layui-inline layui-nav-item">
+            <a type="button" class="little-button button-red el-button">删除</a>
+        </li>
+        <li class="layui-inline layui-nav-item">
+            <a type="button" class="box-button button-blue el-button"onclick="WeAdminShow('分配网点','./distributionNetwork.html',750,450)" >分配网点</a>
+        </li>
+        <li class="layui-inline layui-nav-item">
+            <a type="button" class="box-button button-blue el-button" onclick="WeAdminShow('分配网点','./alloClient.html',750,550)">分配客户</a>
+        </li>
+    </ul>
+    <form class="layui-form" >
+
+        <div class="layui-form-item layui-inline"style="width: 170px;margin-left: 0px">
+            <label class="layui-form-label input-title">规则名称</label>
+            <div class="layui-input-inline" style="margin-left: -2%">
+                <input type="text" name="title" lay-verify="title" style="autocomplete:off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item layui-inline"style="width: 170px;margin-left: 20px">
+            <label class="layui-form-label input-title" >启用状态</label>
+            <div class="layui-input-inline">
+                <select name="midtype" lay-verify="required">
+                    <option value="总部">总部</option>
+                    <option value="长沙分部">长沙分部</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-inline" style="margin-left: 30px;padding-top: 2.5%; ">
+            <button type="button" class="button-blue"  >查询</button>
+            <button class="reset-bth" type="reset"  >重置</button>
+        </div>
+    </form>
+    <table class="layui-hide" id="test"></table>
+
+        <div style="width:49.5%;float: left;padding-top: 1%;background-color: #f6f6f6;">
+            <p>号码段信息</p>
+            <table class="layui-hide" id="numberInfo"></table>
+        </div>
+    <div style="width:49.5%;float: left;padding-top: 1%;background-color: #f6f6f6;padding-left: 1%">
+            <p>使用信息</p>
+            <table class="layui-hide"  id="useInfo"></table>
+    </div>
+
+</div>
+<script type="text/html" id="rowDemo">
+    <div class="layui-btn-container">
+        <button id="delRow" type="button" class="layui-btn layui-icon-subtraction layui-icon layui-btn-danger layui-btn-sm layui-btn-normal" lay-event="del"></button>
+    </div>
+</script>
+<script src="../../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="../../../static/js/strategy/order/waybillAllocationRules.js"></script>
+</body>
+</html>

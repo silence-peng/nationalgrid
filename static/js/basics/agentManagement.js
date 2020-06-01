@@ -36,8 +36,8 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
         ,url: 'test' //数据接口
         ,title: '错误信息表'
         ,cols: [[ //表头
-
-            {field: 'num', title: '启用'}
+            {type:'numbers',title:"序号"}
+            ,{field: 'num', title: '启用'}
             ,{field: 'sortNo', title: '代理编码'}
             ,{field: 'sortNo', title: '代理名称'}
             ,{field: 'orderNum', title: '代理简码'}

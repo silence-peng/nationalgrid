@@ -1,0 +1,60 @@
+.little-button{
+     width: 55px;
+     height: 35px;
+     line-height: 35px;
+     font-size: 18px;
+     padding: 6px 15px;
+     border-radius: 2px;
+     text-align: center;
+ }
+.box-button{
+    width: 85px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    padding: 6px 15px;
+    border-radius: 2px;
+    text-align: center;
+}
+.button-green{
+    background-color: #0fba38;
+    border-color: #0fba38;
+}
+.button-blue{
+    background-color: #286ed6;
+    border-color: #286ed6;
+}
+.button-red{
+    background-color: #e9161e;
+    border-color: #e9161e;
+}
+.input-title{
+    font-size: 18px;
+    padding: 0;
+    margin:5px 0 10px 0;
+}
+button{
+    width: 100px;
+    height:35px;
+    border: 0;color: rgb(255,255,255);
+    font-size:18px;
+    text-align: center;
+    line-height: normal;
+    margin-bottom: 2%;
+}
+.reset-bth{
+    background: #fff;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+}
+.reset-bth:hover{
+    background-color: rgb(236,245,255);
+    border: 1px solid rgb(198,226,255);
+    color: rgb(102,69,255);
+}
+a:hover{
+    cursor: pointer;
+}
+button:hover{
+    cursor: pointer;
+}

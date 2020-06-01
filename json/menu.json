@@ -94,7 +94,7 @@
 				"id": 18,
 				"name": "员工管理",
 				"icon": "",
-				"url": "./pages/organization/jobRole.html"
+				"url": "./pages/organization/staffManagement.html"
 			},{
 				"id": 19,
 				"name": "职位角色",
@@ -143,31 +143,31 @@
 				"id": 27,
 				"name": "客户分组",
 				"icon": "",
-				"url": "./pages/admin/cate.html"
+				"url": "./pages/basics/customerGroup.html"
 			},
 			{
 				"id": 28,
 				"name": "客户管理",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/clientManagement.html"
 			},
 			{
 				"id": 29,
 				"name": "寄件人管理",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/sender.html"
 			},
 			{
 				"id": 30,
 				"name": "公共收件人",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/publicReceiver.html"
 			},
 			{
 				"id": 31,
 				"name": "货位管理",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/goodsAllocation.html"
 			},
 			{
 				"id": 32,
@@ -179,7 +179,7 @@
 				"id": 33,
 				"name": "问题状态",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/problemState.html"
 			},
 			{
 				"id": 34,
@@ -215,7 +215,7 @@
 				"id": 39,
 				"name": "发件箱设置",
 				"icon": "",
-				"url": "./pages/admin/rule.html"
+				"url": "./pages/basics/outbox.html"
 			}]
 		},
 		{
@@ -233,7 +233,7 @@
 						"id": 42,
 						"name": "运单分配规则",
 						"icon": "",
-						"url": "./pages/admin/rule.html"
+						"url": "./pages/strategy/order/waybillAllocationRules.html"
 					},{
 						"id": 43,
 						"name": "目的地策略",
@@ -395,7 +395,7 @@
 				"id": 72,
 				"name": "入库",
 				"icon": "",
-				"url": "./pages/admin/rule.html",
+				"url": "",
 				"children":[{
 					"id": 73,
 					"name": "收件录单",
@@ -435,17 +435,17 @@
 					"id": 80,
 					"name": "变更审核",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/changeReview.html"
 				},{
 					"id": 81,
 					"name": "条码打印",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/printBarcode.html"
 				},{
 					"id": 82,
 					"name": "查货",
 					"icon": "",
-					"url": "./pages/admin/rule.html"
+					"url": "./pages/order/checkGoods.html"
 				},{
 					"id": 83,
 					"name": "收货上架",
@@ -553,12 +553,12 @@
 					"id": 103,
 					"name": "转运发件",
 					"icon": "",
-					"url": ""
+					"url": "./pages/basics/transshipmentSentItems.html"
 				},{
 					"id": 104,
 					"name": "转运到件",
 					"icon": "",
-					"url": ""
+					"url": "./pages/basics/toTheThing.html"
 				}]
 			},{
 				"id": 105,
@@ -607,12 +607,12 @@
 					"id": 113,
 					"name": "港前问题件登记",
 					"icon": "",
-					"url": ""
+					"url": "./pages/abnormal/registerAbnormal.html"
 				},{
 					"id": 114,
 					"name": "港前问题件处理",
 					"icon": "",
-					"url": ""
+					"url": "./pages/abnormal/handlingExceptions.html"
 				},{
 					"id": 115,
 					"name": "港前问题件查询",
