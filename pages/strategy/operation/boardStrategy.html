@@ -36,9 +36,9 @@
     <form class="layui-form">
     <div class="layui-row">
         <div class="btnArr">
-            <button type="button" class="layui-btn" style="background-color: #00d000">新增</button>
-            <button type="button" class="layui-btn">修改</button>
-            <button type="button" class="layui-btn layui-btn-danger">删除</button>
+            <button type="button" class="layui-btn" style="background-color: #00d000" onclick="WeAdminShow('新增上板','./addBoardStrategy.html',800,500)">新增</button>
+            <button type="button" class="layui-btn" onclick="WeAdminShow('修改上板','./updateBoardStrategy.html',800,500)">修改</button>
+            <button type="button" class="layui-btn layui-btn-danger" onclick="member_del('./delDeliver.html',id)">删除</button>
             <button type="button" class="layui-btn layui-btn-primary">导出</button>
         </div>
         <br>
