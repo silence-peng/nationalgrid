@@ -291,7 +291,7 @@
 						"id": 53,
 						"name": "上板策略",
 						"icon": "",
-						"url": "./pages/admin/rule.html"
+						"url": "./pages/strategy/operation/boardStrategy.html"
 					},{
 						"id": 54,
 						"name": "重量采集策略",
