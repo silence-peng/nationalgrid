@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../../../static/css/weadmin.css">
 
     <link rel="stylesheet" type="text/css" href="../../../lib/layui/formSelects-v4.css"/>
+
+    <link rel="stylesheet" href="../../../lib/layui/css/layui.css">
     <!--<link rel="stylesheet" href="../../static/css/menu.css">-->
     <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
     <!--[if lt IE 9]>
@@ -52,7 +54,7 @@
                     <div class="layui-input-inline" style="position: relative">
 
                         <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input "   style="width: 170px;position: absolute;top: 40px;left: -50px;">
-                        <button type="button" style="background-color: rgb(242,242,242);width: 40px;height: 38px; position: absolute;top: 40px;right: 40px;border: 0" onclick="WeAdminShow('查找','./bianjizujian.html',790,550)">0</button>
+                        <a type="button" style="background-color: rgb(242,242,242);width: 40px;height: 38px; position: absolute;top: 40px;right: 40px;border: 0" onclick="WeAdminShow('查找','./bianjizujian.html',790,550)">0</a>
                         <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input layui-disabled" value="广州物流" disabled   style="width: 480px;position: absolute;top: 40px;left: 150px;background-color: rgb(235,235,228)">
                     </div>
                 </div>
@@ -110,6 +112,8 @@
 <script src="../../../lib/layui/layui.js" charset="utf-8"></script>
 <script src="../../../static/js/basics/addAgency.js"></script>
 <script src="../../../lib/layui/formSelects-v4.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="../../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
     //全局定义一次, 加载formSelects
     layui.config({

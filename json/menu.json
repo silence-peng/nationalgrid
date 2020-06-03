@@ -338,8 +338,8 @@
 					},{
 						"id": 62,
 						"name": "干线追踪设置",
-						"icon": "",
-						"url": "./pages/strategy/proxy/SingleImportResolve.html"
+						"icon": "./pages/admin/rule.html",
+						"url": ""
 					},{
 						"id": 63,
 						"name": "轨迹匹配设置",
@@ -349,12 +349,12 @@
 						"id": 64,
 						"name": "运单自动跟踪规则",
 						"icon": "",
-						"url": "./pages/admin/rule.html"
+						"url": "./pages/strategy/proxy/AutomaticTrackingRulesForWaybills.html"
 					},{
 						"id": 65,
 						"name": "打单导入分解",
 						"icon": "",
-						"url": "./pages/admin/rule.html"
+						"url": "./pages/strategy/proxy/SingleImportResolve.html"
 					},{
 						"id": 66,
 						"name": "寄件随机名单",
