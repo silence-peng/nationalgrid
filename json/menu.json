@@ -291,7 +291,7 @@
 						"id": 53,
 						"name": "上板策略",
 						"icon": "",
-						"url": "./pages/admin/rule.html"
+						"url": "./pages/strategy/operation/boardStrategy.html"
 					},{
 						"id": 54,
 						"name": "重量采集策略",
@@ -334,12 +334,12 @@
 						"id": 61,
 						"name": "运单追踪设置",
 						"icon": "",
-						"url": "./pages/admin/rule.html"
+						"url": "./pages/strategy/proxy/WaybillTrackingSettings.html"
 					},{
 						"id": 62,
 						"name": "干线追踪设置",
 						"icon": "",
-						"url": "./pages/admin/rule.html"
+						"url": "./pages/strategy/proxy/SingleImportResolve.html"
 					},{
 						"id": 63,
 						"name": "轨迹匹配设置",
@@ -359,12 +359,12 @@
 						"id": 66,
 						"name": "寄件随机名单",
 						"icon": "",
-						"url": "./pages/admin/rule.html"
+						"url": "./pages/strategy/proxy/RandomListItemsSend.html"
 					},{
 						"id": 67,
 						"name": "自动转单规则",
 						"icon": "",
-						"url": "./pages/admin/rule.html"
+						"url": "./pages/strategy/proxy/TurnSingleRule.html"
 					}
 				]
 			}

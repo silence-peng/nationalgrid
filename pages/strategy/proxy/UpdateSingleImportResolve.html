@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增打单导入分解 </title>
+    <link rel="stylesheet" href="../../../static/css/font.css">
+    <link rel="stylesheet" href="../../../static/css/weadmin.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../lib/layui/formSelects-v4.css"/>
+    <!--<link rel="stylesheet" href="../../static/css/menu.css">-->
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+    <style>
+        .layui-elem-quote {
+            font-size: 5px;
+            margin-bottom: 10px;
+            padding: 5px;
+            line-height: 20px;
+            border-left: 5px solid #009688;
+            border-radius: 0 2px 2px 0;
+            background-color: #f2f2f2;
+        }
+        /*.layui-input {
+            width: 140px;
+            height: 25px;
+            line-height: 1.3;
+            line-height: 38px\9;
+            border-width: 1px;
+            border-style: solid;
+            background-color: #fff;
+            border-radius: 3px;
+        }*/
+
+    </style>
+</head>
+<body style="padding: 15px;">
+<form class="layui-form" >
+
+    <div class="layui-tab" style="margin: 0;padding: 0;">
+
+        <div class="layui-tab-content" style="margin: 0;padding: 0;"    >
+            <div class="layui-tab-item layui-show">
+                <blockquote class="layui-elem-quote">分解规则</blockquote>
+                <div class="layui-form-item layui-inline"style="width: 200px;margin-bottom: 0;margin-right: 18px;">
+                    <label class="layui-form-label" style="margin-left: -20px;font-size: 14px;"><span style="color: red;font-size: 17px">*</span>寄件帐号</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input"   style="width: 200px;">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline"style="width: 200px;margin-left: 0px;margin-bottom: 0; margin-right: 18px;">
+                    <label class="layui-form-label" style="margin-left: -20px;font-size: 14px;"><span style="color: red;font-size: 17px;">*</span>付款帐号</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="title" lay-verify="title"  autocomplete="off" class="layui-input " style="width: 200px;">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline"style="width: 200px;margin-left: 0px;margin-bottom: 0">
+                    <label class="layui-form-label" style="margin-left: -20px;font-size: 14px;"><span style="color: red;font-size: 17px;">*</span>付款方式<span></span></label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="title" lay-verify="title"  autocomplete="off" class="layui-input" style="width: 200px;">
+                    </div>
+                </div>
+                        <div class="layui-form-item layui-inline"style="width: 650px;margin: 0 0 0 0;padding: 0 0 0 0">
+                            <label class="layui-form-label" style="margin-left: -20px;font-size: 14px;width: 300px;"><span style="color: red;font-size: 17px;">*</span>服务方式 &nbsp;&nbsp;<span style="color: red"> (允许多个，多个用逗号隔开)</span></label>
+
+                            <div class="layui-input-inline" style="width: 650px">
+                            <input type="text" name="title" lay-verify="title"  autocomplete="off" class="layui-input "  style="width: 650px;">
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="layui-tab-item layui-show" style="margin-top: 3%">
+                <blockquote class="layui-elem-quote">分解结果</blockquote>
+
+
+                <div class="layui-form-item layui-inline"style="width: 200px;margin: 0 0 0 0;padding: 0 0 0 0">
+                    <label class="layui-form-label" style="margin-left: -20px;font-size: 14px;"><span style="color: red;font-size: 17px;">*</span>走货路线</label>
+
+                    <div class="layui-input-inline" style="width: 200px">
+                        <select name="midtype" lay-verify="required" class="layui-select-disabled" disabled="disabled" style="width: 170px">
+                            <option value="运单">运单</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline"style="width: 200px;margin: 0 0 0 10px;padding: 0 0 0 0">
+
+                    <div class="layui-input-inline" style="width: 500px">
+                      <p style="color: red;">走货路线：适用于通过代理系统（如FEDEX, UPS等）打单后，根</br>据寄件帐号、付款帐号、付款方式，服务方式自动分解出走货路线，</br>便于打单数据与运单数据做差异性核对，控制打单异常</p>
+                    </div>
+                </div>
+                <br/>
+                <div class="layui-form-item layui-inline"style="width: 200px;margin: 0 0 0 0;padding: 0 0 0 0">
+                    <label class="layui-form-label" style="margin-left: -20px;font-size: 14px;width: 110px"><span style="color: red;font-size: 17px;">*</span>特殊走货路线</label>
+
+                    <div class="layui-input-inline" style="width: 200px">
+                        <select name="midtype" lay-verify="required" class="layui-select-disabled" disabled="disabled" style="width: 170px">
+                            <option value="运单">运单</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline"style="width: 200px;margin: 0 0 0 10px;padding: 0 0 0 0">
+
+                    <div class="layui-input-inline" style="width: 500px;">
+                        <p style="color: red;">特殊走货路线：如特殊走货路线有值，根据特殊走货路线计算应</br>付运费，如应付运费 > 0，以特殊走货路线作为最终走货路线</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="layui-form-item layui-inline" style="float: right;margin-top: 3%;margin-right: 10%">
+                <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="btn_submit">保存</button>
+                <button class="layui-btn layui-bg-gray" type="reset" onclick="x_admin_close()">关闭</button>
+            </div>
+</form>
+<script type="text/html" id="toolbarDemo">
+    <div align="left" class="layui-btn-container">
+        <button id="addTable" type="button" class="layui-btn layui-icon-addition layui-icon layui-btn-sm layui-btn-normal" lay-event="add"></button>
+    </div>
+</script>
+<script type="text/html" id="rowDemo">
+    <div class="layui-btn-container">
+        <button id="delRow" type="button" class="layui-btn layui-icon-subtraction layui-icon layui-btn-danger layui-btn-sm layui-btn-normal" lay-event="del"></button>
+    </div>
+</script>
+<script src="../../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../../static/js/basics/addAgency.js"></script>
+<script src="../../../lib/layui/formSelects-v4.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    //全局定义一次, 加载formSelects
+    layui.config({
+        base: '/' //此处路径请自行处理, 可以使用绝对路径
+    }).extend({
+        formSelects: 'formSelects-v4'
+    });
+    //加载模块
+    layui.use(['jquery', 'formSelects'], function () {
+        var formSelects = layui.formSelects;
+
+    });
+    layui.use(['form', 'layer', 'jquery', 'table', 'laydate', 'element', 'upload', 'flow'], function () {
+        var $$ = layui.jquery;
+        var form = layui.form,
+            layer = parent.layer == undefined ? layui.layer : parent.layer,
+            //layer = layui.layer,
+            table = layui.table,
+            laydate = layui.laydate,
+            element = layui.element,
+            upload = layui.upload,
+            flow = layui.flow;
+        form.render();
+
+        form.on('submit(btn_submit)', function (obj) {
+            layer.confirm('确认录入无误吗？', {
+                btn: ['确认', '再看看']
+            }, function () {
+                var getName = JSON.stringify(layui.formSelects.value('select_base_a', 'name'));//取值name数组
+                layer.msg("你选择的值为：" + getName, { offset: '150px', icon: 1, time: 5000 }, function () {
+                });
+            });
+        });
+
+    });
+</script>
+</body>
+</html>

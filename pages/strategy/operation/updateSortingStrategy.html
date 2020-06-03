@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改分拣</title>
+    <link rel="stylesheet" href="../../../static/css/font.css">
+    <link rel="stylesheet" href="../../../static/css/weadmin.css">
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="weadmin-body">
+    <form class="layui-form">
+        <div class="layui-row">
+            <blockquote class="layui-elem-quote">基础信息
+                <div class="layui-form-item layui-inline" style="height: 10px;margin-top: -15px;">
+                    <div class="layui-input-block">
+                        <input type="checkbox" name="like1[write]" lay-skin="primary" title="启用" checked>
+                    </div>
+                </div>
+            </blockquote>
+            <div class="layui-form-item layui-inline"style="width: 60%;">
+                <div style="padding: 10px;">客户</div>
+                <div class="layui-row">
+                    <select name="midtype" lay-verify="required">
+                        <option value=" "></option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">
+                <div style="padding: 10px;"><span style="color: red">*</span>所属网点</div>
+                <div class="layui-input-inline">
+                    <select name="midtype" lay-verify="required">
+                        <option value=" ">深圳</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline" style="width: 100%;">
+                <div style="padding: 10px;"><span style="color: red">*</span>走货路线（多选）</div>
+                <div class="layui-row">
+                    <select name="midtype" lay-verify="required">
+                        <option value=" ">DHL-FBK</option>
+                    </select>
+                </div>
+            </div>
+            <div style="width: 100%" class="layui-inline">
+                <div class="layui-tab layui-tab-card">
+                    <ul class="layui-tab-title">
+                        <li class="layui-this">目的地编码</li>
+                        <li>英文目的地</li>
+                        <li>简体目的地</li>
+                    </ul>
+                    <div class="layui-tab-content" style="height: 100px;">
+                        <div class="layui-tab-item layui-show">
+                            <div class="layui-form-item layui-form-text">
+                                <div class="layui-row">
+                                    <textarea class="layui-textarea"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-tab-item">
+                            <div class="layui-form-item layui-form-text">
+                                <div class="layui-row">
+                                    <textarea class="layui-textarea"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-tab-item">
+                            <div class="layui-form-item layui-form-text">
+                                <div class="layui-row">
+                                    <textarea class="layui-textarea"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline" style="width: 100%;">
+                <div style="padding: 10px;">报货方式（多选）</div>
+                <div class="layui-row">
+                    <select name="midtype" lay-verify="required">
+                        <option value=" ">普货</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline" style="width: 100%;">
+                <div style="padding: 10px;">货物类型（多选）</div>
+                <div class="layui-row">
+                    <select name="midtype" lay-verify="required">
+                        <option value=" ">DHL-FBK</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="">
+                <div class="layui-form-item layui-inline">
+                    <div style="padding: 10px;">分拣卡口</div>
+                    <div class="layui-input-inline">
+                        <select name="midtype" lay-verify="required">
+                            <option value=" ">02</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-inline">
+                    <div style="padding: 10px;">分拣码</div>
+                    <div class="layui-input-inline">
+                        <input type="text" name="title" autocomplete="off" class="layui-input" value="02">
+                    </div>
+                </div>
+                <div class="layui-form-item" style="margin-left: 70%;">
+                    <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="formDemo2">保存</button>
+                    <button class="layui-btn layui-bg-gray" type="reset" onclick="x_admin_close()">关闭</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../static/js/strategy/operation/updateSortingStrategy.js"></script>
+</body>
+</html>
