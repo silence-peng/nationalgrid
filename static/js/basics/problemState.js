@@ -9,55 +9,60 @@ layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'elemen
         , jquery = layui.jquery
         , form = layui.form
         , slider = layui.slider; //滑块//执行一个laydate实例
-    form.on('checkbox(always_the_awb)', function(data){
-        var r = data.elem.checked; //是否被选中，true或者false
-        $("#always_the_awb_button").attr('disabled',"true");
-        alert("进来了")
-    });
-    /*$(function () {
-        var a = $("#always_the_awb").prop('checked');
-        if(a){
-            $("#always_the_awb_button").click(function(){
-                $(this).attr('disabled',"false");
-            });
-        }else {
-            $("#always_the_awb_button").click(function(){
-                $(this).attr('disabled',"true");
-            });
-        }
-    })*/
-    laydate.render({
-        elem: '#test1,#test2'//指定元素
-    });
+
     //执行一个 table 实例
     table.render({
-        elem: '#errorInfo'
+        elem: '#problem'
         ,height: 450
-        ,url: 'test' //数据接口
-        ,title: '错误信息表'
+        ,url: 'issueStatus/getIssueStatus' //数据接口
+        ,title: '问题状态表'
         ,cols: [[ //表头
             {type:'numbers',title:"序号"}
-            , {field: 'id', title: '问题编码'}
-            , {field: 'username', title: '问题名称'}
-            , {field: 'sex', title: '启用'    }
-            , {field: 'city', title: '问题大类'}
-            , {field: 'sign', title: '问题类型'}
-            , {field: 'experience', title: '简体类型'}
-            , {field: 'score', title: '简体备注'}
-            , {field: 'classify', title: '英文备注'}
-            , {field: 'wealth', title: '通知岗位'}
-            , {field: 'wealth', title: '指定处理岗位'}
-            , {field: 'wealth', title: '收件标识问题'}
-            , {field: 'wealth', title: '打单标识问题件'}
-            , {field: 'wealth', title: '需要回复'}
-            , {field: 'wealth', title: '客户可视'}
-            , {field: 'wealth', title: '排列顺序'}
-            ,{field: 'errorInfo', title: '建立时间'}
-            ,{field: 'errorInfo', title: '建立人'}
-            ,{field: 'errorInfo', title: '修改时间'}
-            ,{field: 'errorInfo', title: '修改人'}
+            , {field: 'issueCoding', title: '问题编码'}
+            , {field: 'issueName', title: '问题名称'}
+            , {field: 'isStartUsing', title: '启用',templet: function (item) {
+                    if (item.isStartUsing == 1) {
+                        return "未启用";
+                    } else if (item.isStartUsing ==2) {
+                        return "已启用";
+                    }
+                }}
+            , {field: 'problemTypes', title: '问题大类',templet: function (item) {
+                    if (item.problemTypes == 1) {
+                        return "港前问题件";
+                    } else if (item.problemTypes ==2) {
+                        return "港后问题件";
+                    }
+                }}
+            , {field: 'issueTypeId', title: '问题类型'}
+            , {field: 'chineseRemark', title: '简体备注'}
+            , {field: 'englishRemark', title: '英文备注'}
+            , {field: 'informPost', title: '通知岗位'}
+            , {field: 'roleList', title: '指定处理岗位'}
+            , {field: 'consigneeIssue', title: '收件标识问题'}
+            , {field: 'playSingleIssue', title: '打单标识问题件'}
+            , {field: 'needReply', title: '需要回复'}
+            , {field: 'visual', title: '客户可视'}
+            , {field: 'sortOrder', title: '排列顺序'}
+            ,{field: 'createDate', title: '建立时间'}
+            ,{field: 'createPerson', title: '建立人'}
+            ,{field: 'alterDate', title: '修改时间'}
+            ,{field: 'alterPerson', title: '修改人'}
         ]]
         ,page: true
+    });
+    table.reload('problem', {
+        where: { //设定异步数据接口的额外参数，任意设
+            issueCoding: $("#issueCoding").val()
+            ,issueTypeId: $("#issueTypeId").val()
+            ,problemTypes: $("#problemTypes").val()
+            ,issueName: $("#issueName").val()
+            ,isStartUsing: $("#isStartUsing").val()
+            //…
+        }
+        ,page: {
+            curr: 1 //重新从第 1 页开始
+        }
     });
 })
 
