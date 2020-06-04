@@ -10,6 +10,7 @@
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="../../static/css/font.css">
     <link rel="stylesheet" href="../../static/css/weadmin.css">
+
     <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
     <!--[if lt IE 9]>
     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -31,7 +32,7 @@
         <a>
           <cite>入库</cite></a>
          <a>
-          <cite>运单修改</cite></a>
+          <cite>代理打单</cite></a>
       </span>
     <a class="layui-btn layui-btn-sm" style="line-height:1.6em;margin-top:3px;float:right"
        href="javascript:location.replace(location.href);" title="刷新">
@@ -39,9 +40,12 @@
 </div>
 <div class="weadmin-body">
     <form class="layui-form">
-        <button class="layui-btn layui-btn-normal">保存&S</button>
+        <button class="layui-btn layui-btn-normal">保存</button>
+        <button class="layui-btn layui-btn-normal">问题件</button>
+        <button class="layui-btn layui-btn-normal">打印设置</button>
+        <button class="layui-btn layui-btn-normal">预打单</button>
         <li class="layui-inline layui-nav-item">
-            <a type="button" class="layui-btn ">导出</a>
+            <a type="button" class="layui-btn ">费用补录</a>
             <dl class="layui-nav-child" style="margin-top: -20px;">
                 <dd><a href="javascript:;">自定义导出</a></dd>
                 <dd><a href="javascript:;">test</a></dd>
@@ -72,6 +76,165 @@
                             <div class="layui-col-xs4"><input type="text" style="width: 415px;" class="layui-input"></div>
 
                         </div>
+                        <blockquote class="layui-elem-quote layui-text">收件信息</blockquote>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs4">公司名称</div>
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs4"><input style="width: 415px" type="text" class="layui-input"></div>
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs4">国家</div>
+                            <div class="layui-col-xs4" style="position: relative;left: 70px">州/省</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-inline" style="width: 100%">
+                                <div class="layui-col-xs4">
+                                    <div class="layui-row">
+                                        <div class="layui-col-xs8"><input  type="text" style="width: 165px" name="addressCode" id="routeCode" class="layui-input"></div>
+                                        <div class="layui-col-xs2" style="width: auto">
+                                            <button style="width:auto;position: relative;left: 60px;height:38px" type="button" onclick="WeAdminShow('查找','./find.html?type='+'route',900,650)"
+                                                    class="layui-btn layui-icon layui-btn-primary layui-btn-sm">&#xe615;
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-xs6" style="position: relative;left: 65px;top: 5px"><input type="text" class="layui-input"></div>
+                            </div>
+
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs4">邮编</div>
+                            <div class="layui-col-xs4" style="position: relative;left: 70px">城市</div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-inline" style="width: 100%">
+                                <div class="layui-col-xs4">
+                                    <div class="layui-row">
+                                        <div class="layui-col-xs8"><input  type="text" style="width: 165px" name="addressCode" id="routeCode" class="layui-input"></div>
+                                        <div class="layui-col-xs2" style="width: auto">
+                                            <button style="width:auto;position: relative;left: 60px;height:38px" type="button" onclick="WeAdminShow('查找','./find.html?type='+'route',900,650)"
+                                                    class="layui-btn layui-icon layui-btn-primary layui-btn-sm">&#xe615;
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-xs6" style="position: relative;left: 65px;top: 5px"><input type="text" class="layui-input"></div>
+                            </div>
+
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs2">联络人</div>
+                            <div class="layui-col-xs4" style="position: relative;left: 150px">联系电话</div>
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
+                            <div class="layui-col-xs4" >
+                                <div class="layui-row" style="margin: 0">
+                                    <div class="layui-col-xs8" ><input  style="width: 205px" type="text" class="layui-input"></div>
+                                    <div class="layui-col-xs4" style="overflow: hidden;position: relative;left: 70px">
+                                        <select class="layui-select layui-disabled" disabled>
+                                            <option value="0">  </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-row layui-col-space5">
+                                <div class="layui-col-xs4">地址1</div>
+                            </div>
+                            <div class="layui-row layui-col-space5">
+                                <div class="layui-col-xs4"><input style="width: 415px" type="text" class="layui-input"></div>
+                            </div>
+                            <div class="layui-row layui-col-space5">
+                                <div class="layui-col-xs6">地址2</div>
+                                <div class="layui-col-xs6">地址3</div>
+                            </div>
+                            <div class="layui-row layui-col-space5">
+                                <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
+                                <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
+                            </div>
+
+                        </div>
+                        <blockquote class="layui-elem-quote layui-text">寄件信息</blockquote>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs4">公司名称</div>
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs4"><input style="width: 415px" type="text" class="layui-input"></div>
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs6">国家</div>
+                            <div class="layui-col-xs6">州/省</div>
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
+                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs6">邮编</div>
+                            <div class="layui-col-xs6">城市</div>
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
+                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs6">联络人</div>
+                            <div class="layui-col-xs6">联系电话</div>
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
+                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs4">地址1</div>
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs4"><input style="width: 415px" type="text" class="layui-input"></div>
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs6">地址2</div>
+                            <div class="layui-col-xs6">地址3</div>
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
+                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs2">
+                                <span style="color: red"></span>报关方式
+                            </div>
+
+
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs4" style="overflow: hidden">
+                                <select class="layui-select layui-disabled" style="width: 100px" disabled>
+                                    <option value="0">  </option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="layui-col-xs6">
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs4"><span >收费材重</span></div>
+                            <div class="layui-col-xs4"><span>收件备注</span></div>
+                            <div class="layui-col-xs4">指定路线</div>
+
+                        </div>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs4"><input type="text" name="date"  autocomplete="off" class="layui-input"></div>
+                            <div class="layui-col-xs4"><input type="text" name="date"  autocomplete="off" class="layui-input"></div>
+                            <div class="layui-col-xs4"><input type="text" name="date"  autocomplete="off" class="layui-input"></div>
+                        </div>
+
+                        <div class="layui-row layui-col-space5">
+
+
+                        </div>
+
                         <blockquote class="layui-elem-quote layui-text">货物信息</blockquote>
                         <div class="layui-row layui-col-space5">
                             <div class="layui-col-xs2">
@@ -179,11 +342,11 @@
 
                             </div>
                             <div class="layui-row layui-col-space5">
-                                        <div class="layui-col-xs4" style="overflow: hidden">
-                                            <select class="layui-select layui-disabled" style="width: 10px" disabled>
-                                                <option value="0">  </option>
-                                            </select>
-                                        </div>
+                                <div class="layui-col-xs4" style="overflow: hidden">
+                                    <select class="layui-select layui-disabled" style="width: 10px" disabled>
+                                        <option value="0">  </option>
+                                    </select>
+                                </div>
                                 <div class="layui-col-xs4" style="overflow: hidden">
                                     <select class="layui-select layui-disabled" style="width: 10px" disabled>
                                         <option value="0">  </option>
@@ -209,203 +372,161 @@
                             <div class="layui-row layui-col-space5">
                                 <div class="layui-col-xs4"><input style="width: 415px" type="text" class="layui-input"></div>
                             </div>
-                        </div>
-                        <blockquote class="layui-elem-quote layui-text">寄件信息</blockquote>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs4">公司名称</div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs4"><input style="width: 415px" type="text" class="layui-input"></div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs6">国家</div>
-                            <div class="layui-col-xs6">州/省</div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
-                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs6">邮编</div>
-                            <div class="layui-col-xs6">城市</div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
-                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs6">联络人</div>
-                            <div class="layui-col-xs6">联系电话</div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
-                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs4">地址1</div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs4"><input style="width: 415px" type="text" class="layui-input"></div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs6">地址2</div>
-                            <div class="layui-col-xs6">地址3</div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
-                            <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs2">
-                                <span style="color: red"></span>报关方式
-                            </div>
-
-
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs4" style="overflow: hidden">
-                                <select class="layui-select layui-disabled" style="width: 100px" disabled>
-                                    <option value="0">  </option>
-                                </select>
-                            </div>
-                        </div>
-
                     </div>
-
-                    <div class="layui-col-xs6">
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs4"><span >收费材重</span></div>
-                            <div class="layui-col-xs4"><span>收件备注</span></div>
-                            <div class="layui-col-xs4">指定路线</div>
-
+                        <div style="position: absolute;left: 420px;top: -45px;width: 800px" >
+                        <blockquote class="layui-elem-quote layui-text">打单设置</blockquote>
+                        <div class="layui-row layui-col-space5" style="font-size: 15px">
+                             <input type="checkbox" name="like1[write]" lay-skin="primary" title="" checked="">排货模式<br>
+                            <input type="checkbox" name="like1[write]" lay-skin="primary" title="" >带出运单寄件信息<br>
+                            <input type="checkbox" name="like1[write]" lay-skin="primary" title="" >自动翻译寄件公司
                         </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs4"><input type="text" name="date"  autocomplete="off" class="layui-input"></div>
-                            <div class="layui-col-xs4"><input type="text" name="date"  autocomplete="off" class="layui-input"></div>
-                            <div class="layui-col-xs4"><input type="text" name="date"  autocomplete="off" class="layui-input"></div>
+                        <blockquote class="layui-elem-quote layui-text">打印设置</blockquote>
+                        <div class="layui-row layui-col-space5" style="font-size: 15px">
+                            <input type="radio" name="sks" lay-skin="primary" title="" >保存时不获取转单<br>
+                            <input type="radio" name="sks" lay-skin="primary" title="" >保存时获取转单<br>
+                            <input type="radio" name="sks" lay-skin="primary" title="" checked="">保存时打印LABEL<br>
+                            <input type="checkbox" name="sks" lay-skin="primary" title="" checked="">保存时打印INVOICE<br>
+                            <input type="checkbox" name="sks" lay-skin="primary" title="" checked="">保存时打印备份联<br>
+                            <input type="checkbox" name="sks" lay-skin="primary" title="" checked="">强制录入发票<br>
+                            INVOICE打印份数<br>
+                            <input type="text" value="1" class="layui-input"><br>
+                            <input type="checkbox" name="sks" lay-skin="primary" title="" checked="">PDF按原始大小输出<br>
                         </div>
-
-                        <div class="layui-row layui-col-space5">
-
-
+                        <blockquote class="layui-elem-quote layui-text">允许强制保存设置</blockquote>
+                        <div class="layui-row layui-col-space5" style="font-size: 15px">
+                        <input type="checkbox" name="sks" lay-skin="primary" title="" checked="">申报不符<span style="color: red">（收货有录申报时，<br>打单申报金额不符）</span><br>
+                            <input type="checkbox" name="sks" lay-skin="primary" title="" checked="">邮编城市不符<span style="color: red">（收货有录邮编<br>城市时，打单时不符）</span><br>
+                            <input type="checkbox" name="sks" lay-skin="primary" title="" checked="">重量风险<span style="color: red">(打单.出货重>运<br>单.收费重(忽略0.5))</span><br>
+                            <input type="checkbox" name="sks" lay-skin="primary" title="" checked="">偏远风险<br><span style="color: red">（未收偏远费，打单偏远）</span><br>
+                            <input type="checkbox" name="sks" lay-skin="primary" title="" checked="">运费亏损风险<span style="color: red">毛利亏损；<br>应收为0；应付为0）</span><br>
+                            <input type="checkbox" name="sks" lay-skin="primary" title="" checked="">问题件未处理<br>
+                            <input type="checkbox" name="sks" lay-skin="primary" title="" checked="">国家简码不符<br>
+                            <input type="checkbox" name="sks" lay-skin="primary" title="" checked="">包装类型不符<br>
+                            <input type="checkbox" name="sks" lay-skin="primary" title="" checked="">件数不符<br>
+                            <input type="checkbox" name="sks" lay-skin="primary" title="" checked="">付款方式不符<br>
+                            <input type="checkbox" name="sks" lay-skin="primary" title="" checked="">税金付款不符<br>
                         </div>
-                        <blockquote class="layui-elem-quote layui-text">费用结算</blockquote>
-                        <div class="layui-row layui-col-space5">
-
-                            <div class="layui-col-xs6">
-                                <div class="layui-row" style="margin: 0">
-                                    付款方式
-                                </div>
-                                <div class="layui-row" style="margin-bottom: 10px">
-                                    <select name=""class="layui-select"></select>
-                                </div>
-                                <div class="layui-row">
-                                    到付款
-                                </div>
-                                <div class="layui-row" style="margin-bottom: 5px">
-                                    <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
-                                    <div class="layui-col-xs6"><select class="layui-select">
-                                        <option value="0">  </option>
-                                    </select></div>
-                                </div>
-                                <div class="layui-row">
-                                    税金付款
-                                </div>
-                                <div class="layui-row">
-                                    <select class="layui-select">
-                                        <option value="0">  </option>
-                                    </select>
-                                </div>
-                                <div class="layui-row">
-                                    代付款
-                                </div>
-                                <div class="layui-row">
-                                    <div class="layui-col-xs6"><input type="text" class="layui-input"></div>
-                                    <div class="layui-col-xs6"><select class="layui-select">
-                                        <option value="0">  </option>
-                                    </select></div>
-                                </div>
-                            </div>
-                            <div class="layui-col-xs6" style="padding: 0 10px">
-                                <table class="layui-table" id="chargeInfo" ></table>
-                            </div>
                         </div>
-                        <div class="layui-row">结算备注</div>
-                        <div class="layui-row">
-                            <div class="layui-form-item">
-                                <div class="layui-input-inline" style="width: 100%">
-                                    <input type="text" class="layui-input">
-                                </div>
-                            </div>
-                        </div>
-                        <blockquote class="layui-elem-quote layui-text">收件人</blockquote>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs4">寄件公司</div>
-                            <div class="layui-col-xs4">寄件人</div>
-                            <div class="layui-col-xs4">寄件电话</div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs4"><input type="text" class="layui-input"></div>
-                            <div class="layui-col-xs4"><input type="text" class="layui-input"></div>
-                            <div class="layui-col-xs4"><input type="text" class="layui-input"></div>
-                        </div>
-                        <div>寄件地址</div>
-                        <div class="layui-form-item">
-                            <div class="layui-input-inline" style="width: 100%">
-                                <input type="text" class="layui-input">
-                            </div>
-                        </div>
-                        <div>寄件地址2</div>
-                        <div class="layui-form-item">
-                            <div class="layui-input-inline" style="width: 100%">
-                                <input type="text" class="layui-input">
-                            </div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs8">寄件地址3</div>
-                            <div class="layui-col-xs4">寄件国家</div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs8">
-                                <div class="layui-form-item">
-                                    <div class="layui-input-inline" style="width: 100%">
-                                        <input type="text" class="layui-input">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="layui-col-xs4">
-                                <input type="text" class="layui-input">
-                            </div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs4">寄件洲/省</div>
-                            <div class="layui-col-xs4">寄件城市</div>
-                            <div class="layui-col-xs4">寄件邮编</div>
-                        </div>
-                        <div class="layui-row layui-col-space5">
-                            <div class="layui-col-xs4"><input type="text" class="layui-input"></div>
-                            <div class="layui-col-xs4"><input type="text" class="layui-input"></div>
-                            <div class="layui-col-xs4"><input type="text" class="layui-input"></div>
-                        </div>
-
-                    </div>
+                     <div style="position: absolute;left: 280px;top: -90px;font-size: 15px">  EDI 名称 + 走货路线</div>     <div style="font-size: 15px;position: absolute;left: 420px;top: -100px;width: 800px"><div class="layui-input-inline">
+                    <select name="quiz1" >
+                        <option value="">请选择省</option>
+                        <option value="浙江" selected="">浙江省</option>
+                        <option value="你的工号">江西省</option>
+                        <option value="你最喜欢的老师">福建省</option>
+                    </select>
+                </div></div>
                 </div>
-                <blockquote class="layui-elem-quote layui-text">INVOICE信息
-                    <div style="float: right">
-                        <input type="checkbox" name="like[write]" lay-skin="primary" title="显示invoice">
-                    </div>
-                </blockquote>
-            </div>
-            <div class="layui-col-xs4">
-
             </div>
         </div>
+        </div>
     </form>
+   <div style="position: absolute;left: 440px;top: 900px"><table class="layui-table" id="OrderInfo"   lay-filter="orderInfo"></table>
+   </div>
 
 </div>
+<script type="text/html" id="toolbarDemo">
+    <div align="left" class="layui-btn-container">
+        <button id="addTable" type="button" class="layui-btn layui-icon-addition layui-icon layui-btn-sm layui-btn-normal" lay-event="add"></button>
+    </div>
+</script>
+<script type="text/html" id="rowDemo">
+    <div class="layui-btn-container">
+        <button id="delRow" type="button" class="layui-btn layui-icon-subtraction layui-icon layui-btn-danger layui-btn-sm layui-btn-normal" lay-event="del"></button>
+    </div>
+</script>
 
 <script src="../../lib/layui/layui.js" charset="utf-8"></script>
+
 <script src="../../static/js/order/modificationWaybill.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+<script>
+
+
+    var renderForm;
+    layui.use(['laydate' ,'layer', 'table', 'jquery', 'form'], function(){
+        var laydate = layui.laydate //日期
+            ,layer = layui.layer //弹层
+            ,table = layui.table
+            ,$=layui.jquery,//表格
+            form=layui.form;
+
+        renderForm=function (obj) {
+            form.val('record',JSON.parse(JSON.stringify(obj)));
+        }
+        table.render({
+            elem: '#OrderInfo'
+            ,cellMinWidth: 80
+            ,totalRow: true //开启合计行
+            ,id:"grid"
+            ,width:840
+            ,height:400
+            ,toolbar: '#toolbarDemo'
+            ,cols: [[
+                {type:'numbers',title:"序号"}
+                ,{title: '',align:'center', toolbar: '#rowDemo',edit:'text'}
+                ,{field:'chineseName', title:'联系人',edit: 'text'}
+                ,{field:'englishName', title:'岗位',edit: 'text' }
+                ,{field:'goodsNumber', title:'电话',edit: 'text'}
+                ,{field:'rw', title:'手机',edit: 'text' }
+                ,{field:'long', title:'传真',edit:'text'}
+                ,{field:'wide', title:'email',edit:'text'}
+                ,{field:'height', title:'备注',edit:'text'}
+            ]],data:[{
+                "chineseName": ""
+                ,"englishName": ""
+                ,"goodsNumber": ""
+                ,"rw": ""
+                ,"long": ""
+                ,"wide": ""
+                ,"height": ""
+            }],done: function(res, curr, count){
+                //如果是异步请求数据方式，res即为你接口返回的信息。
+                //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                tabledata = res.data;
+                //去掉下拉框的失焦事件 否则在下拉框里输入值 失焦后变回下拉选项里的值了 没有需要的同学忽略掉即可
+
+                $('tr').each(function(e){
+                    var $cr=$(this);
+                    var dataindex = $cr.attr("data-index");
+                });
+
+
+
+
+            }
+        });
+        var tabledata;
+        //头工具栏添加按钮事件
+        table.on('toolbar(orderInfo)', function(obj){
+            if(obj.event === 'add'){
+                tabledata.push({  "nw": ""
+                    ,"long": ""
+                    ,"wide": ""
+                    ,"height": ""
+                    ,"divided": ""
+                    ,"weight": ""
+                    ,"cw": ""
+                    ,"minimumWeight": ""
+                    ,"packingCost": ""
+                    ,"currency": ""
+                });
+
+                table.reload('grid', {
+                    data: tabledata
+                });
+
+            };
+        });
+        table.on('tool(orderInfo)', function(obj){
+                if(obj.event === 'del'){
+                    obj.del();
+                };
+            }
+        );
+
+
+    });
+
+</script>
 </body>
 </html>

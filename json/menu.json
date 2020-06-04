@@ -238,12 +238,12 @@
 						"id": 43,
 						"name": "目的地策略",
 						"icon": "",
-						"url": "./pages/admin/rule.html"
+						"url": "./pages/basics/DestinationStrategy.html"
 					},{
 						"id": 44,
 						"name": "品名对照规则",
 						"icon": "",
-						"url": "./pages/admin/rule.html"
+						"url": "./pages/basics/nameComparison.html"
 					},{
 						"id": 45,
 						"name": "17单号规则",

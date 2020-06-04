@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增邮编目的地策略</title>
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/weadmin.css">
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="weadmin-body">
+    <form class="layui-form">
+        <blockquote class="layui-elem-quote">邮编目的地策略
+            <div class="layui-form-item layui-inline" style="height: 10px;margin-top: -15px;">
+                <div class="layui-input-block">
+                    <input type="checkbox" name="like1[write]" lay-skin="primary" title="启用" checked>
+                </div>
+            </div>
+        </blockquote>
+        <div class="layui-row">
+            <div class="layui-form-item layui-inline">
+                <div style="padding: 10px;"><span style="color: red">*</span>国家简码</div>
+                <div class="layui">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">
+                <div style="padding: 10px;"><span style="color: red">*</span>国家</div>
+                <div class="layui">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">
+                <div style="padding: 10px;"><span style="color: red">*</span>邮编目的地分类</div>
+                <div class="layui-row">
+                    <select name="midtype" >
+                        <option value="发送账单">发送账单</option>
+                        <option value="发送通知">发送通知</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">
+                <div style="padding: 10px;"><span style="color: red">*</span>起始邮编</div>
+                <div class="layui">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">
+                <div style="padding: 10px;"><span style="color: red">*</span>终止邮编</div>
+                <div class="layui">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline">
+                <div style="padding: 10px;"><span style="color: red">*</span>目的地</div>
+                <div class="layui-input-inline">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input" >
+                </div>
+            </div>
+
+            <div class="" style="margin-left: 400px;">
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="formDemo2">保存</button>
+                    <button class="layui-btn layui-bg-gray" type="reset" onclick="x_admin_close()">关闭</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../static/js/order/addDestinationStrategy.js"></script>
+</body>
+</html>
