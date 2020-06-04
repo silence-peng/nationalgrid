@@ -14,11 +14,11 @@
 </head>
 <body>
 <div class="weadmin-body">
-    <form class="layui-form">
+    <form class="layui-form" id="data" lay-filter="example">
         <blockquote class="layui-elem-quote">基础信息
             <div class="layui-form-item layui-inline" style="height: 10px;margin-top: -15px;">
                 <div class="layui-input-block">
-                    <input type="checkbox" name="like1[write]" lay-skin="primary" title="启用" checked>
+                    <input type="checkbox" value="1" id="isStartUsing" name="isStartUsing" lay-skin="primary" title="启用" checked>
                 </div>
             </div>
         </blockquote>
@@ -26,31 +26,29 @@
             <div class="layui-form-item layui-inline">
                 <div style="padding: 10px;"><span style="color: red">*</span>货位编码</div>
                 <div class="layui-input-inline">
-                    <input type="text" name="title" autocomplete="off" class="layui-input">
+                    <input type="text" name="positionCoding"  id="dataId" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item layui-inline">
                 <div style="padding: 10px;"><span style="color: red">*</span>货位类型</div>
                 <div class="layui-input-inline">
-                    <select name="midtype" >
-                        <option value="发送账单">发送账单</option>
-                        <option value="发送通知">发送通知</option>
+                    <select name="positionType" id="positionType">
+                        <option value="1">正常区</option>
+                        <option value="0">异常区</option>
                     </select>
                 </div>
             </div>
             <div class="layui-form-item layui-inline">
                 <div style="padding: 10px;"><span style="color: red">*</span>所属网点</div>
                 <div class="layui-input-inline">
-                    <select name="midtype" >
-                        <option value="发送账单">发送账单</option>
-                        <option value="发送通知">发送通知</option>
+                    <select name="affiliatedBranches" id="affiliatedBranches">
                     </select>
                 </div>
             </div>
             <div class="layui-form-item layui-inline" style="width: 100%">
                 <div style="padding: 10px;">备注</div>
                 <div class="layui-row">
-                    <input type="text" name="title" autocomplete="off" class="layui-input">
+                    <input type="text" name="remark" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="" style="margin-left: 400px;margin-top: 50px;">
@@ -64,6 +62,6 @@
 </div>
 <script src="../../lib/layui/layui.js" charset="utf-8"></script>
 <script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
-<script src="../../static/js/basics/addGoodsAllocation.js"></script>
+<script src="../../static/js/basics/updateGoodsAllocation.js"></script>
 </body>
 </html>
