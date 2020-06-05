@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../../static/css/font.css">
+    <link rel="stylesheet" href="../../../static/css/weadmin.css">
+    <link rel="stylesheet" href="../../../static/css/cyh_button.css">
+</head>
+<style type="text/css">
+    .tree-txt-active{
+        color :red;
+    }
+    .tree-cyh {
+        font-family: "黑体 Regular", 黑体;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 18px;
+        color: rgb(51, 51, 51);
+    }
+</style>
+<body>
+
+<div style="float: left;">
+    <div class="weadmin-body" style="">
+        <ul class="layui-nav" style="font-size: 14px;border-radius: 0px;padding:0;background-color: rgb(255,255,255)">
+            <li class="layui-nav-item layui-inline">
+                <a type="button" class="little-button button-green el-button"   onclick="WeAdminShow('新增自动转单规则','./AddTurnSingleRule.html',790,550)">新增</a>
+            </li>
+            <li class="layui-inline layui-nav-item">
+                <a type="button" class="little-button button-blue el-button"   onclick="WeAdminShow('修改自动转单规则','./UpdateTurnSingleRule.html.html',790,550)">修改</a>
+            </li>
+            <li class="layui-inline layui-nav-item">
+                <a type="button" class="little-button button-red el-button"  onclick="WeAdminShow('删除','./ToOpenDocuments.html',750,500)" >删除</a>
+            </li>
+
+        </ul>
+        <form class="layui-form"style="margin-top: 10px;" >
+            <div class="layui-form-item layui-inline"style="width: 170px;margin-right: 25px;">
+                <label class="layui-form-label input-title" >所属网点</label>
+                <div class="layui-input-inline">
+                    <select name="midtype" lay-verify="required">
+                        <option value="全部">全部</option>
+                        <option value="启用">启用</option>
+                        <option value="停用">停用</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline"style="width: 170px;margin-right: 0px;">
+                <label class="layui-form-label input-title">客户编码</label>
+                <div class="layui-input-inline" >
+                    <input type="text" name="title" lay-verify="title" style="autocomplete:off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline"style="width: 170px;margin-left: 25px;margin-right: 0px;">
+                <label class="layui-form-label input-title">客户名称</label>
+                <div class="layui-input-inline" >
+                    <input type="text" name="title" lay-verify="title" style="autocomplete:off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline"style="width: 170px;margin-left: 25px">
+                <label class="layui-form-label input-title" style="width: 110px;" >指定路线分类</label>
+                <div class="layui-input-inline">
+                    <select name="midtype" lay-verify="required">
+                        <option value="全部">全部</option>
+                        <option value="启用">启用</option>
+                        <option value="停用">停用</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item layui-inline"style="width: 170px;margin-left: 25px">
+                <label class="layui-form-label input-title">指定路线</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="title" lay-verify="title" style="autocomplete:off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item layui-inline"style="width: 170px;margin-left: 25px">
+                <label class="layui-form-label input-title" >启用状态</label>
+                <div class="layui-input-inline">
+                    <select name="midtype" lay-verify="required">
+                        <option value="全部">全部</option>
+                        <option value="启用">启用</option>
+                        <option value="停用">停用</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item layui-inline" style="margin-left: 30px;padding-top: 2.5%; ">
+                <button type="button" class="button-blue"  >查询</button>
+                <button class="reset-bth" type="reset"  >重置</button>
+            </div>
+        </form>
+        <table class="layui-hide" id="test" ></table>
+
+    </div>
+
+</div>
+</body>
+<script src="../../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    layui.use(['tree', 'util','jquery','table'], function() {
+        var tree = layui.tree
+            , layer = layui.layer
+            , util = layui.util
+            , $ = layui.jquery
+            ,table=layui.table
+            ,data1 = [{
+            title: '<span style="font-size: 20px;">走货路线分类</span>'
+            ,id: 1
+            ,spread: true
+            ,children: [{
+                title: 'DHL-CN'
+                ,id: 1000
+                ,checked: true
+            },
+                {
+                    title: 'DHL-MO'
+                    ,id: 1000
+                },
+                {
+                    title: 'DHL-TW'
+                    ,id: 1000
+                },
+                {
+                    title: 'FED-HK'
+                    ,id: 1000
+                }]
+        }]
+        //无连接线风格
+        tree.render({
+            elem: '#test13'
+            , data: data1
+            , showLine: false  //是否开启连接线
+            ,click: function (obj) {
+                console.log(obj.data); //得到当前点击的节点数据
+                console.log(obj.state); //得到当前节点的展开状态：open、close、normal
+                console.log(obj.elem); //得到当前节点元素
+
+                console.log(obj.data.children); //当前节点下是否有子节点
+
+            }
+        });
+        // 单选
+        $(document).click(function(e) { // 在页面任意位置点击而触发此事件
+            if($(e.target).attr('class') === "layui-tree-txt"){ // 防止因为点击展开按钮把已选中的样式取消
+                $(".layui-tree-txt").removeClass("tree-txt-active"); // 移除点击样式
+                $(e.target).addClass("tree-txt-active"); // e.target表示被点击的目标
+            }
+        });
+
+        table.render({
+            elem: '#test'
+            ,url:'/demo/table/user/'
+            ,height: 550
+            ,cols: [[ //表头
+                {field: 'num', title: '序号',width:70}
+                ,{field: 'sortNo', title: '启用',width:100}
+                ,{field: 'sortNo', title: '所属网点',width:150}
+                ,{field: 'orderNum', title: '客户编码',width:150}
+                ,{field: 'errorInfo', title: '客户名称',width:150}
+                ,{field: 'errorInfo', title: '指定路线分类',width:150}
+                ,{field: 'errorInfo', title: '指定路线',width:150}
+                ,{field: 'errorInfo', title: '创建时间',width:150}
+                ,{field: 'errorInfo', title: '创建人',width:150}
+                ,{field: 'errorInfo', title: '修改时间',width:150}
+                ,{field: 'errorInfo', title: '修改人',width:150}
+            ]]
+            ,page:true
+        });
+    })
+</script>
+</html>

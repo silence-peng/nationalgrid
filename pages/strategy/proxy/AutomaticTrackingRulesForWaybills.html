@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../../static/css/font.css">
+    <link rel="stylesheet" href="../../../static/css/weadmin.css">
+    <link rel="stylesheet" href="../../../static/css/cyh_button.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../lib/layui/formSelects-v4.css"/>
+</head>
+<style type="text/css">
+    .tree-txt-active{
+        color :red;
+    }
+    .tree-cyh {
+        font-family: "黑体 Regular", 黑体;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 18px;
+        color: rgb(51, 51, 51);
+    }
+</style>
+<body>
+<div style="float: left;width: 13%;">
+    <div id="test13" class="demo-tree-more tree-cyh" style="margin-top: 10px;margin-left: 10px;"></div>
+</div>
+<div style="display:inline-block;width: 80%;padding-left: 5%;">
+<form class="layui-form">
+    <input type="hidden" name="trackingNetworkId" id="trackingNetworkId"/>
+    <div class="layui-form-item layui-inline"style="width: 100%;margin-bottom: 0; margin-right: 18px;">
+        <label class="layui-form-label tree-cyh" style="font-size: 20px;float: none;width: 120px;margin-left: -1%;">包含走货路线</label>
+        <div class="layui-input-inline" style="width: 85%;">
+            <textarea name="bindingLine" placeholder="请输入内容" id="bindingLine"  class="layui-textarea layui-disabled" style="width: 90%;height: 180px;">DHL-A,DHL-B,DHL-C</textarea>  </div>
+    </div>
+    <div class="layui-form-item layui-inline"style="width: 200px;margin: 20px 0 0 0;padding: 0 0 0 0">
+        <label class="layui-form-label tree-cyh" style="font-size: 20px;width: 215px;float: none;margin-bottom: 5px;margin-left: -13%;">出货后触发延时(小时)</label>
+
+        <div class="layui-input-inline" style="width: 200px">
+            <input type="text" name="timeAfterDeparture" lay-verify="title" value="5"  autocomplete="off" class="layui-input "  style="width: 200px;">
+
+        </div>
+    </div>
+    <div class="layui-form-item layui-inline"style="width: 600px;margin: 5% 0 0 1%;padding: 0 0 0 0">
+
+        <div class="layui-input-inline" style="width: 800px;">
+            <p style="color: red;">出货后统一触发，触发后，做指定小时的延时，等代理收货后，再做追踪</p>
+        </div>
+    </div>
+<br/>
+    <div class="layui-form-item layui-inline"style="width: 200px;margin: 10px 0 5px 0;padding: 0 0 0 0">
+
+        <div class="layui-input-inline" style="width: 250px">
+            <input type="radio" name="stateTrigger" value="1" title="触发后间隔发起追踪">
+        </div>
+    </div>
+
+    <br/>
+    <div class="layui-form-item layui-inline"style="width: 200px;margin: 0px 0 0 0;padding: 0 0 0 0">
+        <label class="layui-form-label tree-cyh" style="font-size: 20px;width: 215px;float: none;margin-bottom: 5px;margin-left: -13%;">前N天隔M小时发起追踪</label>
+
+        <div class="layui-input-inline" style="width: 250px">
+            <input type="text" name="beforAfterHours" lay-verify="title" value="5"  autocomplete="off" class="layui-input "  style="width: 100px;float:left;margin-right: 10px;">
+            <input type="text" name="title" lay-verify="title" value="5"  autocomplete="off" class="layui-input "  style="width: 100px;">
+
+        </div>
+    </div>
+    <div class="layui-form-item layui-inline"style="width: 200px;margin: 0px 0 0 40px;padding: 0 0 0 0">
+    <label class="layui-form-label tree-cyh" style="font-size: 20px;width: 215px;float: none;margin-bottom: 5px;margin-left: -13%;">后X天隔Y小时发起追踪</label>
+
+    <div class="layui-input-inline" style="width: 250px">
+        <input type="text" name="everyTimeAfter" lay-verify="title" value="5"  autocomplete="off" class="layui-input "  style="width: 100px;float:left;margin-right: 10px;">
+        <input type="text" name="title" lay-verify="title" value="5"  autocomplete="off" class="layui-input "  style="width: 100px;">
+
+    </div>
+</div>
+    <div class="layui-form-item layui-inline"style="width: 600px;margin: 1% 0 0 3%;padding: 0 0 0 0">
+
+        <div class="layui-input-inline" style="width: 800px;">
+            <p style="color: red;">间隔发起追踪：<br/>
+
+                1、分两个时段设置，在前几天，可高密度追踪；后几天大部分件已签收，少部分件可降低密度<br/>
+
+                2、N天与X天内取最大值（如未设置，统一按10天）作为追踪有效期，超出有效期将不再自动追踪</p>
+        </div>
+    </div>
+
+    <br/>
+    <div class="layui-form-item layui-inline"style="width: 200px;margin: 10px 0 0 0;padding: 0 0 0 0">
+
+        <div class="layui-input-inline" style="width: 250px">
+            <input type="radio" name="stateTrigger" value="2" title="触发后每天指定触发时间">
+        </div>
+    </div>
+
+    <br/>
+    <div class="layui-form-item layui-inline"style="width: 500px;margin: 10px 0 0 40px;padding: 0 0 0 0">
+        <label class="layui-form-label tree-cyh" style="font-size: 20px;width: 500px;float: none;margin-bottom: 5px;margin-left: -10%;">每天指定追踪时间(格式：HHMM,多个时用,隔开;最多5个)</label>
+
+        <div class="layui-input-inline" style="width: 500px;margin-left: -8%;">
+            <input type="text" name="specifyTrackingTime" lay-verify="title" value="5"  autocomplete="off" class="layui-input "  style="width: 500px;">
+
+        </div>
+    </div>
+    <div class="layui-form-item layui-inline"style="width: 600px;margin: 4% 0 0 -1%;padding: 0 0 0 0">
+
+        <div class="layui-input-inline" style="width: 800px;">
+            <p style="color: red;">每天指定出发时间：可综合考虑交货时间之前，客服的上班时间之前发起追踪，在需要数据之前，统一追踪一次</p>
+        </div>
+    </div>
+    <div class="layui-form-item layui-inline"style="width: 200px;margin: 40px 0 0 20px;padding: 0 0 0 0">
+
+        <div class="layui-input-inline" style="width: 200px;margin-left: -8%;">
+            <button type="submit" class="layui-btn layui-bg-blue" lay-submit="" lay-filter="demo1">保存</button>
+        </div>
+    </div>
+
+</form>
+</div>
+</body>
+<script src="../../../lib/layui/layui.js" charset="utf-8"></script>
+<script src="../../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../static/js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    function gg(d){
+       return eval(d);
+    }
+    layui.use(['tree', 'util','jquery','table','form'], function() {
+        var tree = layui.tree
+            , layer = layui.layer
+            , util = layui.util
+            , $ = layui.jquery
+            ,form=layui.form
+            ,table=layui.table;
+            var data1 = "";
+
+            $.ajax({
+                url:"http://127.0.0.1:8080/selectAll",
+                type:'get',
+                dataType:'json',
+                crossDomain: true,
+                success:function (result) {
+
+
+                    //无连接线风格
+                    tree.render({
+                        elem: '#test13'
+                        , data: result
+                        , showLine: false  //是否开启连接线
+                        ,click: function (obj) {
+                            $("#bindingLine").text(obj.data.id); //得到当前点击的节点数据
+                            $("#trackingNetworkId").text(obj.data.title); //得到当前点击的节点数据
+
+                        }
+                    });
+                }
+            })
+
+
+
+        // 单选
+        $(document).click(function(e) { // 在页面任意位置点击而触发此事件
+            if($(e.target).attr('class') === "layui-tree-txt"){ // 防止因为点击展开按钮把已选中的样式取消
+                $(".layui-tree-txt").removeClass("tree-txt-active"); // 移除点击样式
+                $(e.target).addClass("tree-txt-active"); // e.target表示被点击的目标
+            }
+        });
+
+        form.on('submit(demo1)', function(data){
+            var user = $('form').serialize();
+            $.ajax({
+                 data:user,
+                url:"http://127.0.0.1:8080/addTrackingNetwork",
+                dataType:"text",
+                success:function(result){
+                    if(result=='true'){
+                        layer.msg("保存成功",{time:'1000'});
+
+                    }else{
+                        layer.msg("保存失败");
+                    }
+                }
+            })
+            return false;
+        });
+
+    })
+</script>
+</html>
