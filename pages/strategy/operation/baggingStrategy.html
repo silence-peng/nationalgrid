@@ -36,9 +36,9 @@
     <form class="layui-form">
         <div class="layui-row">
             <div class="btnArr">
-                <button type="button" class="layui-btn" style="background-color: #00d000" onclick="WeAdminShow('修改装袋','./addBaggingStrategy.html',800,500)">新增</button>
-                <button type="button" class="layui-btn" onclick="WeAdminShow('修改装袋','./updateBaggingStrategy.html',800,500)">修改</button>
-                <button type="button" class="layui-btn layui-btn-danger" onclick="member_del('./delDeliver.html',id)">删除</button>
+                <button type="button" class="layui-btn" style="background-color: #00d000" onclick="WeAdminShow('新增装袋','./addBaggingStrategy.html',800,500)">新增</button>
+                <button type="button" class="layui-btn" data-type="getCheckData">修改</button>
+                <button type="button" class="layui-btn layui-btn-danger" data-type="delData">删除</button>
                 <button type="button" class="layui-btn layui-btn-primary">导出</button>
             </div>
             <div class="layui-row layui-col-space10">
@@ -50,16 +50,20 @@
             </div>
             <div class="layui-row layui-col-space10">
                 <div class="layui-col-xs2">
-                    <select class="layui-select" ></select>
+                    <select class="layui-select" name="affiliatedBranches"></select>
                 </div>
-                <div class="layui-col-xs2"><input type="text" class="layui-input"></div>
-                <div class="layui-col-xs2"><input type="text" class="layui-input"></div>
-                <div class="layui-col-xs2"><input type="text" class="layui-input"></div>
+                <div class="layui-col-xs2"><input type="text" class="layui-input" name="strategyCoding"></div>
+                <div class="layui-col-xs2"><input type="text" class="layui-input" name="sendASite"></div>
+                <div class="layui-col-xs2"><input type="text" class="layui-input" name="shipRoute"></div>
                 <div class="layui-col-xs2">
-                    <select class="layui-select" ></select>
+                    <select class="layui-select" name="isStartUsing">
+                        <option value="">请选择</option>
+                        <option value="1">启用</option>
+                        <option value="0">停用</option>
+                    </select>
                 </div>
                 <div class="layui-col-xs2 btnArr">
-                    <button class="layui-btn">查询</button>
+                    <button type="button" class="layui-btn" lay-submit lay-filter="formDemo">查询</button>
                     <button class="layui-btn layui-btn-primary">重置</button>
                 </div>
             </div>
