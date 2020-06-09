@@ -13,28 +13,24 @@
 </head>
 <body>
 <div class="weadmin-body">
-    <form class="layui-form">
+    <form class="layui-form" lay-filter="formTest">
         <div class="layui-row">
             <blockquote class="layui-elem-quote">基础信息
-                <div class="layui-form-item layui-inline" style="height: 10px;margin-top: -15px;">
-                    <div class="layui-input-block">
-                        <input type="checkbox" name="like1[write]" lay-skin="primary" title="启用" checked>
-                    </div>
-                </div>
+                <input type="hidden" name="id"/>
+                <input type="hidden" name="createPerson"/>
+                <input type="hidden" name="createDate"/>
             </blockquote>
             <div class="layui-form-item layui-inline"style="width: 200px;">
                 <div style="padding: 10px;"><span style="color: red">*</span>所属网点</div>
                 <div class="layui-input-inline">
-                    <select name="midtype" lay-verify="required">
-                        <option value=" ">深圳</option>
+                    <select name="affiliatedBranches" lay-verify="required">
                     </select>
                 </div>
             </div>
             <div class="layui-form-item layui-inline"style="width: 60%;">
                 <div style="padding: 10px;"><span style="color: red">*</span>指定路线</div>
                 <div class="layui-row">
-                    <select name="midtype" lay-verify="required">
-                        <option value=" "> </option>
+                    <select name="assRoute" lay-verify="required">
                     </select>
                 </div>
             </div>
@@ -49,21 +45,21 @@
                         <div class="layui-tab-item layui-show">
                             <div class="layui-form-item layui-form-text">
                                 <div class="layui-row">
-                                    <textarea class="layui-textarea"></textarea>
+                                    <textarea class="layui-textarea" name="desCoding"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="layui-tab-item">
                             <div class="layui-form-item layui-form-text">
                                 <div class="layui-row">
-                                    <textarea class="layui-textarea"></textarea>
+                                    <textarea class="layui-textarea" name="englishDes"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="layui-tab-item">
                             <div class="layui-form-item layui-form-text">
                                 <div class="layui-row">
-                                    <textarea class="layui-textarea"></textarea>
+                                    <textarea class="layui-textarea" name="chineseDes"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -74,21 +70,20 @@
                 <div class="layui-form-item layui-form-text">
                     <div style="padding: 10px;">收件邮编</div>
                     <div class="layui-row">
-                        <textarea class="layui-textarea" style="height: 120px;"></textarea>
+                        <textarea class="layui-textarea" style="height: 120px;" name="receipt"></textarea>
                     </div>
                 </div>
             </div>
             <div class="layui-form-item layui-inline" style="width: 100%;">
                 <div style="padding: 10px;"><span style="color: red">*</span>走货路线（多选）</div>
                 <div class="layui-row">
-                    <select name="midtype" lay-verify="required">
-                        <option value=" "> </option>
+                    <select name="shiRoute" lay-verify="required">
                     </select>
                 </div>
             </div>
             <div class="" style="margin-left: 400px;">
                 <div class="layui-form-item">
-                    <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="formDemo2">保存</button>
+                    <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="formDemo">保存</button>
                     <button class="layui-btn layui-bg-gray" type="reset" onclick="x_admin_close()">关闭</button>
                 </div>
             </div>

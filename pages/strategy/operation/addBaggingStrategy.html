@@ -13,48 +13,46 @@
 </head>
 <body>
 <div class="weadmin-body">
-    <form class="layui-form">
+    <form class="layui-form" lay-filter="formTest">
         <div class="layui-row">
             <blockquote class="layui-elem-quote">基础信息
                 <div class="layui-form-item layui-inline" style="height: 10px;margin-top: -15px;">
                     <div class="layui-input-block">
-                        <input type="checkbox" name="like1[write]" lay-skin="primary" title="启用" checked>
+                        <input type="hidden" name="isStartUsing"/>
+                        <input type="checkbox" name="isStart" lay-skin="primary" title="启用" checked>
                     </div>
                 </div>
             </blockquote>
             <div class="layui-form-item layui-inline" style="width: 160px;">
                 <div style="padding: 10px;"><span style="color: red">*</span>策略编码</div>
                 <div class="layui-input-inline">
-                    <input type="text" name="title" autocomplete="off" class="layui-input" style="width: 150px;">
+                    <input type="text" name="strategyCoding" autocomplete="off" class="layui-input" style="width: 150px;">
                 </div>
             </div>
             <div class="layui-form-item layui-inline" style="width: 160px;">
                 <div style="padding: 10px;"><span style="color: red">*</span>策略名称</div>
                 <div class="layui-input-inline">
-                    <input type="text" name="title" autocomplete="off" class="layui-input" style="width: 150px;">
+                    <input type="text" name="strategyBame" autocomplete="off" class="layui-input" style="width: 150px;">
                 </div>
             </div>
             <div class="layui-form-item layui-inline">
                 <div style="padding: 10px;">派件网点</div>
                 <div class="layui-input-inline">
-                    <select name="midtype" lay-verify="required">
-                        <option value=" "></option>
+                    <select name="sendASite" lay-verify="required">
                     </select>
                 </div>
             </div>
             <div class="layui-form-item layui-inline">
-                <div style="padding: 10px;">货物类型(可多选)</div>
+                <div style="padding: 10px;">货物类型</div>
                 <div class="layui-input-inline">
-                    <select name="midtype" lay-verify="required">
-                        <option value=" ">深圳</option>
+                    <select name="cargoType" lay-verify="required">
                     </select>
                 </div>
             </div>
             <div class="layui-form-item layui-inline" style="width: 100%;">
                 <div style="padding: 10px;"><span style="color: red">*</span>走货路线（多选）</div>
                 <div class="layui-row">
-                    <select name="midtype" lay-verify="required">
-                        <option value=" ">DHL-FBK</option>
+                    <select name="shipRoute" lay-verify="required">
                     </select>
                 </div>
             </div>
@@ -69,21 +67,21 @@
                         <div class="layui-tab-item layui-show">
                             <div class="layui-form-item layui-form-text">
                                 <div class="layui-row">
-                                    <textarea class="layui-textarea"></textarea>
+                                    <textarea class="layui-textarea" name="destination"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="layui-tab-item">
                             <div class="layui-form-item layui-form-text">
                                 <div class="layui-row">
-                                    <textarea class="layui-textarea"></textarea>
+                                    <textarea class="layui-textarea" name="englishDes"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="layui-tab-item">
                             <div class="layui-form-item layui-form-text">
                                 <div class="layui-row">
-                                    <textarea class="layui-textarea"></textarea>
+                                    <textarea class="layui-textarea" name="chineseDes"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -93,45 +91,44 @@
             <div class="layui-form-item layui-inline" style="width: 160px;">
                 <div style="padding: 10px;">整袋限制重量(KG)</div>
                 <div class="layui-input-inline">
-                    <input type="text" name="title" autocomplete="off" class="layui-input" style="width: 150px;">
+                    <input type="text" name="wholeBagWeight" autocomplete="off" class="layui-input" style="width: 150px;">
                 </div>
             </div>
             <div class="layui-form-item layui-inline" style="width: 160px;">
                 <div style="padding: 10px;">单票限制申报价值</div>
                 <div class="layui-input-inline">
-                    <input type="text" name="title" autocomplete="off" class="layui-input" style="width: 150px;">
+                    <input type="text" name="singleBagWeight" autocomplete="off" class="layui-input" style="width: 150px;">
                 </div>
             </div>
             <div class="layui-form-item layui-inline">
                 <div style="padding: 10px;"><span style="color: red">*</span>报关方式</div>
                 <div class="layui-input-inline">
-                    <select name="midtype" lay-verify="required">
-                        <option value=" "></option>
+                    <select name="clearanceId">
                     </select>
                 </div>
             </div>
             <div class="layui-form-item layui-inline" style="width: 160px;">
                 <div style="padding: 10px;">目的地机场代码</div>
                 <div class="layui-input-inline">
-                    <input type="text" name="title" autocomplete="off" class="layui-input" style="width: 150px;">
+                    <input type="text" name="desAirport" autocomplete="off" class="layui-input" style="width: 150px;">
                 </div>
             </div>
             <div class="layui-form-item layui-inline" style="width: 20%;">
                 <div style="padding: 10px;">邮包互换局</div>
                 <div class="layui-row">
-                    <input type="text" name="title" autocomplete="off" class="layui-input">
+                    <input type="text" name="parcelExchangeOffice" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item layui-inline" style="width: 78%;">
                 <div style="padding: 10px;">备注</div>
                 <div class="layui-row">
-                    <input type="text" name="title" autocomplete="off" class="layui-input">
+                    <input type="text" name="remark" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item layui-inline">
                 <div style="padding: 10px;"><span style="color: red">*</span>所属网点</div>
                 <div class="layui-input-inline">
-                    <select name="midtype" lay-verify="required">
+                    <select name="affiliatedBranches" lay-verify="required">
                         <option value=" "></option>
                     </select>
                 </div>
@@ -139,66 +136,65 @@
             <div class="layui-form-item layui-inline">
                 <div style="padding: 10px;"><span style="color: red">*</span>共享方式</div>
                 <div class="layui-input-inline">
-                    <select name="midtype" lay-verify="required">
-                        <option value=" "></option>
+                    <select name="sharingMode">
                     </select>
                 </div>
             </div>
             <div class="layui-form-item layui-inline" style="width: 45%;">
-                <div style="padding: 10px;"><span style="color: red">*</span>共享网点（可多选）</div>
+                <div style="padding: 10px;"><span style="color: red">*</span>共享网点</div>
                 <div class="layui-row">
-                    <select name="midtype">
-                        <option value=" "></option>
+                    <select name="shareBranch">
                     </select>
                 </div>
             </div>
             <div class="layui-form-item">
                 <div style="padding: 10px;"><span style="color: red">*</span>生成袋号规则</div>
                 <div class="layui-input-inline">
-                    <select name="midtype">
-                        <option value=" ">网点简码</option>
-                        <option value=" ">年月日</option>
-                        <option value=" ">年月</option>
-                        <option value=" ">流水号7位</option>
-                        <option value=" ">流水号6位</option>
-                        <option value=" ">流水号5位</option>
-                        <option value=" ">流水号4位</option>
-                        <option value=" ">流水号3位</option>
+                    <select name="rOne">
+                        <option value="网点简码">网点简码</option>
+                        <option value="年月日">年月日</option>
+                        <option value="年月">年月</option>
+                        <option value="流水号7位">流水号7位</option>
+                        <option value="流水号6位">流水号6位</option>
+                        <option value="流水号5位">流水号5位</option>
+                        <option value="流水号4位">流水号4位</option>
+                        <option value="流水号3位">流水号3位</option>
                     </select>
                 </div>
                 <div class="layui-input-inline" style="width: 50px;">
-                    <input type="text" name="title" autocomplete="off" class="layui-input" width="50">
+                    <input type="text" name="rTwo" autocomplete="off" class="layui-input" width="50">
                 </div>
                 <div class="layui-input-inline">
-                    <select name="midtype">
-                        <option value=" ">网点简码</option>
-                        <option value=" ">年月日</option>
-                        <option value=" ">年月</option>
-                        <option value=" ">流水号7位</option>
-                        <option value=" ">流水号6位</option>
-                        <option value=" ">流水号5位</option>
-                        <option value=" ">流水号4位</option>
-                        <option value=" ">流水号3位</option>
+                    <select name="rThree">
+                        <option value="网点简码">网点简码</option>
+                        <option value="年月日">年月日</option>
+                        <option value="年月">年月</option>
+                        <option value="流水号7位">流水号7位</option>
+                        <option value="流水号6位">流水号6位</option>
+                        <option value="流水号5位">流水号5位</option>
+                        <option value="流水号4位">流水号4位</option>
+                        <option value="流水号3位">流水号3位</option>
                     </select>
                 </div>
                 <div class="layui-input-inline" style="width: 50px;">
-                    <input type="text" name="title" autocomplete="off" class="layui-input" width="50">
+                    <input type="text" name="rFour" autocomplete="off" class="layui-input" width="50">
                 </div>
                 <div class="layui-input-inline">
-                    <select name="midtype">
-                        <option value=" ">网点简码</option>
-                        <option value=" ">年月日</option>
-                        <option value=" ">年月</option>
-                        <option value=" ">流水号7位</option>
-                        <option value=" ">流水号6位</option>
-                        <option value=" ">流水号5位</option>
-                        <option value=" ">流水号4位</option>
-                        <option value=" ">流水号3位</option>
+                    <select name="rFive">
+                        <option value="网点简码">网点简码</option>
+                        <option value="年月日">年月日</option>
+                        <option value="年月">年月</option>
+                        <option value="流水号7位">流水号7位</option>
+                        <option value="流水号6位">流水号6位</option>
+                        <option value="流水号5位">流水号5位</option>
+                        <option value="流水号4位">流水号4位</option>
+                        <option value="流水号3位">流水号3位</option>
                     </select>
                 </div>
+                <input type="hidden" name="baggingRule"/>
             </div>
             <div class="layui-form-item" style="margin-left: 70%;">
-                <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="formDemo2">保存</button>
+                <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="formDemo">保存</button>
                 <button class="layui-btn layui-bg-gray" type="reset" onclick="x_admin_close()">关闭</button>
             </div>
         </div>

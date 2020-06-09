@@ -38,8 +38,8 @@
     <div class="layui-row">
         <div class="btnArr">
             <button type="button" class="layui-btn" style="background-color: #00d000" onclick="WeAdminShow('新增排货','./addDeliveryStrategy.html',600,500)">新增</button>
-            <button type="button" class="layui-btn" onclick="WeAdminShow('修改排货','./updateDeliveryStrategy.html',600,500)">修改</button>
-            <button type="button" class="layui-btn layui-btn-danger"  onclick="member_del('./delDeliver.html',id)">删除</button>
+            <button type="button" class="layui-btn" data-type="getCheckData">修改</button>
+            <button type="button" class="layui-btn layui-btn-danger" data-type="delData">删除</button>
             <button type="button" class="layui-btn layui-btn-primary">导出</button>
         </div>
         <div class="layui-row layui-col-space10">
@@ -50,17 +50,17 @@
         </div>
         <div class="layui-row layui-col-space10">
             <div class="layui-col-xs2">
-                <select class="layui-select" ></select>
+                <select class="layui-select" id="affiliatedBranches"></select>
             </div>
-            <div class="layui-col-xs2"><input type="text" class="layui-input"></div>
-            <div class="layui-col-xs2"><input type="text" class="layui-input"></div>
-            <div class="layui-col-xs2"><input type="text" class="layui-input"></div>
+            <div class="layui-col-xs2"><input type="text" id="assRoute" style="" class="layui-input"></div>
+            <div class="layui-col-xs2"><input type="text" id="chineseDes" class="layui-input"></div>
+            <div class="layui-col-xs2"><input type="text" id="shiRoute" class="layui-input"></div>
             <div class="layui-col-xs2 btnArr">
-                <button class="layui-btn">查询</button>
-                <button class="layui-btn layui-btn-primary">重置</button>
+                <button type="button" class="layui-btn" lay-submit lay-filter="formDemo">查询</button>
+                <button type="button" class="layui-btn layui-btn-primary">重置</button>
             </div>
         </div>
-        <table class="layui-table" id="errorInfo"></table>
+        <table class="layui-table" lay-filter="test" id="errorInfo"></table>
     </div>
     </form>
 </div>
