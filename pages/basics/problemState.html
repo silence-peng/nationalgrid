@@ -53,10 +53,10 @@
             <a type="button" class="layui-btn layui-bg-blue" onclick="WeAdminShow('新增问题状态','./addProblemState.html',700,550)">新增</a>
         </li>
         <li class="layui-inline">
-            <a type="button" class="layui-btn" onclick="WeAdminShow('修改问题状态','./updateProblemState.html',700,550)">修改</a>
+            <a type="button" class="layui-btn" data-type="getCheckData" id="xg">修改</a>
         </li>
         <li class="layui-inline">
-            <a type="button" class="layui-btn layui-bg-red">删除</a>
+            <a type="button" class="layui-btn layui-bg-red" data-type="del" id="del">删除</a>
         </li>
         <li class="layui-inline">
             <a type="button" class="layui-btn layui-bg-blue">导出</a>
@@ -81,6 +81,7 @@
                     <div style="padding: 10px;">问题大类</div>
                     <div class="layui-input-inline">
                         <select name="problemTypes" id="problemTypes">
+                            <option value="0">请选择</option>
                             <option value="1">港前问题件</option>
                             <option value="2">港后问题件</option>
                         </select>
@@ -98,8 +99,9 @@
                     <div style="padding: 10px;">启用状态</div>
                     <div class="layui-input-inline">
                         <select name="isStartUsing" id="isStartUsing">
-                            <option value="1">启用</option>
-                            <option value="2">停用</option>
+                            <option value="0">全部</option>
+                            <option value="1">未启用</option>
+                            <option value="2">启用</option>
                         </select>
                     </div>
                 </div>

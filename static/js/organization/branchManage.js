@@ -5,36 +5,42 @@ layui.use(['element','jquery','table','layer'], function() {
 
     table.render({
         elem: '#test'
-        , url: '/demo/table/user/'
+        ,id:'testReload'
+        ,height: 450
+        , url: 'http://127.0.0.1:8080/problemstate/getIssueStaus'
+        ,title: '网点管理表'
+        ,type:'get'
+        ,dataType:'json'
+        ,crossDomain:true
         , cols: [[
             {type: 'checkbox'}
-            , {field: 'id', title: '网点名称'}
-            , {field: 'username', title: '网点编码'}
-            , {field: 'sex', title: '启用'    }
-            , {field: 'city', title: '网络简码'}
-            , {field: 'sign', title: '网点类型'}
-            , {field: 'experience', title: '网点简体'}
-            , {field: 'score', title: '网点英文'}
-            , {field: 'classify', title: '所属国家'}
-            , {field: 'wealth', title: '所属洲/省'}
-            , {field: 'wealth', title: '所属城市'}
-            , {field: 'wealth', title: '本位币'}
-            , {field: 'wealth', title: '委托录单网点'}
-            , {field: 'wealth', title: '负责人'}
-            , {field: 'wealth', title: '负责人电话'}
-            , {field: 'wealth', title: '经理'}
-            , {field: 'wealth', title: '经理电话'}
-            , {field: 'wealth', title: '投诉电话'}
-            , {field: 'wealth', title: '内部电话'}
-            , {field: 'wealth', title: '客服'}
-            , {field: 'wealth', title: '客服传真'}
-            , {field: 'wealth', title: '客服电话'}
-            , {field: 'wealth', title: '对账员'}
-            , {field: 'wealth', title: '备注'}
-            , {field: 'wealth', title: '创建时间'}
-            , {field: 'wealth', title: '创建人'}
-            , {field: 'wealth', title: '修改时间'}
-            , {field: 'wealth', title: '修改人'}
+            , {field: 'id', title: '网点名称',width:130}
+            , {field: 'username', title: '网点编码',width:130}
+            , {field: 'sex', title: '启用',width:80}
+            , {field: 'city', title: '网点简码',width:130}
+            , {field: 'sign', title: '网点类型',width:130}
+            , {field: 'experience', title: '网点简体',width:130}
+            , {field: 'score', title: '网点英文',width:130}
+            , {field: 'classify', title: '所属国家',width:130}
+            , {field: 'wealth', title: '所属洲/省',width:130}
+            , {field: 'wealth', title: '所属城市',width:130}
+            , {field: 'wealth', title: '本位币',width:130}
+            , {field: 'wealth', title: '委托录单网点',width:180}
+            , {field: 'wealth', title: '负责人',width:100}
+            , {field: 'wealth', title: '负责人电话',width:150}
+            , {field: 'wealth', title: '经理',width:80}
+            , {field: 'wealth', title: '经理电话',width:130}
+            , {field: 'wealth', title: '投诉电话',width:130}
+            , {field: 'wealth', title: '内部电话',width:130}
+            , {field: 'wealth', title: '客服',width:80}
+            , {field: 'wealth', title: '客服传真',width:130}
+            , {field: 'wealth', title: '客服电话',width:130}
+            , {field: 'wealth', title: '对账员',width:120}
+            , {field: 'wealth', title: '备注',width:80}
+            , {field: 'wealth', title: '创建时间',width:180}
+            , {field: 'wealth', title: '创建人',width:100}
+            , {field: 'wealth', title: '修改时间',width:180}
+            , {field: 'wealth', title: '修改人',width:100}
         ]]
     });
 
