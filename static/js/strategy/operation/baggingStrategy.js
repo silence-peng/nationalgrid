@@ -21,11 +21,12 @@ layui.use(['laydate', 'laypage', 'layer', 'table','form','jquery'], function(){
                 }}
             ,{field: 'affiliatedBranches', title: '所属网点'}
             ,{field: 'strategyCoding', title: '策略编码'}
+            ,{field: 'strategyBame', title: '策略名称'}
             ,{field: 'shipRoute', title: '走货路线'}
             ,{field: 'clearanceId', title: '报关方式'}
             ,{field: 'cargoType', title: '限定货物类型'}
             ,{field: 'wholeBagWeight', title: '整袋限制重量'}
-            ,{field: 'destination', title: '目的地'}
+            ,{field: 'chineseDes', title: '目的地'}
             ,{field: 'desAirport', title: '目的地机场代码'}
             ,{field: 'parcelExchangeOffice', title: '邮局包互换局'}
             ,{field: 'sendASite', title: '派件网点'}
@@ -112,7 +113,7 @@ layui.use(['laydate', 'laypage', 'layer', 'table','form','jquery'], function(){
         table.reload('testReload', {
             where : {
                 affiliatedBranches:$("select[name='affiliatedBranches']").val(),
-                strategyCoding:$("input[name='strategyCoding']").val(),
+                strategyBame:$("input[name='strategyBame']").val(),
                 shipRoute:$("input[name='shipRoute']").val(),
                 sendASite:$("input[name='sendASite']").val(),
                 isStartUsing:$("select[name='isStartUsing']").val()
@@ -144,8 +145,6 @@ layui.use(['laydate', 'laypage', 'layer', 'table','form','jquery'], function(){
                     title : '修改货位',
                     success : function(layero, index) {
                         var iframe = window['layui-layer-iframe' + index];
-                        console.log(data);
-                        console.log(data[0].id);
                         iframe.getid(data[0].id);
                     },
                     shade : [ 0.8, '#393d49' ],
