@@ -77,7 +77,7 @@ layui.use(['element','jquery','table','layer','transfer','form'], function() {
 
     });
     var $ = layui.$, active = {
-        getCheckData: function(){ //获取选中数据
+            getCheckData: function(){ //获取选中数据
             var checkStatus = table.checkStatus('testReload')
                 ,data = checkStatus.data;
             if(data.length<=0){
