@@ -81,13 +81,8 @@
                         </div>
                     </div>
                     <div class="layui-col-xs4">
-                        <select class="layui-select">
-                            <option value="0">D类</option>
-                            <option value="1">其他</option>
-                            <option value="2">EDI</option>
-                            <option value="3">快件</option>
-                            <option value="4">特货</option>
-                            <option value="5">9610</option>
+                        <select class="layui-select" name="customsWay" id="customsWay">
+
                         </select>
                     </div>
                 </div>
@@ -134,7 +129,7 @@
                             <div class="layui-col-xs5" ><input  type="text" name="destinationName" id="destinationName"
                                                                 class="layui-input"></div>
                             <div class="layui-col-xs2" >
-                                <button style="width:auto;height:38px" type="button" onclick="WeAdminShow('查找','find.html?type='+'destination',900,650)"
+                                <button style="width:auto;height:38px" type="button" onclick="WeAdminShow('查找','getCustomer.html?type='+'destination',900,650)"
                                         class="layui-btn layui-icon layui-btn-primary layui-btn-sm">&#xe615;
                                 </button>
                             </div>
@@ -144,10 +139,8 @@
                         </div>
                     </div>
                     <div class="layui-col-xs4">
-                        <select class="layui-select">
-                            <option value="0">普货</option>
-                            <option value="1">敏感货</option>
-                            <option value="2">商检货</option>
+                        <select class="layui-select" name="cargoType" id="cargoType">
+
                         </select>
                     </div>
                 </div>
@@ -179,8 +172,9 @@
                             <div class="layui-col-xs6">
                                 <input type="text" class="layui-input">
                             </div><div class="layui-col-xs6">
-                            <select class="layui-select">
-                                <option value="CNY">CNY</option></select>
+                            <select class="layui-select" name="declaredCurrency" id="declaredCurrency">
+
+                            </select>
                             </div>
                         </div>
 
@@ -200,7 +194,7 @@
                         </div>
                         <div class="layui-row" >
                             <div class="layui-col-xs4">
-                                <select class="layui-select" id=""></select>
+                                <select class="layui-select" name="packagingType" id="packagingType"></select>
                             </div>
                             <div class="layui-col-xs8">
                                 <div class="layui-row" style="margin: 0">
@@ -245,11 +239,13 @@
                         </div>
                         <div class="layui-row">
                             <div class="layui-col-xs4">
-                                <select name=""class="layui-select"></select>
+                                <select name="paymentMethod" id="paymentMethod" class="layui-select"></select>
                             </div>
                             <div class="layui-col-xs4"><input type="text" class="layui-input" value="0.00"></div>
                             <div class="layui-col-xs4">
-                                <select name=""class="layui-select"></select></div>
+                                <select name="paymentCurrency" id="paymentCurrency" class="layui-select">
+
+                                </select></div>
                         </div>
                         <div class="layui-row">
                             <div class="layui-col-xs4"> <i class="layui-icon layui-icon-snowflake"
@@ -259,11 +255,13 @@
                         </div>
                         <div class="layui-row">
                             <div class="layui-col-xs4">
-                                <select name=""class="layui-select"></select>
+                                <select name="taxPayment" id="taxPayment" class="layui-select"></select>
                             </div>
                             <div class="layui-col-xs4"><input type="text" class="layui-input" value="0.00"></div>
                             <div class="layui-col-xs4">
-                                <select name=""class="layui-select"></select></div>
+                                <select name="agencyCurrency" id="agencyCurrency" class="layui-select">
+
+                                </select></div>
                         </div>
                     </div>
                     <div class="layui-col-xs6" style="padding: 0 10px">
