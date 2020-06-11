@@ -13,36 +13,35 @@
 </head>
 <body>
 <div class="weadmin-body">
-    <form class="layui-form">
+    <form class="layui-form" lay-filter="formTest">
         <div class="layui-row">
             <blockquote class="layui-elem-quote">基础信息
                 <div class="layui-form-item layui-inline" style="height: 10px;margin-top: -15px;">
                     <div class="layui-input-block">
-                        <input type="checkbox" name="like1[write]" lay-skin="primary" title="启用" checked>
+                        <input type="hidden" name="id"/>
+                        <input type="hidden" name="isStartUsing"/>
+                        <input type="checkbox" name="isStart" lay-skin="primary" title="启用">
                     </div>
                 </div>
             </blockquote>
             <div class="layui-form-item layui-inline"style="width: 60%;">
                 <div style="padding: 10px;">客户</div>
                 <div class="layui-row">
-                    <select name="midtype" lay-verify="required">
-                        <option value=" "></option>
+                    <select name="customer" lay-verify="required">
                     </select>
                 </div>
             </div>
             <div class="layui-form-item layui-inline">
                 <div style="padding: 10px;"><span style="color: red">*</span>所属网点</div>
                 <div class="layui-input-inline">
-                    <select name="midtype" lay-verify="required">
-                        <option value=" ">深圳</option>
+                    <select name="affiliatedBranches" lay-verify="required">
                     </select>
                 </div>
             </div>
             <div class="layui-form-item layui-inline" style="width: 100%;">
                 <div style="padding: 10px;"><span style="color: red">*</span>走货路线（多选）</div>
                 <div class="layui-row">
-                    <select name="midtype" lay-verify="required">
-                        <option value=" ">DHL-FBK</option>
+                    <select name="shipRoute" lay-verify="required">
                     </select>
                 </div>
             </div>
@@ -57,21 +56,21 @@
                         <div class="layui-tab-item layui-show">
                             <div class="layui-form-item layui-form-text">
                                 <div class="layui-row">
-                                    <textarea class="layui-textarea"></textarea>
+                                    <textarea class="layui-textarea" name="desCoding"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="layui-tab-item">
                             <div class="layui-form-item layui-form-text">
                                 <div class="layui-row">
-                                    <textarea class="layui-textarea"></textarea>
+                                    <textarea class="layui-textarea" name="englishDes"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="layui-tab-item">
                             <div class="layui-form-item layui-form-text">
                                 <div class="layui-row">
-                                    <textarea class="layui-textarea"></textarea>
+                                    <textarea class="layui-textarea" name="chineseDes"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -81,16 +80,14 @@
             <div class="layui-form-item layui-inline" style="width: 100%;">
                 <div style="padding: 10px;">报货方式（多选）</div>
                 <div class="layui-row">
-                    <select name="midtype" lay-verify="required">
-                        <option value=" ">普货</option>
+                    <select name="clearanceId" lay-verify="required">
                     </select>
                 </div>
             </div>
             <div class="layui-form-item layui-inline" style="width: 100%;">
                 <div style="padding: 10px;">货物类型（多选）</div>
                 <div class="layui-row">
-                    <select name="midtype" lay-verify="required">
-                        <option value=" ">DHL-FBK</option>
+                    <select name="cargoTypeId" lay-verify="required">
                     </select>
                 </div>
             </div>
@@ -99,19 +96,23 @@
                 <div class="layui-form-item layui-inline">
                     <div style="padding: 10px;">分拣卡口</div>
                     <div class="layui-input-inline">
-                        <select name="midtype" lay-verify="required">
-                            <option value=" ">02</option>
+                        <select name="sortingMouth" lay-verify="required">
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
                         </select>
                     </div>
                 </div>
                 <div class="layui-form-item layui-inline">
                     <div style="padding: 10px;">分拣码</div>
                     <div class="layui-input-inline">
-                        <input type="text" name="title" autocomplete="off" class="layui-input" value="02">
+                        <input type="text" name="sortingYards" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item" style="margin-left: 70%;">
-                    <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="formDemo2">保存</button>
+                    <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="formDemo">保存</button>
                     <button class="layui-btn layui-bg-gray" type="reset" onclick="x_admin_close()">关闭</button>
                 </div>
             </div>

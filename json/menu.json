@@ -415,7 +415,7 @@
 					"id": 76,
 					"name": "运单查询",
 					"icon": "",
-					"url": "./pages/order/queryOrder.html"
+					"url": "./pages/order/SelectOrder.html"
 				},{
 					"id": 77,
 					"name": "运单导入修改",

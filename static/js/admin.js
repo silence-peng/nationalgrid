@@ -9,11 +9,12 @@
  * +----------------------------------------------------------------------
  */
 
-layui.define(['jquery', 'form', 'layer', 'element'], function(exports) {
+layui.define(['jquery', 'form', 'layer', 'element','table'], function(exports) {
 	var $ = layui.jquery,
 		form = layui.form,
 		layer = layui.layer,
-		element = layui.element;
+		element = layui.element
+		,table=layui.table;
 	var menu = [];
 	var curMenu;
 
@@ -324,7 +325,12 @@ layui.define(['jquery', 'form', 'layer', 'element'], function(exports) {
 			shadeClose: true,
 			shade: 0.4,
 			title: title,
-			content: url
+			content: url,
+			success:function () {
+				
+			},end:function () {
+                table.reload('testReload');
+            }
 		});
 	}
 	/*弹出层+传递ID参数*/
@@ -354,7 +360,6 @@ layui.define(['jquery', 'form', 'layer', 'element'], function(exports) {
 				//向iframe页的id=house的元素传值  // 参考 https://yq.aliyun.com/ziliao/133150
 				var body = layer.getChildFrame('body', index);
 				body.contents().find("#dataId").val(id);
-				console.log(id);
 			},
 			error: function(layero, index) {
 				alert("aaa");

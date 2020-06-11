@@ -14,11 +14,11 @@
 </head>
 <body>
 <div class="weadmin-body">
-    <form class="layui-form">
+    <form class="layui-form" lay-filter="example" id="pro">
         <blockquote class="layui-elem-quote">基础信息
             <div class="layui-form-item layui-inline" style="height: 10px;margin-top: -15px;">
                 <div class="layui-input-block">
-                    <input type="checkbox" name="like1[write]" lay-skin="primary" title="启用" checked>
+                    <input type="checkbox" name="isStartUsing" id="isStartUsing" value="2" lay-skin="primary" title="启用" checked>
                 </div>
             </div>
         </blockquote>
@@ -39,7 +39,7 @@
                 <div class="layui-form-item layui-inline">
                     <div style="padding: 10px;">问题大类</div>
                     <div class="layui-input-inline">
-                        <select name="problemTypes">
+                        <select name="problemTypes" id="problemTypes">
                             <option value="1">港前问题件</option>
                             <option value="2">港后问题件</option>
                         </select>
@@ -48,9 +48,7 @@
                 <div class="layui-form-item layui-inline">
                     <div style="padding: 10px;">问题类型</div>
                     <div class="layui-input-inline">
-                        <select name="issueTypeId">
-                            <option value="启用">启用</option>
-                            <option value="停用">停用</option>
+                        <select name="issueTypeId" id="issueTypeId">
                         </select>
                     </div>
                 </div>
@@ -69,18 +67,20 @@
                 <div class="layui-form-item layui-inline">
                     <div style="padding: 10px;">收件标识问题件</div>
                     <div class="layui-input-inline">
-                        <select name="consigneeIssue">
-                            <option value="启用">启用</option>
-                            <option value="停用">停用</option>
+                        <select name="consigneeIssue" id="consigneeIssue">
+                            <option value="偏远时标识">偏远时标识</option>
+                            <option value="税金预付时标识">税金预付时标识</option>
+                            <option value="运费为0时标识">运费为0时标识</option>
+                            <option value="到付款时标识">到付款时标识</option>
                         </select>
                     </div>
                 </div>
                 <div class="layui-form-item layui-inline">
                     <div style="padding: 10px;">打单标识问题件</div>
                     <div class="layui-input-inline">
-                        <select name="playSingleIssue">
-                            <option value="启用">启用</option>
-                            <option value="停用">停用</option>
+                        <select name="playSingleIssue" id="playSingleIssue">
+                            <option value="偏远时标识">偏远时标识</option>
+                            <option value="超值时标识">超值时标识</option>
                         </select>
                     </div>
                 </div>
@@ -100,18 +100,14 @@
                 <div class="layui-form-item layui-inline">
                     <div style="padding: 10px;">通知岗位（可多选）</div>
                     <div class=" layui-input-inline">
-                        <select name="informPost">
-                            <option value="启用">启用</option>
-                            <option value="停用">停用</option>
+                        <select name="informPost" id="informPost">
                         </select>
                     </div>
                 </div>
                 <div class="layui-form-item layui-inline">
                     <div style="padding: 10px;">指定处理岗位</div>
                     <div class=" layui-input-inline">
-                        <select name="roleList">
-                            <option value="启用">启用</option>
-                            <option value="停用">停用</option>
+                        <select name="roleList" id="roleList">
                         </select>
                     </div>
                 </div>

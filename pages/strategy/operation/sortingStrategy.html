@@ -37,13 +37,12 @@
     <div class="layui-row">
         <div class="btnArr">
             <button type="button" class="layui-btn" style="background-color: #00d000" onclick="WeAdminShow('新增分拣','./addSortingStrategy.html',600,500)">新增</button>
-            <button type="button" class="layui-btn" onclick="WeAdminShow('修改分拣','./updateSortingStrategy.html',600,500)">修改</button>
-            <button type="button" class="layui-btn layui-btn-danger" onclick="member_del('./delDeliver.html',id)">删除</button>
+            <button type="button" class="layui-btn" data-type="getCheckData">修改</button>
+            <button type="button" class="layui-btn layui-btn-danger" data-type="delData">删除</button>
             <button type="button" class="layui-btn layui-btn-primary">导出</button>
         </div>
         <br>
         <div class="layui-row layui-col-space10">
-            <div class="layui-col-xs2">所属网点</div>
             <div class="layui-col-xs2">客户</div>
             <div class="layui-col-xs2">目的地</div>
             <div class="layui-col-xs1">走货路线</div>
@@ -52,24 +51,29 @@
         </div>
         <div class="layui-row layui-col-space10">
             <div class="layui-col-xs2">
-                <select class="layui-select" ></select>
+                <select class="layui-select" name="customer"></select>
             </div>
-            <div class="layui-col-xs2"><input type="text" class="layui-input"></div>
-            <div class="layui-col-xs2"><input type="text" class="layui-input"></div>
-            <div class="layui-col-xs1"><input type="text" class="layui-input"></div>
-            <div class="layui-col-xs2"><select class="layui-select"></select></div>
-            <div class="layui-col-xs1"><select class="layui-select"></select></div>
+            <div class="layui-col-xs2"><input type="text" class="layui-input" name="chineseDes"></div>
+            <div class="layui-col-xs1"><input type="text" class="layui-input" name="shipRoute"></div>
+            <div class="layui-col-xs2"><select class="layui-select" name="cargoTypeId"></select></div>
+            <div class="layui-col-xs1">
+                <select class="layui-select" name="isStartUsing">
+                    <option value="">请选择</option>
+                    <option value="1">启用</option>
+                    <option value="0">停用</option>
+                </select>
+            </div>
             <div class="layui-col-xs2 btnArr">
-                <button class="layui-btn">查询</button>
+                <button class="layui-btn" type="button" lay-submit lay-filter="formDemo">查询</button>
                 <button class="layui-btn layui-btn-primary">重置</button>
             </div>
         </div>
-        <table class="layui-table" id="errorInfo"></table>
+        <table class="layui-table" lay-filter="test" id="errorInfo"></table>
     </div>
     </form>
 </div>
 <script src="../../../lib/layui/layui.js" charset="utf-8"></script>
-<script src="../../../static/js/strategy/operation/deliveryStrategy.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../static/js/strategy/operation/sortingStrategy.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
