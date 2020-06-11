@@ -59,13 +59,13 @@
 <div class="weadmin-body" style="background-color: #f6f6f6">
     <ul class="layui-nav" style="font-size: 14px;border-radius: 0px;background-color: #f6f6f6">
         <li class="layui-inline">
-            <a type="button" class="layui-btn layui-bg-blue" onclick="WeAdminShow('新增代理','./addAgency.html',860,550)">新增</a>
+            <a type="button" class="layui-btn layui-bg-blue" onclick="WeAdminShow('新增目的地','./addDestination.html',860,550)">新增</a>
         </li>
         <li class="layui-inline">
-            <a type="button" class="layui-btn" onclick="WeAdminShow('修改代理','./updateAgency.html',860,550)">修改</a>
+            <a type="button" class="layui-btn" id="xg">修改</a>
         </li>
         <li class="layui-inline">
-            <a type="button" class="layui-btn layui-bg-red">删除</a>
+            <a type="button" class="layui-btn layui-bg-red layui-btn-xs" id="sc" lay-event="del">删除</a>
         </li>
         <li class="layui-inline">
             <a type="button" class="layui-btn layui-bg-blue">设置报音</a>
@@ -78,60 +78,60 @@
         <div class="layui-form-item layui-inline"style="width: 190px;">
             <label class="layui-form-label" style="margin-left: -30px;">目的地编码</label>
             <div class="layui-input-inline" style="margin-left: -2%">
-                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                <input type="text" name="code" id="code" lay-verify="title" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item layui-inline"style="width: 190px;margin-left: 3%">
             <label class="layui-form-label" style="margin-left: -25px;">目的地名称</label>
             <div class="layui-input-inline">
-                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                <input type="text" name="name" id="name" lay-verify="title" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item layui-inline"style="width: 190px;margin-left: 3%">
             <label class="layui-form-label" style="margin-left: -30px;">国家简码</label>
             <div class="layui-input-inline">
-                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                <input type="text" name="countriesInCode" id="countriesInCode" lay-verify="title" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item layui-inline"style="width: 190px;margin-left: 3%">
             <label class="layui-form-label" style="margin-left: -30px;">英文名称</label>
             <div class="layui-input-inline">
-                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                <input type="text" name="englishName" id="englishName" lay-verify="title" autocomplete="off" class="layui-input">
             </div>
         </div>
         <br/>
         <div class="layui-form-item layui-inline"style="width: 190px;">
             <label class="layui-form-label" style="margin-left: -35px;">国家别名</label>
             <div class="layui-input-inline">
-                <input type="text" name="title" lay-verify="title" autocomplete="off" class="layui-input">
+                <input type="text" name="countryCode" id="countryCode" lay-verify="title" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item layui-inline"style="width: 190px;margin-left: 3%">
             <label class="layui-form-label" style="margin-left: -30px;">业务类型</label>
             <div class="layui-input-inline">
-                <select name="midtype" lay-verify="required">
-                    <option value="快递业务"></option>
-                    <option value="快递业务">快递业务</option>
-                    <option value="海运业务">海运业务</option>
-                    <option value="空运业务">空运业务</option>
+                <select name="businessTypeId" id="businessTypeId" lay-verify="required">
+                    <option value=""></option>
+                    <option value="0">快递业务</option>
+                    <option value="1">海运业务</option>
+                    <option value="2">空运业务</option>
                 </select>
             </div>
         </div>
         <div class="layui-form-item layui-inline"style="width: 190px;margin-left: 3%">
             <label class="layui-form-label" style="margin-left: -30px;">启用状态</label>
             <div class="layui-input-inline">
-                <select name="midtype" lay-verify="required">
-                    <option value="启用">启用</option>
-                    <option value="停用">停用</option>
+                <select name="isStartUsing" id="isStartUsing" lay-verify="required">
+                    <option value="0">启用</option>
+                    <option value="1">停用</option>
                 </select>
             </div>
         </div>
         <div class="layui-form-item layui-inline" style="margin-left: 30px;margin-top: 40px;">
-            <button class="layui-btn" type="button">查询</button>
+            <button class="layui-btn" type="button" id="button">查询</button>
             <button class="layui-btn" type="reset" style="background-color:#c2c2c2">重置</button>
         </div>
     </form>
-    <table class="layui-table" id="errorInfo"></table>
+    <table class="layui-table" id="errorInfo" lay-filter="demo"></table>
 </div>
 <script src="../../lib/layui/layui.js" charset="utf-8"></script>
 <script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>

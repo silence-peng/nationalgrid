@@ -2,7 +2,7 @@ layui.use(['element','jquery','layer','form'], function() {
     var $ = layui.jquery
         , layer = layui.layer
         , form = layui.form;
-    var issueCoding=getUrlParam("issueCoding");
+    var issueCoding=getUrlParam("ruleCoding");
     $.get('http://127.0.0.1:8080/problemstate/getIssueStausById',{issueCoding:issueCoding},function (result) {
 
         if (result.isStartUsing == 1){
@@ -34,27 +34,21 @@ layui.use(['element','jquery','layer','form'], function() {
         $("#playSingleIssue").val(result.playSingleIssue);
         $("#consigneeIssue").val(result.consigneeIssue);
         $("#problemTypes").val(result.problemTypes);
+        $("#playSingleIssue").val(result.playSingleIssue);
 
     });
 
     form.on('submit(formDemo2)', function(data){
+        $.get( 'http://127.0.0.1:8080/problemstate/updateIssueStaus',$("#pro").serialize(),function (result) {
 
-        $.ajax({
-            url: 'http://127.0.0.1:8080/problemstate/updateIssueStaus',
-            type: 'get',
-            contentType:'application/x-www-form-urlencoded; charset=UTF-8',
-            data: $("#pro").serialize(),
-            dataType:'text',
-            success: function (result) {
-                if (result == "ok") {
-                    layer.alert("修改成功！", function () {
-                        x_admin_close()
-                    })
-                } else {
-                    layer.alert("修改失败！", function () {
-                        x_admin_close()
-                    })
-                }
+            if (result=="ok"){
+                layer.alert("修改成功！",function () {
+                    x_admin_close()
+                })
+            }else{
+                layer.alert("修改失败！",function () {
+                    x_admin_close()
+                })
             }
         })
         return false;

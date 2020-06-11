@@ -28,16 +28,17 @@
 </div>
 <div style="display:inline-block;width: 80%;padding-left: 5%;">
 <form class="layui-form">
+    <input type="hidden" name="trackingNetworkId" id="trackingNetworkId"/>
     <div class="layui-form-item layui-inline"style="width: 100%;margin-bottom: 0; margin-right: 18px;">
         <label class="layui-form-label tree-cyh" style="font-size: 20px;float: none;width: 120px;margin-left: -1%;">包含走货路线</label>
         <div class="layui-input-inline" style="width: 85%;">
-            <textarea name="desc" placeholder="请输入内容" class="layui-textarea layui-disabled" style="width: 90%;height: 180px;">DHL-A,DHL-B,DHL-C</textarea>  </div>
+            <textarea name="bindingLine" placeholder="请输入内容" id="bindingLine"  class="layui-textarea layui-disabled" style="width: 90%;height: 180px;">DHL-A,DHL-B,DHL-C</textarea>  </div>
     </div>
     <div class="layui-form-item layui-inline"style="width: 200px;margin: 20px 0 0 0;padding: 0 0 0 0">
         <label class="layui-form-label tree-cyh" style="font-size: 20px;width: 215px;float: none;margin-bottom: 5px;margin-left: -13%;">出货后触发延时(小时)</label>
 
         <div class="layui-input-inline" style="width: 200px">
-            <input type="text" name="title" lay-verify="title" value="5"  autocomplete="off" class="layui-input "  style="width: 200px;">
+            <input type="text" name="timeAfterDeparture" lay-verify="title" value="5"  autocomplete="off" class="layui-input "  style="width: 200px;">
 
         </div>
     </div>
@@ -51,7 +52,7 @@
     <div class="layui-form-item layui-inline"style="width: 200px;margin: 10px 0 5px 0;padding: 0 0 0 0">
 
         <div class="layui-input-inline" style="width: 250px">
-            <input type="radio" name="sex" value="触发后间隔发起追踪" title="触发后间隔发起追踪">
+            <input type="radio" name="stateTrigger" value="1" title="触发后间隔发起追踪">
         </div>
     </div>
 
@@ -60,7 +61,7 @@
         <label class="layui-form-label tree-cyh" style="font-size: 20px;width: 215px;float: none;margin-bottom: 5px;margin-left: -13%;">前N天隔M小时发起追踪</label>
 
         <div class="layui-input-inline" style="width: 250px">
-            <input type="text" name="title" lay-verify="title" value="5"  autocomplete="off" class="layui-input "  style="width: 100px;float:left;margin-right: 10px;">
+            <input type="text" name="beforAfterHours" lay-verify="title" value="5"  autocomplete="off" class="layui-input "  style="width: 100px;float:left;margin-right: 10px;">
             <input type="text" name="title" lay-verify="title" value="5"  autocomplete="off" class="layui-input "  style="width: 100px;">
 
         </div>
@@ -69,7 +70,7 @@
     <label class="layui-form-label tree-cyh" style="font-size: 20px;width: 215px;float: none;margin-bottom: 5px;margin-left: -13%;">后X天隔Y小时发起追踪</label>
 
     <div class="layui-input-inline" style="width: 250px">
-        <input type="text" name="title" lay-verify="title" value="5"  autocomplete="off" class="layui-input "  style="width: 100px;float:left;margin-right: 10px;">
+        <input type="text" name="everyTimeAfter" lay-verify="title" value="5"  autocomplete="off" class="layui-input "  style="width: 100px;float:left;margin-right: 10px;">
         <input type="text" name="title" lay-verify="title" value="5"  autocomplete="off" class="layui-input "  style="width: 100px;">
 
     </div>
@@ -89,7 +90,7 @@
     <div class="layui-form-item layui-inline"style="width: 200px;margin: 10px 0 0 0;padding: 0 0 0 0">
 
         <div class="layui-input-inline" style="width: 250px">
-            <input type="radio" name="sex" value="触发后每天指定触发时间" title="触发后每天指定触发时间">
+            <input type="radio" name="stateTrigger" value="2" title="触发后每天指定触发时间">
         </div>
     </div>
 
@@ -98,7 +99,7 @@
         <label class="layui-form-label tree-cyh" style="font-size: 20px;width: 500px;float: none;margin-bottom: 5px;margin-left: -10%;">每天指定追踪时间(格式：HHMM,多个时用,隔开;最多5个)</label>
 
         <div class="layui-input-inline" style="width: 500px;margin-left: -8%;">
-            <input type="text" name="title" lay-verify="title" value="5"  autocomplete="off" class="layui-input "  style="width: 500px;">
+            <input type="text" name="specifyTrackingTime" lay-verify="title" value="5"  autocomplete="off" class="layui-input "  style="width: 500px;">
 
         </div>
     </div>
@@ -111,7 +112,7 @@
     <div class="layui-form-item layui-inline"style="width: 200px;margin: 40px 0 0 20px;padding: 0 0 0 0">
 
         <div class="layui-input-inline" style="width: 200px;margin-left: -8%;">
-            <button class="layui-btn layui-bg-blue" type="button" lay-submit lay-filter="btn_submit">保存</button>
+            <button type="submit" class="layui-btn layui-bg-blue" lay-submit="" lay-filter="demo1">保存</button>
         </div>
     </div>
 
@@ -120,56 +121,44 @@
 </body>
 <script src="../../../lib/layui/layui.js" charset="utf-8"></script>
 <script src="../../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../../static/js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    layui.use(['tree', 'util','jquery','table'], function() {
+    function gg(d){
+       return eval(d);
+    }
+    layui.use(['tree', 'util','jquery','table','form'], function() {
         var tree = layui.tree
             , layer = layui.layer
             , util = layui.util
             , $ = layui.jquery
-            ,table=layui.table
-            ,data1 = [{
-            title: '<span style="font-size: 20px;">DHC</span>'
-            ,id: 1
-            ,spread: true
-            ,children: [{
-                title: 'DHL-01(香港DHL网站)'
-                ,id: 1000
-                ,checked: true
-            },
-                {
-                    title: 'DHL-02(大陆DHL网站)'
-                    ,id: 1000
-                },
-               ]
-        }
-        ,{
-                title: '<span style="font-size: 20px;">TNT</span>'
-                ,id: 1
-                ,spread: true
-                ,children: [{
-                    title: 'TNT-CN'
-                    ,id: 1000
-                },
-                    {
-                        title: 'TNT-TW'
-                        ,id: 1000
-                    },
-                ]
-            }]
-        //无连接线风格
-        tree.render({
-            elem: '#test13'
-            , data: data1
-            , showLine: false  //是否开启连接线
-            ,click: function (obj) {
-                console.log(obj.data); //得到当前点击的节点数据
-                console.log(obj.state); //得到当前节点的展开状态：open、close、normal
-                console.log(obj.elem); //得到当前节点元素
+            ,form=layui.form
+            ,table=layui.table;
+            var data1 = "";
 
-                console.log(obj.data.children); //当前节点下是否有子节点
+            $.ajax({
+                url:"http://127.0.0.1:8080/selectAll",
+                type:'get',
+                dataType:'json',
+                crossDomain: true,
+                success:function (result) {
 
-            }
-        });
+
+                    //无连接线风格
+                    tree.render({
+                        elem: '#test13'
+                        , data: result
+                        , showLine: false  //是否开启连接线
+                        ,click: function (obj) {
+                            $("#bindingLine").text(obj.data.id); //得到当前点击的节点数据
+                            $("#trackingNetworkId").text(obj.data.title); //得到当前点击的节点数据
+
+                        }
+                    });
+                }
+            })
+
+
+
         // 单选
         $(document).click(function(e) { // 在页面任意位置点击而触发此事件
             if($(e.target).attr('class') === "layui-tree-txt"){ // 防止因为点击展开按钮把已选中的样式取消
@@ -178,6 +167,23 @@
             }
         });
 
+        form.on('submit(demo1)', function(data){
+            var user = $('form').serialize();
+            $.ajax({
+                 data:user,
+                url:"http://127.0.0.1:8080/addTrackingNetwork",
+                dataType:"text",
+                success:function(result){
+                    if(result=='true'){
+                        layer.msg("保存成功",{time:'1000'});
+
+                    }else{
+                        layer.msg("保存失败");
+                    }
+                }
+            })
+            return false;
+        });
 
     })
 </script>

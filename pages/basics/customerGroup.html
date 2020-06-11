@@ -63,10 +63,10 @@
             <a type="button" class="layui-btn layui-bg-blue" onclick="WeAdminShow('新增客户组','./addCustomerGroup.html',660,550)">新增</a>
         </li>
         <li class="layui-inline">
-            <a type="button" class="layui-btn" onclick="WeAdminShow('修改客户组','./updateCustomerGroup.html',660,550)">修改</a>
+            <a type="button" class="layui-btn" id="xg">修改</a>
         </li>
         <li class="layui-inline">
-            <a type="button" class="layui-btn layui-bg-red">删除</a>
+            <a type="button" class="layui-btn layui-bg-red" id="sc">删除</a>
         </li>
         <li class="layui-inline layui-nav-item">
             <a type="button" class="layui-btn ">共享</a>
@@ -84,7 +84,7 @@
         <div class="layui-form-item layui-inline"style="width: 150px;margin-left: -1%">
             <label class="layui-form-label" style="margin-left: -30px;">所属网点</label>
             <div class="layui-input-inline" style="width: 130px">
-                <select name="midtype" lay-verify="required">
+                <select name="affiliatedBranches" id="affiliatedBranches" lay-verify="required">
                     <option value="总部">总部</option>
                     <option value="长沙分部">长沙分部</option>
                 </select>
@@ -93,36 +93,36 @@
         <div class="layui-form-item layui-inline"style="width: 150px;margin-left: 0px">
             <label class="layui-form-label" style="margin-left: -30px;">客户组编码</label>
             <div class="layui-input-inline" style="margin-left: -2%">
-                <input type="text" name="title" lay-verify="title" style="width: 150px" autocomplete="off" class="layui-input">
+                <input type="text" name="clientCode" id="clientCode" lay-verify="title" style="width: 150px" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item layui-inline"style="width: 190px;margin-left: 1%">
             <label class="layui-form-label" style="margin-left: -25px;">客户组名称</label>
             <div class="layui-input-inline">
-                <input type="text" name="title" lay-verify="title" autocomplete="off" style="width: 150px" class="layui-input">
+                <input type="text" name="clientName" id="clientName" lay-verify="title" autocomplete="off" style="width: 150px" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item layui-inline"style="width: 150px;margin-left: -1%">
             <label class="layui-form-label" style="margin-left: -30px;">共享分式</label>
             <div class="layui-input-inline" style="width: 150px">
-                <select name="midtype" lay-verify="required">
-                    <option value="不共享">不共享</option>
-                    <option value="共享给所有">共享给所有</option>
-                    <option value="共享给指定">共享给指定</option>
+                <select name="sharingModeId" id="sharingModeId" lay-verify="required">
+                    <option value="0">不共享</option>
+                    <option value="1">共享给所有</option>
+                    <option value="2">共享给指定</option>
                 </select>
             </div>
         </div>
         <div class="layui-form-item layui-inline"style="width: 150px;margin-left: 2%">
             <label class="layui-form-label" style="margin-left: -30px;">启用状态</label>
             <div class="layui-input-inline" style="width: 150px">
-                <select name="midtype" lay-verify="required">
-                    <option value="启用">启用</option>
-                    <option value="停用">停用</option>
+                <select name="isStartUsing" id="isStartUsing" lay-verify="required">
+                    <option value="1">启用</option>
+                    <option value="0">停用</option>
                 </select>
             </div>
         </div>
         <div class="layui-form-item layui-inline" style="margin-left: 30px;margin-top:3%;display: inline-block">
-            <button class="layui-btn" type="button">查询</button>
+            <button class="layui-btn" type="button" id="button">查询</button>
             <button class="layui-btn" type="reset" style="background-color:#c2c2c2">重置</button>
         </div>
     </form>
@@ -130,6 +130,6 @@
 </div>
 <script src="../../lib/layui/layui.js" charset="utf-8"></script>
 <script src="../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
-<script src="../../static/js/basics/agentManagement.js"></script>
+<script src="../../static/js/basics/customerGroup.js"></script>
 </body>
 </html>

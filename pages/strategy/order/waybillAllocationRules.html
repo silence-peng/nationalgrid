@@ -43,10 +43,10 @@
             <a type="button" class="little-button button-red el-button">删除</a>
         </li>
         <li class="layui-inline layui-nav-item">
-            <a type="button" class="box-button button-blue el-button"onclick="WeAdminShow('分配网点','./distributionNetwork.html',750,450)" >分配网点</a>
+            <a type="button" class="box-button button-blue el-button" id="godistributionNetwork">分配网点</a>
         </li>
         <li class="layui-inline layui-nav-item">
-            <a type="button" class="box-button button-blue el-button" onclick="WeAdminShow('分配网点','./alloClient.html',750,550)">分配客户</a>
+            <a type="button" class="box-button button-blue el-button" id="goalloClient">分配客户</a>
         </li>
     </ul>
     <form class="layui-form" >
@@ -54,25 +54,33 @@
         <div class="layui-form-item layui-inline"style="width: 170px;margin-left: 0px">
             <label class="layui-form-label input-title">规则名称</label>
             <div class="layui-input-inline" style="margin-left: -2%">
-                <input type="text" name="title" lay-verify="title" style="autocomplete:off" class="layui-input">
+                <input type="text" name="ruleName" id="ruleName" lay-verify="title" style="autocomplete:off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item layui-inline"style="width: 170px;margin-left: 20px">
             <label class="layui-form-label input-title" >启用状态</label>
             <div class="layui-input-inline">
-                <select name="midtype" lay-verify="required">
-                    <option value="总部">总部</option>
-                    <option value="长沙分部">长沙分部</option>
+                <select name="isStartUsing" id="isStartUsing">
+                    <option value="0">全部</option>
+                    <option value="2">启用</option>
+                    <option value="1">停用</option>
                 </select>
             </div>
         </div>
-
+        <div class="layui-form-item layui-inline"style="width: 170px;margin-left: 20px">
+            <label class="layui-form-label input-title" >单号类型</label>
+            <div class="layui-input-inline">
+                <select name="oddType" id="oddType">
+                    <option value="0">全部</option>
+                </select>
+            </div>
+        </div>
         <div class="layui-form-item layui-inline" style="margin-left: 30px;padding-top: 2.5%; ">
             <button type="button" class="button-blue"  >查询</button>
             <button class="reset-bth" type="reset"  >重置</button>
         </div>
     </form>
-    <table class="layui-hide" id="test"></table>
+    <table class="layui-hide" id="test" lay-filter="demo"></table>
 
         <div style="width:49.5%;float: left;padding-top: 1%;background-color: #f6f6f6;">
             <p>号码段信息</p>
@@ -88,6 +96,9 @@
     <div class="layui-btn-container">
         <button id="delRow" type="button" class="layui-btn layui-icon-subtraction layui-icon layui-btn-danger layui-btn-sm layui-btn-normal" lay-event="del"></button>
     </div>
+</script>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
 </script>
 <script src="../../../lib/layui/layui.js" charset="utf-8"></script>
 <script src="../../../static/js/admin.js" type="text/javascript" charset="utf-8"></script>
