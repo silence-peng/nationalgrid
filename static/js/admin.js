@@ -8,10 +8,10 @@
  * | 基于Layui http://www.layui.com/
  * +----------------------------------------------------------------------
  */
-
+var $;
 layui.define(['jquery', 'form', 'layer', 'element','table'], function(exports) {
-	var $ = layui.jquery,
-		form = layui.form,
+	 $ = layui.jquery;
+    var	form = layui.form,
 		layer = layui.layer,
 		element = layui.element
 		,table=layui.table;
@@ -329,7 +329,6 @@ layui.define(['jquery', 'form', 'layer', 'element','table'], function(exports) {
 			success:function () {
 				
 			},end:function () {
-                table.reload('testReload');
             }
 		});
 	}
@@ -512,4 +511,7 @@ function getValue(str,name,type) {
 			break;
 	}
 
+}
+function clearNum() {
+    $(".layui-textarea").val("")
 }

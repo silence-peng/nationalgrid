@@ -1,15 +1,48 @@
-layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element', 'slider'], function() {
+layui.use(['laydate', 'laypage', 'layer', 'table', 'form', 'upload', 'element', 'jquery'], function() {
 
     var laydate = layui.laydate //日期
         , laypage = layui.laypage //分页
         , layer = layui.layer //弹层
         , table = layui.table //表格
-        , carousel = layui.carousel //轮播
+        , form = layui.form //轮播
         , upload = layui.upload //上传
         , element = layui.element //元素操作
-        , slider = layui.slider; //滑块//执行一个laydate实例
-    laydate.render({
-        elem: '#test1,#test2'//指定元素
+        , $ = layui.jquery; //滑块//执行一个laydate实例
+
+    $("#code").load('http://127.0.0.1:8080/transboundaryV5/order/loadCustomerManagement',function (result) {
+        const data=eval(result);
+        $(data).each(function (i,o) {
+            $("#code").append("<option value='"+o.code+"'>"+o.name+"</option>")
+        });
+        form.render("select");
+    });
+    $("#template").load('http://127.0.0.1:8080/transboundaryV5/base/loadTemplateInfo',function (result) {
+        const data=eval(result);
+        $(data).each(function (i,o) {
+            $("#template").append("<option value='"+o.templateId+"'>"+o.templateName+"</option>")
+        });
+        form.render("select");
+    });
+    upload.render({ //允许上传的文件后缀
+        elem: '#templateFile'
+        ,url: 'http://127.0.0.1:8080/transboundaryV5/base/upload' //改成您自己的上传接口
+        ,accept: 'file' //普通文件
+        ,exts: 'xlsx|xls' //只允许上传压缩文件
+        ,before: function(obj) {
+                layer.load();
+
+                this.data.templateId = $("#template").val();
+                this.data.code = $("#code").val();
+        }
+        ,data: {
+
+        },done: function(res){
+            if (res.code===1){
+                layer.msg('上传成功');
+            }else{
+                layer.msg('上传成功');
+            }
+        }
     });
     //执行一个 table 实例
     table.render({

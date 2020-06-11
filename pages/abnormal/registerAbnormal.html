@@ -14,6 +14,7 @@
     <!--[if lt IE 9]>
     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+
     <![endif]-->
 </head>
 
@@ -30,9 +31,9 @@
         <i class="layui-icon" style="line-height:30px">ဂ</i></a>
 </div>
 <div class="weadmin-body">
-    <form class="layui-form layui-col-space10">
-        <div class="layui-form-item">
-            <input type="button" class="layui-btn" style="background-color: #00c500" value="登记">
+    <form class="layui-form layui-col-space10" id="data">
+        <div class="layui-form-item btnArr">
+            <input type="button" class="layui-btn" id="loginInfo" style="background-color: #00c500" value="登记">
             <input type="button" class="layui-btn layui-btn-normal" value="批量登记">
             <input type="button" class="layui-btn layui-btn-normal" value="导入登记">
         </div>
@@ -42,34 +43,31 @@
             <div class="layui-col-xs2">处理网点</div>
         </div>
         <div class="layui-row layui-col-space5">
-            <div class="layui-col-xs2"><input type="text" class="layui-input"></div>
-            <div class="layui-col-xs2"><select class="layui-select"></select></div>
-            <div class="layui-col-xs2"><select class="layui-select"></select></div>
+            <div class="layui-col-xs2"><input type="text" name="waybillNumber"  class="layui-input"></div>
+            <div class="layui-col-xs2"><select class="layui-select" name="problemState" id="problemState"></select></div>
+            <div class="layui-col-xs2"><select class="layui-select" name="processingNode" id="processingNode"></select></div>
         </div>
         <div>问题描述</div>
         <div class="layui-row">
             <div class="layui-col-xs6">
-                <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+                <textarea placeholder="请输入内容" name="description" id="description" class="layui-textarea"></textarea>
             </div>
         </div>
-        <div>
-            <button type="button" class="layui-btn" id="test3"><i class="layui-icon"></i><附件上传></附件上传></button>
-        </div>
+
         <div class="layui-row layui-col-space5">
-            <div class="layui-col-xs2">指定处理人</div>
             <div class="layui-col-xs2">处理时限</div>
             <div class="layui-col-xs2">通知人</div>
+            <div class="layui-col-xs2"></div>
         </div>
-        <div class="layui-row layui-col-space5">
-            <div class="layui-col-xs2"><select class="layui-select"></select></div>
-            <div class="layui-col-xs2"><input type="text" class="layui-input"></div>
-            <div class="layui-col-xs2"><select class="layui-select">
-            </select></div>
+        <div class="layui-row layui-col-space10">
+            <div class="layui-col-xs2"><input type="text" class="layui-input" name="processLimited" id="processLimited"></div>
+            <div class="layui-col-xs2"><select class="layui-select" name="notifier" id="notifier"></select></div>
+            <div class="layui-col-xs2 " ><button type="button" class="layui-btn" id="test3"><i class="layui-icon"></i>附件上传</button></div>
         </div>
         <div class="layui-row">
-            <div class="layui-col-xs8">
+
                 <table class="layui-table" id="chargeInfo" ></table>
-            </div>
+
         </div>
     </form>
 </div>

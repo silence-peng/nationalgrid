@@ -50,20 +50,38 @@
             admin = layui.admin,
             table = layui.table,
             layer = layui.layer;
+        var url="http://127.0.0.1:8080/transboundaryV5/";
+        var name="";
+        var code="";
+        switch (type) {
+            case "customer":
+               url+="order/loadCustomerManagementList";
 
+               name="name";
+               code="code";
+                break;
+            case "destination":
+                url+="";
+                break;
+            case "route":
+                url+="order/loadAssignRouteList";
+                name="id";
+                code="name";
+                break;
+        }
         table.render({
             elem: '#templateInfo',
             id:"tableinfo"
             , width: 600
             , height: 250
-            , url: '../../json/test.json' //数据接口
+            , url:url//数据接口
             , title: '错误信息表'
             , page: true //开启分页
             , cols: [[ //表头
                 {type: 'radio', fixed: 'left'},
-                {field: 'id', title: '序号'}
-                , {field: 'code', title: '编码'}
-                , {field: 'name', title: '名称'}
+                {type:'numbers', title: '序号'}
+                ,{field:name, title: '编码'}
+                ,{field:code, title: '名称'}
             ]]
         });
         var $ = layui.$, active = {

@@ -10,6 +10,7 @@
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="../../static/css/font.css">
     <link rel="stylesheet" href="../../static/css/weadmin.css">
+
     <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
     <!--[if lt IE 9]>
     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
@@ -22,9 +23,16 @@
             height: 30px;
             text-align: center;
             line-height: 0;
+            font-size: 12px;
         }
         .layui-nav-child button{
             font-size: 12px;
+        }
+        .btnz button{
+            border: 0;
+        }
+        .btnz button:hover{
+            color: red;
         }
 
     </style>
@@ -44,14 +52,13 @@
 </div>
 <div class="weadmin-body">
     <div class="layui-row">
-        <form class="layui-form layui-col-md12">
+        <form class="layui-form layui-col-md12" id="data">
             <div class="layui-form-item">
                 <div class="layui-input-inline btnArr" style="width:100%">
-                    <button type="button" class="layui-btn" lay-filter="templateDownload"  style="float: left;">选择收货</button>
-                    <button type="button" class="layui-btn" lay-filter="designTemplate"  style="float: left;">全部收货</button>
-                    <ul class="layui-nav layui-bg-green btnz" lay-filter=""  style=" float:left;font-size: 14px;border-radius: 0px;padding:0;margin: 0 4px;height: 38px">
-                        <li class="layui-nav-item" style="line-height: 30px;">
-                            <a style="color:white;font-size: 12px;padding: 5px 30px 5px 20px;">面单打印<span class="layui-nav-more" style="right: 10px;font-size: 12px;"></span></a>
+                    <button type="button" class="layui-btn" lay-filter="templateDownload" data-type="getCheckData"  style="float: left;">选择收货</button>
+                    <ul class="layui-nav layui-bg-green btnz" lay-filter=""  style=" float:left;font-size: 14px;border-radius: 0px;padding:0;margin: 0 4px;height: 30px">
+                        <li class="layui-nav-item" style="height: 30px;line-height: 30px">
+                            <a style="color:white;font-size: 12px;padding: auto">面单打印&nbsp;&nbsp;<span class="layui-nav-more" style="right: 10px;font-size: 12px;"></span></a>
                             <dl class="layui-nav-child" style="z-index:9999999;top: 30px;font-size: 12px;line-height: 31px;padding: 0px 0px 0px 0px;"> <!-- 二级菜单 -->
                                 <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm" > 嘉里-标准面单</button></dd>
                                 <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm"> 嘉里-POSLAJU</button></dd>
@@ -65,9 +72,9 @@
                             </dl>
                         </li>
                     </ul>
-                    <ul class="layui-nav layui-bg-green btnz" lay-filter=""  style=" float:left;font-size: 14px;border-radius: 0px;padding:0;margin: 0 4px;height: 38px">
-                        <li class="layui-nav-item" style="line-height: 30px;">
-                            <a  style="color:white;font-size: 12px;padding: 5px 30px 5px 20px;">标签打印<span class="layui-nav-more" style="right: 10px;font-size: 12px;"></span></a>
+                    <ul class="layui-nav layui-bg-green btnz" lay-filter=""  style=" float:left;font-size: 14px;border-radius: 0px;padding:0 0 5px 0;margin: 0 4px;height: 30px">
+                        <li class="layui-nav-item" style="height: 30px;line-height: 30px">
+                            <a  style="color:white;font-size: 12px;padding: auto">标签打印&nbsp;&nbsp;<span class="layui-nav-more" style="right: 10px;font-size: 12px;"></span></a>
                             <dl class="layui-nav-child" style="z-index:9999999;top: 30px;font-size: 12px;line-height: 31px;padding: 0px 0px 0px 0px;"> <!-- 二级菜单 -->
                                 <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm" >收货标签</button></dd>
                                 <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm">发票标签</button></dd>
@@ -78,9 +85,9 @@
                     <button type="button" class="layui-btn" style="float: left;" lay-filter="designTemplate">预报修改</button>
                     <button type="button" class="layui-btn"  style="float: left;"lay-filter="designTemplate">批量修改</button>
                     <button type="button" class="layui-btn layui-btn-danger" style="float: left;" lay-filter="designTemplate">取消订单</button>
-                    <ul class="layui-nav layui-bg-green btnz" lay-filter=""  style=" float:left;font-size: 14px;border-radius: 0px;padding:0;margin: 0 4px;height: 38px">
-                        <li class="layui-nav-item" style="line-height: 30px;">
-                            <a style="color:white;font-size: 12px;padding: 5px 30px 5px 20px;">导出<span class="layui-nav-more" style="right: 10px;font-size: 12px;"></span></a>
+                    <ul class="layui-nav layui-bg-green btnz" lay-filter=""  style=" float:left;font-size: 14px;border-radius: 0px;padding:0;margin: 0 4px;height: 30px">
+                        <li class="layui-nav-item" style="height: 30px;line-height: 30px">
+                            <a style="color:white;font-size: 12px;padding: auto">导出&nbsp;&nbsp;<span class="layui-nav-more" style="right: 10px;font-size: 12px;"></span></a>
                             <dl class="layui-nav-child" style="z-index:9999999;top: 30px;font-size: 12px;line-height: 31px;padding: 0px 0px 0px 0px;"> <!-- 二级菜单 -->
                                 <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm" >qq</button></dd>
                                 <dd><button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="WeAdminShow('Excel自定义导出','./designTemplate2.html?type='+'orderPre',900,650)">自定义导出</button></dd>
@@ -91,30 +98,24 @@
                 </div>
             </div>
 
-            <div class="layui-row" style="font-size: 14px">
+            <div class="layui-row layui-col-space10" style="font-size: 14px">
                 <div class="layui-col-xs2">
                     <div class="layui-row">
                         <div class="layui-col-xs12">
                             <div class="layui-form-item" style="margin: 0;width: 100%">
                                 <div class="layui-inline" style="margin: 0;width: 100%">
-                                    <select name="city" lay-verify="required">
-                                        <option value="0">运单号码</option>
-                                        <option value="1">参考编号</option>
-                                        <option value="2">订单号码</option>
-                                        <option value="3">转运号码</option>
-                                        <option value="4">收货袋号</option>
+                                    <select name="type" id="type" lay-verify="required">
+                                        <option value="waybillNumber">运单号码</option>
+                                        <option value="trackingNumber">转单号码</option>
+                                        <option value="wayId">订单号码</option>
+                                        <option value="participationNumber">参考编号</option>
                                     </select>
                                 </div>
                             </div>
-
                         </div>
-
-                        <div class="layui-col-xs10"><textarea name="desc" class="layui-textarea"></textarea></div>
-                        <div class="layui-col-xs2"><button class="layui-btn" style="height: 100px;padding: 0;width:100%">清<br>空</button></div>
-
+                        <div class="layui-col-xs10"><textarea name="number" id="number" class="layui-textarea"></textarea></div>
+                        <div class="layui-col-xs2"><button type="button" onclick="clearNum()" class="layui-btn" style="height: 100px;padding: 0;width:100%">清<br>空</button></div>
                     </div>
-
-
                     <div class="layui-form-item" style="margin: 0">
                         <div class="layui-input-inline" style="margin: 0">
                             <input type="checkbox" name="" lay-skin="primary" title="回车查询打印收货标签">
@@ -140,33 +141,26 @@
                         <div class="layui-col-xs4">
                             <div class="layui-form-item">
                                 <div class="layui-input-inline" style="width: 40%" >
-                                    <input type="text" name="startDate" id="startDate" lay-verify="startDate"
+                                    <input type="text" name="orderDate" id="orderDate" lay-verify="startDate"
                                            placeholder="开始日期" autocomplete="off" class="layui-input">
                                 </div>
                                 <div class="layui-form-mid">-</div>
                                 <div class="layui-input-inline" style="width: 40%">
-                                    <input type="text"  name="endDate" id="endDate" lay-verify="startDate"
+                                    <input type="text"  name="cretedate" id="cretedate" lay-verify="startDate"
                                            placeholder="结束日期" autocomplete="off" class="layui-input">
                                 </div>
                             </div>
                         </div>
                         <div class="layui-col-xs2">
-
-                                    <select name="city" lay-verify="required">
-                                        <option value="0">总部</option>
-                                        <option value="1">参考编号</option>
-                                        <option value="2">订单号码</option>
-                                        <option value="3">转运号码</option>
-                                        <option value="4">收货袋号</option>
-                                    </select>
-
+                            <select name="affiliatedBranches" id="affiliatedBranches">
+                            </select>
                         </div>
                         <div class="layui-col-xs4">
                             <div class="layui-row">
                                 <div class="layui-col-xs4"><input style="width: 100%;" type="text" name="customerName" id="customerName"
                                                                   class="layui-input"></div>
                                 <div class="layui-col-xs1">
-                                    <button style="width: 100%;height:38px" type="button" onclick="WeAdminShow('查找','./find.html?type='+'customer',900,500)"
+                                    <button style="width: 100%;height:38px" type="button" onclick="WeAdminShow('查找','./find.html?type='+'customer',650,450)"
                                             class="layui-btn layui-icon layui-btn-primary layui-btn-sm">&#xe615;
                                     </button>
                                 </div>
@@ -179,7 +173,7 @@
 
                         </div>
                     </div>
-                    <div class="layui-row" style="font-size: 14px">
+                    <div class="layui-row layui-col-space5" style="font-size: 14px">
                         <div class="layui-row">
                             <div class="layui-col-xs1">走货路线</div>
                             <div class="layui-col-xs1">指定路线</div>
@@ -188,45 +182,28 @@
                             <div class="layui-col-xs1">订单数据来源</div>
                             <div class="layui-col-xs7"></div>
                         </div>
-                        <div class="layui-row">
-                            <div class="layui-col-xs1"><select name="city" lay-verify="required">
-                                <option value="0">总部</option>
-                                <option value="1">参考编号</option>
-                                <option value="2">订单号码</option>
-                                <option value="3">转运号码</option>
-                                <option value="4">收货袋号</option>
+                        <div class="layui-row layui-col-space5">
+                            <div class="layui-col-xs1"><select name="shipmentRace" id="shipmentRoute">
+
                             </select></div>
-                            <div class="layui-col-xs1"><select name="city" lay-verify="required">
-                                <option value="0">总部</option>
-                                <option value="1">参考编号</option>
-                                <option value="2">订单号码</option>
-                                <option value="3">转运号码</option>
-                                <option value="4">收货袋号</option>
+                            <div class="layui-col-xs1">
+                                <select name="courseRace" id="courseRace">
+                                </select>
+                            </div>
+                            <div class="layui-col-xs1"><select name="bourn" id="bourn">
                             </select></div>
-                            <div class="layui-col-xs1"><select name="city" lay-verify="required">
-                                <option value="0">总部</option>
-                                <option value="1">参考编号</option>
-                                <option value="2">订单号码</option>
-                                <option value="3">转运号码</option>
-                                <option value="4">收货袋号</option>
+                            <div class="layui-col-xs1"><select name="orderStatus" id="orderStatus">
+
                             </select></div>
-                            <div class="layui-col-xs1"><select name="city" lay-verify="required">
-                                <option value="0">总部</option>
-                                <option value="1">参考编号</option>
-                                <option value="2">订单号码</option>
-                                <option value="3">转运号码</option>
-                                <option value="4">收货袋号</option>
-                            </select></div>
-                            <div class="layui-col-xs1"><select name="city" lay-verify="required">
-                                <option value="0">总部</option>
-                                <option value="1">参考编号</option>
-                                <option value="2">订单号码</option>
-                                <option value="3">转运号码</option>
-                                <option value="4">收货袋号</option>
+                            <div class="layui-col-xs1"><select name="dataSources" id="dataSources" lay-verify="required">
+                                <option value="0"></option>
+                                <option value="1">收件录单</option>
+                                <option value="2">VIP录入</option>
+                                <option value="3">EI写入</option>
                             </select></div>
                             <div class="layui-col-xs7">
-                                <button type="button" class="layui-btn" lay-filter="fileDownload">查询</button>
-                                <button type="button" class="layui-btn" lay-filter="historyLog">重置</button>
+                                <button type="button" class="layui-btn find" lay-filter="fileDownload">查询</button>
+                                <button type="reset" class="layui-btn" lay-filter="historyLog">重置</button>
                             </div>
                         </div>
                     </div>

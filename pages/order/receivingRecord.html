@@ -58,7 +58,7 @@
                 <div class="layui-row">
                     <div class="layui-col-xs8">
                         <i class="layui-icon layui-icon-snowflake"
-                           style="color: red"></i>客户 <a onclick="WeAdminShow('查找','./customerInfo.html',900,650)"  style="color: rgb(64,158,255)">待提交客户(<span>1</span>)</a>
+                           style="color: red"></i>客户 <a onclick="WeAdminShow('查找','./customerInfo.html',650,450)"  style="color: rgb(64,158,255)">待提交客户(<span>1</span>)</a>
                     </div>
                     <div class="layui-col-xs4">
                         <i class="layui-icon layui-icon-snowflake"
@@ -71,7 +71,7 @@
                             <div class="layui-col-xs5" ><input  type="text" name="customerName" id="customerName"
                                                               class="layui-input"></div>
                             <div class="layui-col-xs2" style="width: auto">
-                                <button style="width: 38px;height:38px" type="button" onclick="WeAdminShow('查找','./find.html?type='+'customer',900,650)"
+                                <button style="width: 38px;height:38px" type="button" onclick="WeAdminShow('查找','./find.html?type='+'customer',650,450)"
                                         class="layui-btn layui-icon layui-btn-primary layui-btn-sm">&#xe615;
                                 </button>
                             </div>
@@ -107,43 +107,29 @@
                     <div class="layui-col-xs4"> <input type="text" disabled class="layui-input" id="transferNo"></div>
                 </div>
                 <div class="layui-row">
-                    <div class="layui-col-xs4">
+                    <div class="layui-col-xs6">
                         <i class="layui-icon layui-icon-snowflake"
                            style="color: red"></i>指定路线
                     </div>
-                    <div class="layui-col-xs4">  <i class="layui-icon layui-icon-snowflake"
-                                                    style="color: red"></i>目的地</div>
-                    <div class="layui-col-xs4">  <i class="layui-icon layui-icon-snowflake"
+
+                    <div class="layui-col-xs6">  <i class="layui-icon layui-icon-snowflake"
                                                     style="color: red"></i>货物类型</div>
                 </div>
                 <div class="layui-row">
-                    <div class="layui-col-xs4">
+                    <div class="layui-col-xs6">
                         <div class="layui-row">
                             <div class="layui-col-xs8" ><input  type="text" name="addressCode" id="routeCode"
                                                                 class="layui-input"></div>
                             <div class="layui-col-xs2" style="width: auto">
-                                <button style="width:auto;height:38px" type="button" onclick="WeAdminShow('查找','./find.html?type='+'route',900,650)"
+                                <button style="width:auto;height:38px" type="button" onclick="WeAdminShow('查找','./find.html?type='+'route',650,450)"
                                         class="layui-btn layui-icon layui-btn-primary layui-btn-sm">&#xe615;
                                 </button>
                             </div>
 
                         </div>
                     </div>
-                    <div class="layui-col-xs4">
-                        <div class="layui-row" style="margin: 0">
-                            <div class="layui-col-xs5" ><input  type="text" name="destinationName" id="destinationName"
-                                                                class="layui-input"></div>
-                            <div class="layui-col-xs2" >
-                                <button style="width:auto;height:38px" type="button" onclick="WeAdminShow('查找','find.html?type='+'destination',900,650)"
-                                        class="layui-btn layui-icon layui-btn-primary layui-btn-sm">&#xe615;
-                                </button>
-                            </div>
-                            <div class="layui-col-xs5" ><input type="text" name="destinationCode" id="destinationCode" disabled
-                                                               class="layui-input"></div>
 
-                        </div>
-                    </div>
-                    <div class="layui-col-xs4">
+                    <div class="layui-col-xs6">
                         <select class="layui-select">
                             <option value="0">普货</option>
                             <option value="1">敏感货</option>
@@ -160,7 +146,7 @@
                 </div>
                 <div class="layui-row">
                     <div class="layui-col-xs4">
-                        <div class="layui-row">
+                        <div class="layui-row" style="margin: 0">
                                 <div class="layui-col-xs8" ><input  type="text" name="addressCode"
                                                                 class="layui-input"></div>
                             <div class="layui-col-xs2" style="width: auto">

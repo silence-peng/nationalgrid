@@ -60,11 +60,13 @@ layui.use(['element','jquery','table','layer','transfer','form'], function() {
                     for (var i=0;i<count;i++){
                         const el=$('.layui-table-main').find("tr[data-index="+i+"] td[data-field='affiliatedBranches']").children();
                         var affiliatedBranches=el.html();
-                        $.each(result,function (i,o) {
-                            if (o.branchCoding===affiliatedBranches){
-                                el.html(o.branchName)
-                            }
-                        })
+                        if (result.length>0){
+                            $.each(result,function (i,o) {
+                                if (o.branchCoding===affiliatedBranches){
+                                    el.html(o.branchName)
+                                }
+                            })
+                        }
                     }
 
                 }

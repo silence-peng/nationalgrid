@@ -20,9 +20,9 @@
         <div id="darkbannerwrap"></div>
         
         <form method="post" class="layui-form" >
-            <input name="username" placeholder="用户名"  type="text" lay-verify="required" class="layui-input" >
+            <input name="userCode" placeholder="用户编码"  type="text" lay-verify="required" class="layui-input" >
             <hr class="hr15">
-            <input name="password" lay-verify="required" placeholder="密码"  type="password" class="layui-input">
+            <input name="pwd" id="login" lay-verify="required" placeholder="密码"  type="password" class="layui-input">
             <hr class="hr15">
             <input class="loginin" value="登录" lay-submit lay-filter="login" style="width:100%;" type="submit">
             <hr class="hr20" >
@@ -37,18 +37,26 @@
         	layui.extend({
 				admin: '{/}./static/js/admin'
 			});
-            layui.use(['form','admin'], function(){
+            layui.use(['form','admin','jquery'], function(){
               var form = layui.form
-              	,admin = layui.admin;
+              	  ,admin = layui.admin
+                  ,$=layui.jquery;
               // layer.msg('玩命卖萌中', function(){
               //   //关闭后的操作
               //   });
               //监听提交
               form.on('submit(login)', function(data){
-                // alert(888)
-                layer.msg(JSON.stringify(data.field),function(){
-                    location.href='./index.html'
-                });
+                  $.post('http://127.0.0.1:8080/transboundaryV5/login',$("form").serialize(),function (re) {
+                      if (re){
+                          layer.msg("登录成功",function () {
+                              location.href='./index.html'
+                          })
+                      }else{
+                          layer.msg("登录失败!用户不存在或密码错误！",function () {
+                              $("#login").val("");
+                          })
+                      }
+                  });
                 return false;
               });
             });   

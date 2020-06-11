@@ -21,6 +21,7 @@
     </style>
 </head>
 
+
 <body>
 <!-- 顶部开始 -->
 <div class="container">
@@ -54,7 +55,9 @@
     </ul>
     <ul class="layui-nav right" lay-filter="">
         <li class="layui-nav-item">
-            <a href="javascript:;">Admin</a>
+            <a href="javascript:;" class="userInfo">
+Admin
+            </a>
             <dl class="layui-nav-child">
                 <!-- 二级菜单 -->
                 <dd>
@@ -64,7 +67,7 @@
                     <a onclick="WeAdminShow('切换帐号','./login.html')">切换帐号</a>
                 </dd>
                 <dd>
-                    <a class="loginout" href="./login.html">退出</a>
+                    <a class="loginout">退出</a>
                 </dd>
             </dl>
         </li>
@@ -159,7 +162,16 @@
 				//alert("右键菜单")
 				return false;
 			});
-		}
+		};
+        $.post("http://127.0.0.1:8080/transboundaryV5/getUserInfo",function (re) {
+            console.log(re)
+            $(".userInfo").html(re.userName);
+        });
+        $(".loginout").click(function () {
+            $.post('http://127.0.0.1:8080/transboundaryV5/loginOut',function (re) {
+                location.href="login.html"
+            });
+        });
         $(function () {
             menu.getMenu('./json/menu.json');
             var login = JSON.parse(localStorage.getItem("login"));
